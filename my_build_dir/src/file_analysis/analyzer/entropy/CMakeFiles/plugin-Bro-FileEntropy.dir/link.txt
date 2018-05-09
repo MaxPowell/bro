@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplugin-Bro-FileEntropy.a  CMakeFiles/plugin-Bro-FileEntropy.dir/Entropy.cc.o CMakeFiles/plugin-Bro-FileEntropy.dir/Plugin.cc.o CMakeFiles/plugin-Bro-FileEntropy.dir/__/__/Analyzer.cc.o CMakeFiles/plugin-Bro-FileEntropy.dir/events.bif.cc.o CMakeFiles/plugin-Bro-FileEntropy.dir/events.bif.init.cc.o
+/usr/bin/ranlib libplugin-Bro-FileEntropy.a

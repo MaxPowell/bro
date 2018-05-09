@@ -1,6 +1,11 @@
+# DPDK
 include_directories(BEFORE
                     ${CMAKE_CURRENT_SOURCE_DIR}
                     ${CMAKE_CURRENT_BINARY_DIR}
+					${CMAKE_CURRENT_SOURCE_DIR}/libmoon/lib
+					${CMAKE_CURRENT_SOURCE_DIR}/libmoon/src
+					${CMAKE_CURRENT_SOURCE_DIR}/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include
+					${CMAKE_CURRENT_SOURCE_DIR}/libmoon/deps/luajit/src
 )
 
 # This collects generated bif and pac files from subdirectories.
@@ -372,12 +377,27 @@ set(bro_SRCS
 
 collect_headers(bro_HEADERS ${bro_SRCS})
 
+# DPDK
+set(LIBMOON_BUILD_LIBRARY true)
+add_subdirectory(libmoon)
+
+set(libraries_moon
+	-Wl,--whole-archive
+	moon
+)
+
+link_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}/libmoon
+	${CMAKE_CURRENT_SOURCE_DIR}/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/lib
+	${CMAKE_CURRENT_SOURCE_DIR}/libmoon/deps/luajit/usr/local/lib
+)
+
 if ( bro_HAVE_OBJECT_LIBRARIES )
     add_executable(bro ${bro_SRCS} ${bro_HEADERS} ${bro_SUBDIRS})
-    target_link_libraries(bro ${brodeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
+    target_link_libraries(bro ${brodeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS} ${libraries_moon})
 else ()
     add_executable(bro ${bro_SRCS} ${bro_HEADERS})
-    target_link_libraries(bro ${bro_SUBDIRS} ${brodeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
+    target_link_libraries(bro ${bro_SUBDIRS} ${brodeps} ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS} ${libraries_moon})
 endif ()
 
 if ( NOT "${bro_LINKER_FLAGS}" STREQUAL "" )

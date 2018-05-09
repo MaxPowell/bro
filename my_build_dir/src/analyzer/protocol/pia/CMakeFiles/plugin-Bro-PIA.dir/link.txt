@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplugin-Bro-PIA.a  CMakeFiles/plugin-Bro-PIA.dir/PIA.cc.o CMakeFiles/plugin-Bro-PIA.dir/Plugin.cc.o
+/usr/bin/ranlib libplugin-Bro-PIA.a

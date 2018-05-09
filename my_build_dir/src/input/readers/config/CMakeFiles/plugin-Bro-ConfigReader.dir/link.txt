@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplugin-Bro-ConfigReader.a  CMakeFiles/plugin-Bro-ConfigReader.dir/Config.cc.o CMakeFiles/plugin-Bro-ConfigReader.dir/Plugin.cc.o CMakeFiles/plugin-Bro-ConfigReader.dir/config.bif.cc.o CMakeFiles/plugin-Bro-ConfigReader.dir/config.bif.init.cc.o
+/usr/bin/ranlib libplugin-Bro-ConfigReader.a

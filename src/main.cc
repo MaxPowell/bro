@@ -8,6 +8,8 @@
 #include <signal.h>
 #include <string.h>
 #include <list>
+#include <iostream>
+#include <fstream>
 #ifdef HAVE_GETOPT_H
 #include <getopt.h>
 #endif
@@ -56,6 +58,11 @@ extern "C" {
 #include "file_analysis/Manager.h"
 #include "broxygen/Manager.h"
 #include "iosource/Manager.h"
+
+/* DPDK */
+extern "C"{
+#include <rte_eal.h>
+};
 
 #include "binpac_bro.h"
 
@@ -429,6 +436,7 @@ static void bro_new_handler()
 
 int main(int argc, char** argv)
 	{
+
 	std::set_new_handler(bro_new_handler);
 
 	double time_start = current_time(true);
@@ -710,6 +718,22 @@ int main(int argc, char** argv)
 	set_processing_status("INITIALIZING", "main");
 
 	bro_start_time = current_time(true);
+
+	/* DPDK */
+	char** eal_opt = NULL;	
+	eal_opt = (char**)malloc(sizeof(char*));
+	eal_opt[0] = (char*)malloc(sizeof(char)*16);
+	strcpy(eal_opt[0], "");
+
+	fprintf(stdout, "Initialising EAL\n");
+	int i = rte_eal_init(1,eal_opt);
+	if(i<0){
+		fprintf(stderr, "\n[+] Error starting EAL\n");
+		return 1;
+	}
+	
+	free(eal_opt[0]);
+	free(eal_opt);
 
 	port_mgr = new PortManager();
 	reporter = new Reporter();
@@ -1109,7 +1133,7 @@ int main(int argc, char** argv)
 
 	iosource_mgr->Register(thread_mgr, true);
 
-	if ( iosource_mgr->Size() > 0 ||
+	if ( /*iosource_mgr->Size() > 0 ||*/
 	     have_pending_timers ||
 	     BifConst::exit_only_after_terminate )
 		{
