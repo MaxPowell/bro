@@ -48,7 +48,7 @@ BinPAC_INCLUDE_DIR:STRING=/home/ubuntu/bro/aux/binpac/lib;/home/ubuntu/bro/my_bu
 BinPAC_LIBRARY:STRING=binpac_lib
 
 //Path to a file.
-BinPAC_ROOT_DIR:PATH=BinPAC_ROOT_DIR-NOTFOUND
+BinPAC_ROOT_DIR:PATH=/usr/local
 
 //Value Computed by CMake
 BinPAC_SOURCE_DIR:STATIC=/home/ubuntu/bro/aux/binpac
@@ -648,7 +648,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=88
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=85
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

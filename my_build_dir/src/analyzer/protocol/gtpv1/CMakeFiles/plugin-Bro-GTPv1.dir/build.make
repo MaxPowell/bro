@@ -76,7 +76,7 @@ src/analyzer/protocol/gtpv1/events.bif.register.cc: src/analyzer/protocol/gtpv1/
 scripts/base/bif/plugins/Bro_GTPv1.events.bif.bro: src/analyzer/protocol/gtpv1/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_GTPv1.events.bif.bro
 
-src/analyzer/protocol/gtpv1/gtpv1_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/analyzer/protocol/gtpv1/binpac
 src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/analyzer/protocol/gtpv1/gtpv1.pac
 src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/binpac.pac
 src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/bro.pac
@@ -84,7 +84,7 @@ src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/analyzer/protocol/gtpv1/gtpv1-protocol.pac
 src/analyzer/protocol/gtpv1/gtpv1_pac.h: ../src/analyzer/protocol/gtpv1/gtpv1-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing gtpv1.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gtpv1 && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gtpv1 -I /home/ubuntu/bro/src/analyzer/protocol/gtpv1 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/gtpv1/gtpv1.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gtpv1 && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gtpv1 -I /home/ubuntu/bro/src/analyzer/protocol/gtpv1 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/gtpv1/gtpv1.pac
 
 src/analyzer/protocol/gtpv1/gtpv1_pac.cc: src/analyzer/protocol/gtpv1/gtpv1_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/gtpv1/gtpv1_pac.cc

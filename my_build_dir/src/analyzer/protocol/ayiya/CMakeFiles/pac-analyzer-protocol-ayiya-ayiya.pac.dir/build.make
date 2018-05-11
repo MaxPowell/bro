@@ -57,7 +57,7 @@ src/analyzer/protocol/ayiya/CMakeFiles/pac-analyzer-protocol-ayiya-ayiya.pac: sr
 src/analyzer/protocol/ayiya/CMakeFiles/pac-analyzer-protocol-ayiya-ayiya.pac: src/analyzer/protocol/ayiya/ayiya_pac.cc
 
 
-src/analyzer/protocol/ayiya/ayiya_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/analyzer/protocol/ayiya/binpac
 src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/analyzer/protocol/ayiya/ayiya.pac
 src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/analyzer/protocol/ayiya/ayiya-protocol.pac
 src/analyzer/protocol/ayiya/ayiya_pac.h: ../src/analyzer/protocol/ayiya/ayiya-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing ayiya.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ayiya && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ayiya -I /home/ubuntu/bro/src/analyzer/protocol/ayiya -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ayiya/ayiya.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ayiya && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ayiya -I /home/ubuntu/bro/src/analyzer/protocol/ayiya -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ayiya/ayiya.pac
 
 src/analyzer/protocol/ayiya/ayiya_pac.cc: src/analyzer/protocol/ayiya/ayiya_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ayiya/ayiya_pac.cc

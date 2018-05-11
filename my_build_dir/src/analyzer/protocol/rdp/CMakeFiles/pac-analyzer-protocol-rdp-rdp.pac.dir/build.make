@@ -57,7 +57,7 @@ src/analyzer/protocol/rdp/CMakeFiles/pac-analyzer-protocol-rdp-rdp.pac: src/anal
 src/analyzer/protocol/rdp/CMakeFiles/pac-analyzer-protocol-rdp-rdp.pac: src/analyzer/protocol/rdp/rdp_pac.cc
 
 
-src/analyzer/protocol/rdp/rdp_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/rdp/rdp_pac.h: ../src/analyzer/protocol/rdp/binpac
 src/analyzer/protocol/rdp/rdp_pac.h: ../src/analyzer/protocol/rdp/rdp.pac
 src/analyzer/protocol/rdp/rdp_pac.h: ../src/binpac.pac
 src/analyzer/protocol/rdp/rdp_pac.h: ../src/bro.pac
@@ -66,7 +66,7 @@ src/analyzer/protocol/rdp/rdp_pac.h: ../src/analyzer/protocol/rdp/rdp-analyzer.p
 src/analyzer/protocol/rdp/rdp_pac.h: ../src/analyzer/protocol/rdp/rdp-protocol.pac
 src/analyzer/protocol/rdp/rdp_pac.h: ../src/analyzer/protocol/rdp/../asn1/asn1.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing rdp.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp -I /home/ubuntu/bro/src/analyzer/protocol/rdp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/rdp/rdp.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp -I /home/ubuntu/bro/src/analyzer/protocol/rdp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/rdp/rdp.pac
 
 src/analyzer/protocol/rdp/rdp_pac.cc: src/analyzer/protocol/rdp/rdp_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/rdp/rdp_pac.cc

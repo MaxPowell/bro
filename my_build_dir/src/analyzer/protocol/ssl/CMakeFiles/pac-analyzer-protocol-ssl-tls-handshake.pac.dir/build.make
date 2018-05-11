@@ -57,7 +57,7 @@ src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-tls-handshake.pac
 src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-tls-handshake.pac: src/analyzer/protocol/ssl/tls-handshake_pac.cc
 
 
-src/analyzer/protocol/ssl/tls-handshake_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/analyzer/protocol/ssl/binpac
 src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/analyzer/protocol/ssl/tls-handshake.pac
 src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/bro.pac
@@ -70,7 +70,7 @@ src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/analyzer/protocol/ssl/proc
 src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/analyzer/protocol/ssl/proc-certificate.pac
 src/analyzer/protocol/ssl/tls-handshake_pac.h: ../src/analyzer/protocol/ssl/tls-handshake-signed_certificate_timestamp.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing tls-handshake.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/tls-handshake.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/tls-handshake.pac
 
 src/analyzer/protocol/ssl/tls-handshake_pac.cc: src/analyzer/protocol/ssl/tls-handshake_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ssl/tls-handshake_pac.cc

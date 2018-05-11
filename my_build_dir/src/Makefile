@@ -2741,6 +2741,33 @@ binpac_bro-lib_pac.cc.s:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/binpac_bro-lib_pac.cc.s
 .PHONY : binpac_bro-lib_pac.cc.s
 
+broLibmoon.o: broLibmoon.cc.o
+
+.PHONY : broLibmoon.o
+
+# target to build an object file
+broLibmoon.cc.o:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/broLibmoon.cc.o
+.PHONY : broLibmoon.cc.o
+
+broLibmoon.i: broLibmoon.cc.i
+
+.PHONY : broLibmoon.i
+
+# target to preprocess a source file
+broLibmoon.cc.i:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/broLibmoon.cc.i
+.PHONY : broLibmoon.cc.i
+
+broLibmoon.s: broLibmoon.cc.s
+
+.PHONY : broLibmoon.s
+
+# target to generate assembly for a file
+broLibmoon.cc.s:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/broLibmoon.cc.s
+.PHONY : broLibmoon.cc.s
+
 bro_inet_ntop.o: bro_inet_ntop.c.o
 
 .PHONY : bro_inet_ntop.o
@@ -3868,6 +3895,9 @@ help:
 	@echo "... binpac_bro-lib_pac.o"
 	@echo "... binpac_bro-lib_pac.i"
 	@echo "... binpac_bro-lib_pac.s"
+	@echo "... broLibmoon.o"
+	@echo "... broLibmoon.i"
+	@echo "... broLibmoon.s"
 	@echo "... bro_inet_ntop.o"
 	@echo "... bro_inet_ntop.i"
 	@echo "... bro_inet_ntop.s"

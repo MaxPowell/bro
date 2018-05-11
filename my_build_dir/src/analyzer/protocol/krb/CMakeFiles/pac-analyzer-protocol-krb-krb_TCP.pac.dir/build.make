@@ -57,7 +57,7 @@ src/analyzer/protocol/krb/CMakeFiles/pac-analyzer-protocol-krb-krb_TCP.pac: src/
 src/analyzer/protocol/krb/CMakeFiles/pac-analyzer-protocol-krb-krb_TCP.pac: src/analyzer/protocol/krb/krb_TCP_pac.cc
 
 
-src/analyzer/protocol/krb/krb_TCP_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/analyzer/protocol/krb/binpac
 src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/analyzer/protocol/krb/krb_TCP.pac
 src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/binpac.pac
 src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/bro.pac
@@ -70,7 +70,7 @@ src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/analyzer/protocol/krb/krb-types.
 src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/analyzer/protocol/krb/krb-padata.pac
 src/analyzer/protocol/krb/krb_TCP_pac.h: ../src/analyzer/protocol/krb/../asn1/asn1.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing krb_TCP.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb -I /home/ubuntu/bro/src/analyzer/protocol/krb -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/krb/krb_TCP.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb -I /home/ubuntu/bro/src/analyzer/protocol/krb -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/krb/krb_TCP.pac
 
 src/analyzer/protocol/krb/krb_TCP_pac.cc: src/analyzer/protocol/krb/krb_TCP_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/krb/krb_TCP_pac.cc

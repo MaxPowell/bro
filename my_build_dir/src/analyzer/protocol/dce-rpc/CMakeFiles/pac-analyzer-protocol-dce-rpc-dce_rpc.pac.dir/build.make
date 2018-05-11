@@ -57,7 +57,7 @@ src/analyzer/protocol/dce-rpc/CMakeFiles/pac-analyzer-protocol-dce-rpc-dce_rpc.p
 src/analyzer/protocol/dce-rpc/CMakeFiles/pac-analyzer-protocol-dce-rpc-dce_rpc.pac: src/analyzer/protocol/dce-rpc/dce_rpc_pac.cc
 
 
-src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/analyzer/protocol/dce-rpc/binpac
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/analyzer/protocol/dce-rpc/dce_rpc.pac
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/binpac.pac
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/bro.pac
@@ -68,7 +68,7 @@ src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/analyzer/protocol/dce-rpc/dc
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/analyzer/protocol/dce-rpc/endpoint-atsvc.pac
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.h: ../src/analyzer/protocol/dce-rpc/endpoint-epmapper.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing dce_rpc.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc -I /home/ubuntu/bro/src/analyzer/protocol/dce-rpc -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/dce-rpc/dce_rpc.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc -I /home/ubuntu/bro/src/analyzer/protocol/dce-rpc -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/dce-rpc/dce_rpc.pac
 
 src/analyzer/protocol/dce-rpc/dce_rpc_pac.cc: src/analyzer/protocol/dce-rpc/dce_rpc_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/dce-rpc/dce_rpc_pac.cc

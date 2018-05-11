@@ -61,7 +61,7 @@ extern "C" {
 
 /* DPDK */
 extern "C"{
-#include <rte_eal.h>
+#include "eal.h"
 };
 
 #include "binpac_bro.h"
@@ -726,7 +726,7 @@ int main(int argc, char** argv)
 	strcpy(eal_opt[0], "");
 
 	fprintf(stdout, "Initialising EAL\n");
-	int i = rte_eal_init(1,eal_opt);
+	int i = rte_eal_init_export(1,eal_opt);
 	if(i<0){
 		fprintf(stderr, "\n[+] Error starting EAL\n");
 		return 1;

@@ -95,7 +95,7 @@ src/file_analysis/analyzer/unified2/types.bif.register.cc: src/file_analysis/ana
 scripts/base/bif/plugins/Bro_Unified2.types.bif.bro: src/file_analysis/analyzer/unified2/types.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_Unified2.types.bif.bro
 
-src/file_analysis/analyzer/unified2/unified2_pac.h: aux/binpac/src/binpac
+src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/file_analysis/analyzer/unified2/binpac
 src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/file_analysis/analyzer/unified2/unified2.pac
 src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/binpac.pac
 src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/bro.pac
@@ -103,7 +103,7 @@ src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/binpac_bro.h
 src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/file_analysis/analyzer/unified2/unified2-file.pac
 src/file_analysis/analyzer/unified2/unified2_pac.h: ../src/file_analysis/analyzer/unified2/unified2-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "[BINPAC] Processing unified2.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2 && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2 -I /home/ubuntu/bro/src/file_analysis/analyzer/unified2 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/unified2/unified2.pac
+	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2 && binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2 -I /home/ubuntu/bro/src/file_analysis/analyzer/unified2 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/unified2/unified2.pac
 
 src/file_analysis/analyzer/unified2/unified2_pac.cc: src/file_analysis/analyzer/unified2/unified2_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/file_analysis/analyzer/unified2/unified2_pac.cc

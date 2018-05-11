@@ -665,7 +665,7 @@ src/analyzer/protocol/smb/types.bif.register.cc: src/analyzer/protocol/smb/types
 scripts/base/bif/plugins/Bro_SMB.types.bif.bro: src/analyzer/protocol/smb/types.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_SMB.types.bif.bro
 
-src/analyzer/protocol/smb/smb_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/smb/smb_pac.h: ../src/analyzer/protocol/smb/binpac
 src/analyzer/protocol/smb/smb_pac.h: ../src/analyzer/protocol/smb/smb.pac
 src/analyzer/protocol/smb/smb_pac.h: ../src/binpac.pac
 src/analyzer/protocol/smb/smb_pac.h: ../src/bro.pac
@@ -710,7 +710,7 @@ src/analyzer/protocol/smb/smb_pac.h: ../src/analyzer/protocol/smb/smb2-com-tree-
 src/analyzer/protocol/smb/smb_pac.h: ../src/analyzer/protocol/smb/smb2-com-tree-disconnect.pac
 src/analyzer/protocol/smb/smb_pac.h: ../src/analyzer/protocol/smb/smb2-com-write.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "[BINPAC] Processing smb.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb -I /home/ubuntu/bro/src/analyzer/protocol/smb -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/smb/smb.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb -I /home/ubuntu/bro/src/analyzer/protocol/smb -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/smb/smb.pac
 
 src/analyzer/protocol/smb/smb_pac.cc: src/analyzer/protocol/smb/smb_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/smb/smb_pac.cc

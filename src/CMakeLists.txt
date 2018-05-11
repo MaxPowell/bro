@@ -373,6 +373,9 @@ set(bro_SRCS
 
     nb_dns.c
     digest.h
+
+	# DPDK
+	broLibmoon.cc
 )
 
 collect_headers(bro_HEADERS ${bro_SRCS})

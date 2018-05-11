@@ -57,7 +57,7 @@ src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac:
 src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac: src/analyzer/protocol/syslog/syslog_pac.cc
 
 
-src/analyzer/protocol/syslog/syslog_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/syslog/syslog_pac.h: ../src/analyzer/protocol/syslog/binpac
 src/analyzer/protocol/syslog/syslog_pac.h: ../src/analyzer/protocol/syslog/syslog.pac
 src/analyzer/protocol/syslog/syslog_pac.h: ../src/binpac.pac
 src/analyzer/protocol/syslog/syslog_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/syslog/syslog_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/syslog/syslog_pac.h: ../src/analyzer/protocol/syslog/syslog-analyzer.pac
 src/analyzer/protocol/syslog/syslog_pac.h: ../src/analyzer/protocol/syslog/syslog-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing syslog.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/syslog && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/syslog -I /home/ubuntu/bro/src/analyzer/protocol/syslog -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/syslog/syslog.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/syslog && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/syslog -I /home/ubuntu/bro/src/analyzer/protocol/syslog -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/syslog/syslog.pac
 
 src/analyzer/protocol/syslog/syslog_pac.cc: src/analyzer/protocol/syslog/syslog_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/syslog/syslog_pac.cc

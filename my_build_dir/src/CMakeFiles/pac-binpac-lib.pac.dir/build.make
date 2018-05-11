@@ -57,13 +57,13 @@ src/CMakeFiles/pac-binpac-lib.pac: src/binpac-lib_pac.h
 src/CMakeFiles/pac-binpac-lib.pac: src/binpac-lib_pac.cc
 
 
-src/binpac-lib_pac.h: aux/binpac/src/binpac
+src/binpac-lib_pac.h: ../src/binpac
 src/binpac-lib_pac.h: ../src/binpac-lib.pac
 src/binpac-lib_pac.h: ../src/binpac.pac
 src/binpac-lib_pac.h: ../src/bro.pac
 src/binpac-lib_pac.h: ../src/binpac_bro.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing binpac-lib.pac"
-	cd /home/ubuntu/bro/my_build_dir/src && ../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac-lib.pac
+	cd /home/ubuntu/bro/my_build_dir/src && binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac-lib.pac
 
 src/binpac-lib_pac.cc: src/binpac-lib_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/binpac-lib_pac.cc

@@ -57,13 +57,13 @@ src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac: src/anal
 src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac: src/analyzer/protocol/ncp/ncp_pac.cc
 
 
-src/analyzer/protocol/ncp/ncp_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ncp/ncp_pac.h: ../src/analyzer/protocol/ncp/binpac
 src/analyzer/protocol/ncp/ncp_pac.h: ../src/analyzer/protocol/ncp/ncp.pac
 src/analyzer/protocol/ncp/ncp_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ncp/ncp_pac.h: ../src/bro.pac
 src/analyzer/protocol/ncp/ncp_pac.h: ../src/binpac_bro.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing ncp.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ncp && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ncp -I /home/ubuntu/bro/src/analyzer/protocol/ncp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ncp/ncp.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ncp && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ncp -I /home/ubuntu/bro/src/analyzer/protocol/ncp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ncp/ncp.pac
 
 src/analyzer/protocol/ncp/ncp_pac.cc: src/analyzer/protocol/ncp/ncp_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ncp/ncp_pac.cc

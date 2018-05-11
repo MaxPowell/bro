@@ -57,7 +57,7 @@ src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-ssl.pac: src/anal
 src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-ssl.pac: src/analyzer/protocol/ssl/ssl_pac.cc
 
 
-src/analyzer/protocol/ssl/ssl_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ssl/ssl_pac.h: ../src/analyzer/protocol/ssl/binpac
 src/analyzer/protocol/ssl/ssl_pac.h: ../src/analyzer/protocol/ssl/ssl.pac
 src/analyzer/protocol/ssl/ssl_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ssl/ssl_pac.h: ../src/bro.pac
@@ -71,7 +71,7 @@ src/analyzer/protocol/ssl/ssl_pac.h: ../src/analyzer/protocol/ssl/proc-client-he
 src/analyzer/protocol/ssl/ssl_pac.h: ../src/analyzer/protocol/ssl/proc-server-hello.pac
 src/analyzer/protocol/ssl/ssl_pac.h: ../src/analyzer/protocol/ssl/proc-certificate.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing ssl.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/ssl.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/ssl.pac
 
 src/analyzer/protocol/ssl/ssl_pac.cc: src/analyzer/protocol/ssl/ssl_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ssl/ssl_pac.cc

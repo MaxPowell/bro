@@ -76,7 +76,7 @@ src/file_analysis/analyzer/pe/events.bif.register.cc: src/file_analysis/analyzer
 scripts/base/bif/plugins/Bro_PE.events.bif.bro: src/file_analysis/analyzer/pe/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_PE.events.bif.bro
 
-src/file_analysis/analyzer/pe/pe_pac.h: aux/binpac/src/binpac
+src/file_analysis/analyzer/pe/pe_pac.h: ../src/file_analysis/analyzer/pe/binpac
 src/file_analysis/analyzer/pe/pe_pac.h: ../src/file_analysis/analyzer/pe/pe.pac
 src/file_analysis/analyzer/pe/pe_pac.h: ../src/binpac.pac
 src/file_analysis/analyzer/pe/pe_pac.h: ../src/bro.pac
@@ -84,7 +84,7 @@ src/file_analysis/analyzer/pe/pe_pac.h: ../src/binpac_bro.h
 src/file_analysis/analyzer/pe/pe_pac.h: ../src/file_analysis/analyzer/pe/pe-file.pac
 src/file_analysis/analyzer/pe/pe_pac.h: ../src/file_analysis/analyzer/pe/pe-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing pe.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/pe && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/pe -I /home/ubuntu/bro/src/file_analysis/analyzer/pe -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/pe/pe.pac
+	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/pe && binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/pe -I /home/ubuntu/bro/src/file_analysis/analyzer/pe -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/pe/pe.pac
 
 src/file_analysis/analyzer/pe/pe_pac.cc: src/file_analysis/analyzer/pe/pe_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/file_analysis/analyzer/pe/pe_pac.cc

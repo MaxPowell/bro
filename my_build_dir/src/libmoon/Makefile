@@ -245,6 +245,33 @@ src/device.c.s:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/libmoon/CMakeFiles/moon.dir/build.make src/libmoon/CMakeFiles/moon.dir/src/device.c.s
 .PHONY : src/device.c.s
 
+src/eal.o: src/eal.c.o
+
+.PHONY : src/eal.o
+
+# target to build an object file
+src/eal.c.o:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/libmoon/CMakeFiles/moon.dir/build.make src/libmoon/CMakeFiles/moon.dir/src/eal.c.o
+.PHONY : src/eal.c.o
+
+src/eal.i: src/eal.c.i
+
+.PHONY : src/eal.i
+
+# target to preprocess a source file
+src/eal.c.i:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/libmoon/CMakeFiles/moon.dir/build.make src/libmoon/CMakeFiles/moon.dir/src/eal.c.i
+.PHONY : src/eal.c.i
+
+src/eal.s: src/eal.c.s
+
+.PHONY : src/eal.s
+
+# target to generate assembly for a file
+src/eal.c.s:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/libmoon/CMakeFiles/moon.dir/build.make src/libmoon/CMakeFiles/moon.dir/src/eal.c.s
+.PHONY : src/eal.c.s
+
 src/filter.o: src/filter.c.o
 
 .PHONY : src/filter.o
@@ -752,6 +779,9 @@ help:
 	@echo "... src/device.o"
 	@echo "... src/device.i"
 	@echo "... src/device.s"
+	@echo "... src/eal.o"
+	@echo "... src/eal.i"
+	@echo "... src/eal.s"
 	@echo "... src/filter.o"
 	@echo "... src/filter.i"
 	@echo "... src/filter.s"

@@ -57,7 +57,7 @@ src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac: src/a
 src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac: src/analyzer/protocol/dhcp/dhcp_pac.cc
 
 
-src/analyzer/protocol/dhcp/dhcp_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/analyzer/protocol/dhcp/binpac
 src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/analyzer/protocol/dhcp/dhcp.pac
 src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/binpac.pac
 src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/analyzer/protocol/dhcp/dhcp-protocol.pac
 src/analyzer/protocol/dhcp/dhcp_pac.h: ../src/analyzer/protocol/dhcp/dhcp-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing dhcp.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dhcp && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dhcp -I /home/ubuntu/bro/src/analyzer/protocol/dhcp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/dhcp/dhcp.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dhcp && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dhcp -I /home/ubuntu/bro/src/analyzer/protocol/dhcp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/dhcp/dhcp.pac
 
 src/analyzer/protocol/dhcp/dhcp_pac.cc: src/analyzer/protocol/dhcp/dhcp_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/dhcp/dhcp_pac.cc

@@ -76,7 +76,7 @@ src/analyzer/protocol/gssapi/events.bif.register.cc: src/analyzer/protocol/gssap
 scripts/base/bif/plugins/Bro_GSSAPI.events.bif.bro: src/analyzer/protocol/gssapi/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_GSSAPI.events.bif.bro
 
-src/analyzer/protocol/gssapi/gssapi_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/analyzer/protocol/gssapi/binpac
 src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/analyzer/protocol/gssapi/gssapi.pac
 src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/binpac.pac
 src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/bro.pac
@@ -85,7 +85,7 @@ src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/analyzer/protocol/gssapi/gssap
 src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/analyzer/protocol/gssapi/gssapi-analyzer.pac
 src/analyzer/protocol/gssapi/gssapi_pac.h: ../src/analyzer/protocol/gssapi/../asn1/asn1.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing gssapi.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gssapi && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gssapi -I /home/ubuntu/bro/src/analyzer/protocol/gssapi -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/gssapi/gssapi.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gssapi && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gssapi -I /home/ubuntu/bro/src/analyzer/protocol/gssapi -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/gssapi/gssapi.pac
 
 src/analyzer/protocol/gssapi/gssapi_pac.cc: src/analyzer/protocol/gssapi/gssapi_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/gssapi/gssapi_pac.cc

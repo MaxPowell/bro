@@ -132,6 +132,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/bro.dir/plugin/Manager.cc.o"
   "CMakeFiles/bro.dir/plugin/Plugin.cc.o"
   "CMakeFiles/bro.dir/nb_dns.c.o"
+  "CMakeFiles/bro.dir/broLibmoon.cc.o"
   "bro.pdb"
   "bro"
 )

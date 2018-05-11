@@ -133,14 +133,14 @@ src/file_analysis/analyzer/x509/ocsp_events.bif.register.cc: src/file_analysis/a
 scripts/base/bif/plugins/Bro_X509.ocsp_events.bif.bro: src/file_analysis/analyzer/x509/ocsp_events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_X509.ocsp_events.bif.bro
 
-src/file_analysis/analyzer/x509/x509-extension_pac.h: aux/binpac/src/binpac
+src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/file_analysis/analyzer/x509/binpac
 src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/file_analysis/analyzer/x509/x509-extension.pac
 src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/binpac.pac
 src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/bro.pac
 src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/binpac_bro.h
 src/file_analysis/analyzer/x509/x509-extension_pac.h: ../src/file_analysis/analyzer/x509/x509-signed_certificate_timestamp.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "[BINPAC] Processing x509-extension.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509 && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509 -I /home/ubuntu/bro/src/file_analysis/analyzer/x509 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/x509/x509-extension.pac
+	cd /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509 && binpac -q -d /home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509 -I /home/ubuntu/bro/src/file_analysis/analyzer/x509 -I /home/ubuntu/bro/src /home/ubuntu/bro/src/file_analysis/analyzer/x509/x509-extension.pac
 
 src/file_analysis/analyzer/x509/x509-extension_pac.cc: src/file_analysis/analyzer/x509/x509-extension_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/file_analysis/analyzer/x509/x509-extension_pac.cc

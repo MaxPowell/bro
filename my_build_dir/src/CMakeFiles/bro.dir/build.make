@@ -57,24 +57,24 @@ include src/CMakeFiles/bro.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/bro.dir/flags.make
 
-src/binpac-lib_pac.h: aux/binpac/src/binpac
+src/binpac-lib_pac.h: ../src/binpac
 src/binpac-lib_pac.h: ../src/binpac-lib.pac
 src/binpac-lib_pac.h: ../src/binpac.pac
 src/binpac-lib_pac.h: ../src/bro.pac
 src/binpac-lib_pac.h: ../src/binpac_bro.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing binpac-lib.pac"
-	cd /home/ubuntu/bro/my_build_dir/src && ../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac-lib.pac
+	cd /home/ubuntu/bro/my_build_dir/src && binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac-lib.pac
 
 src/binpac-lib_pac.cc: src/binpac-lib_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/binpac-lib_pac.cc
 
-src/binpac_bro-lib_pac.h: aux/binpac/src/binpac
+src/binpac_bro-lib_pac.h: ../src/binpac
 src/binpac_bro-lib_pac.h: ../src/binpac_bro-lib.pac
 src/binpac_bro-lib_pac.h: ../src/binpac.pac
 src/binpac_bro-lib_pac.h: ../src/bro.pac
 src/binpac_bro-lib_pac.h: ../src/binpac_bro.h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing binpac_bro-lib.pac"
-	cd /home/ubuntu/bro/my_build_dir/src && ../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac_bro-lib.pac
+	cd /home/ubuntu/bro/my_build_dir/src && binpac -q -d /home/ubuntu/bro/my_build_dir/src -I /home/ubuntu/bro/src -I /home/ubuntu/bro/src /home/ubuntu/bro/src/binpac_bro-lib.pac
 
 src/binpac_bro-lib_pac.cc: src/binpac_bro-lib_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/binpac_bro-lib_pac.cc
@@ -2849,6 +2849,30 @@ src/CMakeFiles/bro.dir/nb_dns.c.o.provides: src/CMakeFiles/bro.dir/nb_dns.c.o.re
 src/CMakeFiles/bro.dir/nb_dns.c.o.provides.build: src/CMakeFiles/bro.dir/nb_dns.c.o
 
 
+src/CMakeFiles/bro.dir/broLibmoon.cc.o: src/CMakeFiles/bro.dir/flags.make
+src/CMakeFiles/bro.dir/broLibmoon.cc.o: ../src/broLibmoon.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object src/CMakeFiles/bro.dir/broLibmoon.cc.o"
+	cd /home/ubuntu/bro/my_build_dir/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bro.dir/broLibmoon.cc.o -c /home/ubuntu/bro/src/broLibmoon.cc
+
+src/CMakeFiles/bro.dir/broLibmoon.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bro.dir/broLibmoon.cc.i"
+	cd /home/ubuntu/bro/my_build_dir/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/bro/src/broLibmoon.cc > CMakeFiles/bro.dir/broLibmoon.cc.i
+
+src/CMakeFiles/bro.dir/broLibmoon.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bro.dir/broLibmoon.cc.s"
+	cd /home/ubuntu/bro/my_build_dir/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/bro/src/broLibmoon.cc -o CMakeFiles/bro.dir/broLibmoon.cc.s
+
+src/CMakeFiles/bro.dir/broLibmoon.cc.o.requires:
+
+.PHONY : src/CMakeFiles/bro.dir/broLibmoon.cc.o.requires
+
+src/CMakeFiles/bro.dir/broLibmoon.cc.o.provides: src/CMakeFiles/bro.dir/broLibmoon.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/broLibmoon.cc.o.provides.build
+.PHONY : src/CMakeFiles/bro.dir/broLibmoon.cc.o.provides
+
+src/CMakeFiles/bro.dir/broLibmoon.cc.o.provides.build: src/CMakeFiles/bro.dir/broLibmoon.cc.o
+
+
 # Object files for target bro
 bro_OBJECTS = \
 "CMakeFiles/bro.dir/version.c.o" \
@@ -2963,7 +2987,8 @@ bro_OBJECTS = \
 "CMakeFiles/bro.dir/plugin/Component.cc.o" \
 "CMakeFiles/bro.dir/plugin/Manager.cc.o" \
 "CMakeFiles/bro.dir/plugin/Plugin.cc.o" \
-"CMakeFiles/bro.dir/nb_dns.c.o"
+"CMakeFiles/bro.dir/nb_dns.c.o" \
+"CMakeFiles/bro.dir/broLibmoon.cc.o"
 
 # External object files for target bro
 bro_EXTERNAL_OBJECTS =
@@ -3081,6 +3106,7 @@ src/bro: src/CMakeFiles/bro.dir/plugin/Component.cc.o
 src/bro: src/CMakeFiles/bro.dir/plugin/Manager.cc.o
 src/bro: src/CMakeFiles/bro.dir/plugin/Plugin.cc.o
 src/bro: src/CMakeFiles/bro.dir/nb_dns.c.o
+src/bro: src/CMakeFiles/bro.dir/broLibmoon.cc.o
 src/bro: src/CMakeFiles/bro.dir/build.make
 src/bro: src/analyzer/protocol/arp/libplugin-Bro-ARP.a
 src/bro: src/analyzer/protocol/ayiya/libplugin-Bro-AYIYA.a
@@ -3157,7 +3183,6 @@ src/bro: src/input/libbro_input.a
 src/bro: src/file_analysis/libbro_file_analysis.a
 src/bro: src/broxygen/libbro_broxygen.a
 src/bro: src/analyzer/libbro_analyzer.a
-src/bro: aux/binpac/lib/libbinpac.a
 src/bro: /usr/lib/x86_64-linux-gnu/libpcap.so
 src/bro: /usr/lib/x86_64-linux-gnu/libssl.so
 src/bro: /usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -3165,7 +3190,7 @@ src/bro: /usr/lib/x86_64-linux-gnu/libresolv.a
 src/bro: /usr/lib/x86_64-linux-gnu/libz.so
 src/bro: src/libmoon/libmoon.a
 src/bro: src/CMakeFiles/bro.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Linking CXX executable bro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Linking CXX executable bro"
 	cd /home/ubuntu/bro/my_build_dir/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bro.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -3286,6 +3311,7 @@ src/CMakeFiles/bro.dir/requires: src/CMakeFiles/bro.dir/plugin/Component.cc.o.re
 src/CMakeFiles/bro.dir/requires: src/CMakeFiles/bro.dir/plugin/Manager.cc.o.requires
 src/CMakeFiles/bro.dir/requires: src/CMakeFiles/bro.dir/plugin/Plugin.cc.o.requires
 src/CMakeFiles/bro.dir/requires: src/CMakeFiles/bro.dir/nb_dns.c.o.requires
+src/CMakeFiles/bro.dir/requires: src/CMakeFiles/bro.dir/broLibmoon.cc.o.requires
 
 .PHONY : src/CMakeFiles/bro.dir/requires
 

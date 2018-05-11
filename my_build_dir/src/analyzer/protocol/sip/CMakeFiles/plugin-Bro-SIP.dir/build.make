@@ -76,7 +76,7 @@ src/analyzer/protocol/sip/events.bif.register.cc: src/analyzer/protocol/sip/even
 scripts/base/bif/plugins/Bro_SIP.events.bif.bro: src/analyzer/protocol/sip/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_SIP.events.bif.bro
 
-src/analyzer/protocol/sip/sip_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/sip/sip_pac.h: ../src/analyzer/protocol/sip/binpac
 src/analyzer/protocol/sip/sip_pac.h: ../src/analyzer/protocol/sip/sip.pac
 src/analyzer/protocol/sip/sip_pac.h: ../src/binpac.pac
 src/analyzer/protocol/sip/sip_pac.h: ../src/bro.pac
@@ -84,12 +84,12 @@ src/analyzer/protocol/sip/sip_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/sip/sip_pac.h: ../src/analyzer/protocol/sip/sip-analyzer.pac
 src/analyzer/protocol/sip/sip_pac.h: ../src/analyzer/protocol/sip/sip-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing sip.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip -I /home/ubuntu/bro/src/analyzer/protocol/sip -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/sip/sip.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip -I /home/ubuntu/bro/src/analyzer/protocol/sip -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/sip/sip.pac
 
 src/analyzer/protocol/sip/sip_pac.cc: src/analyzer/protocol/sip/sip_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/sip/sip_pac.cc
 
-src/analyzer/protocol/sip/sip_TCP_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/analyzer/protocol/sip/binpac
 src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/analyzer/protocol/sip/sip_TCP.pac
 src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/binpac.pac
 src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/bro.pac
@@ -97,7 +97,7 @@ src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/analyzer/protocol/sip/sip-protocol.pac
 src/analyzer/protocol/sip/sip_TCP_pac.h: ../src/analyzer/protocol/sip/sip-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "[BINPAC] Processing sip_TCP.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip -I /home/ubuntu/bro/src/analyzer/protocol/sip -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/sip/sip_TCP.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip -I /home/ubuntu/bro/src/analyzer/protocol/sip -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/sip/sip_TCP.pac
 
 src/analyzer/protocol/sip/sip_TCP_pac.cc: src/analyzer/protocol/sip/sip_TCP_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/sip/sip_TCP_pac.cc

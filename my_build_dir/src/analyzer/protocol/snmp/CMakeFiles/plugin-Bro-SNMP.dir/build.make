@@ -95,7 +95,7 @@ src/analyzer/protocol/snmp/events.bif.register.cc: src/analyzer/protocol/snmp/ev
 scripts/base/bif/plugins/Bro_SNMP.events.bif.bro: src/analyzer/protocol/snmp/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_SNMP.events.bif.bro
 
-src/analyzer/protocol/snmp/snmp_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/snmp/snmp_pac.h: ../src/analyzer/protocol/snmp/binpac
 src/analyzer/protocol/snmp/snmp_pac.h: ../src/analyzer/protocol/snmp/snmp.pac
 src/analyzer/protocol/snmp/snmp_pac.h: ../src/binpac.pac
 src/analyzer/protocol/snmp/snmp_pac.h: ../src/bro.pac
@@ -104,7 +104,7 @@ src/analyzer/protocol/snmp/snmp_pac.h: ../src/analyzer/protocol/snmp/snmp-protoc
 src/analyzer/protocol/snmp/snmp_pac.h: ../src/analyzer/protocol/snmp/snmp-analyzer.pac
 src/analyzer/protocol/snmp/snmp_pac.h: ../src/analyzer/protocol/snmp/../asn1/asn1.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "[BINPAC] Processing snmp.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp -I /home/ubuntu/bro/src/analyzer/protocol/snmp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/snmp/snmp.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp -I /home/ubuntu/bro/src/analyzer/protocol/snmp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/snmp/snmp.pac
 
 src/analyzer/protocol/snmp/snmp_pac.cc: src/analyzer/protocol/snmp/snmp_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/snmp/snmp_pac.cc

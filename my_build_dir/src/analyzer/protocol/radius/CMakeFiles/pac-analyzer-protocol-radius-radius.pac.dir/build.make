@@ -57,7 +57,7 @@ src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac:
 src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac: src/analyzer/protocol/radius/radius_pac.cc
 
 
-src/analyzer/protocol/radius/radius_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/radius/radius_pac.h: ../src/analyzer/protocol/radius/binpac
 src/analyzer/protocol/radius/radius_pac.h: ../src/analyzer/protocol/radius/radius.pac
 src/analyzer/protocol/radius/radius_pac.h: ../src/binpac.pac
 src/analyzer/protocol/radius/radius_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/radius/radius_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/radius/radius_pac.h: ../src/analyzer/protocol/radius/radius-analyzer.pac
 src/analyzer/protocol/radius/radius_pac.h: ../src/analyzer/protocol/radius/radius-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing radius.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/radius && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/radius -I /home/ubuntu/bro/src/analyzer/protocol/radius -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/radius/radius.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/radius && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/radius -I /home/ubuntu/bro/src/analyzer/protocol/radius -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/radius/radius.pac
 
 src/analyzer/protocol/radius/radius_pac.cc: src/analyzer/protocol/radius/radius_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/radius/radius_pac.cc

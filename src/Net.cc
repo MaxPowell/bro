@@ -42,8 +42,7 @@
 extern "C" {
 #include "device.h"
 };
-#define MAX_PKT_BURST 256
-
+#include "broLibmoon.h"
 
 extern "C" {
 #include "setsignal.h"
@@ -347,7 +346,8 @@ void net_run()
 
 		/*if ( src )
 			src->Process();*/	// which will call net_packet_dispatch()
-		if(port_id >= 0){
+
+		/*if(port_id >= 0){
 			n_pkt = rte_eth_rx_burst_export(port_id, 0, bufs, MAX_PKT_BURST);
 			if(n_pkt > 0){ //TODO Implement likely() to improve performance
 				for(int i=0;i<n_pkt;i++){
@@ -355,7 +355,9 @@ void net_run()
 					printf("I read something!\n");
 				}
 			}
-		}
+		}*/
+		if(port_id>=0)
+			startCapturing();
 
 		else if ( reading_live && ! pseudo_realtime)
 			{ // live but  no source is currently active

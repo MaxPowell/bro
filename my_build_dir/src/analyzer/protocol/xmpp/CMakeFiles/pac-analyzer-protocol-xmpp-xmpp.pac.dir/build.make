@@ -57,7 +57,7 @@ src/analyzer/protocol/xmpp/CMakeFiles/pac-analyzer-protocol-xmpp-xmpp.pac: src/a
 src/analyzer/protocol/xmpp/CMakeFiles/pac-analyzer-protocol-xmpp-xmpp.pac: src/analyzer/protocol/xmpp/xmpp_pac.cc
 
 
-src/analyzer/protocol/xmpp/xmpp_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/analyzer/protocol/xmpp/binpac
 src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/analyzer/protocol/xmpp/xmpp.pac
 src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/binpac.pac
 src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/analyzer/protocol/xmpp/xmpp-analyzer.pac
 src/analyzer/protocol/xmpp/xmpp_pac.h: ../src/analyzer/protocol/xmpp/xmpp-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing xmpp.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/xmpp && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/xmpp -I /home/ubuntu/bro/src/analyzer/protocol/xmpp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/xmpp/xmpp.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/xmpp && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/xmpp -I /home/ubuntu/bro/src/analyzer/protocol/xmpp -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/xmpp/xmpp.pac
 
 src/analyzer/protocol/xmpp/xmpp_pac.cc: src/analyzer/protocol/xmpp/xmpp_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/xmpp/xmpp_pac.cc

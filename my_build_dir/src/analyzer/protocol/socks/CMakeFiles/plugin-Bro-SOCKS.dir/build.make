@@ -76,7 +76,7 @@ src/analyzer/protocol/socks/events.bif.register.cc: src/analyzer/protocol/socks/
 scripts/base/bif/plugins/Bro_SOCKS.events.bif.bro: src/analyzer/protocol/socks/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_SOCKS.events.bif.bro
 
-src/analyzer/protocol/socks/socks_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/socks/socks_pac.h: ../src/analyzer/protocol/socks/binpac
 src/analyzer/protocol/socks/socks_pac.h: ../src/analyzer/protocol/socks/socks.pac
 src/analyzer/protocol/socks/socks_pac.h: ../src/binpac.pac
 src/analyzer/protocol/socks/socks_pac.h: ../src/bro.pac
@@ -84,7 +84,7 @@ src/analyzer/protocol/socks/socks_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/socks/socks_pac.h: ../src/analyzer/protocol/socks/socks-protocol.pac
 src/analyzer/protocol/socks/socks_pac.h: ../src/analyzer/protocol/socks/socks-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing socks.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/socks && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/socks -I /home/ubuntu/bro/src/analyzer/protocol/socks -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/socks/socks.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/socks && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/socks -I /home/ubuntu/bro/src/analyzer/protocol/socks -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/socks/socks.pac
 
 src/analyzer/protocol/socks/socks_pac.cc: src/analyzer/protocol/socks/socks_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/socks/socks_pac.cc

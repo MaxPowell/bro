@@ -76,7 +76,7 @@ src/analyzer/protocol/imap/events.bif.register.cc: src/analyzer/protocol/imap/ev
 scripts/base/bif/plugins/Bro_IMAP.events.bif.bro: src/analyzer/protocol/imap/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_IMAP.events.bif.bro
 
-src/analyzer/protocol/imap/imap_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/imap/imap_pac.h: ../src/analyzer/protocol/imap/binpac
 src/analyzer/protocol/imap/imap_pac.h: ../src/analyzer/protocol/imap/imap.pac
 src/analyzer/protocol/imap/imap_pac.h: ../src/binpac.pac
 src/analyzer/protocol/imap/imap_pac.h: ../src/bro.pac
@@ -84,7 +84,7 @@ src/analyzer/protocol/imap/imap_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/imap/imap_pac.h: ../src/analyzer/protocol/imap/imap-analyzer.pac
 src/analyzer/protocol/imap/imap_pac.h: ../src/analyzer/protocol/imap/imap-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[BINPAC] Processing imap.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/imap && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/imap -I /home/ubuntu/bro/src/analyzer/protocol/imap -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/imap/imap.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/imap && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/imap -I /home/ubuntu/bro/src/analyzer/protocol/imap -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/imap/imap.pac
 
 src/analyzer/protocol/imap/imap_pac.cc: src/analyzer/protocol/imap/imap_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/imap/imap_pac.cc

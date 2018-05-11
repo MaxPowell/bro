@@ -95,7 +95,7 @@ src/analyzer/protocol/ntlm/events.bif.register.cc: src/analyzer/protocol/ntlm/ev
 scripts/base/bif/plugins/Bro_NTLM.events.bif.bro: src/analyzer/protocol/ntlm/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_NTLM.events.bif.bro
 
-src/analyzer/protocol/ntlm/ntlm_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/analyzer/protocol/ntlm/binpac
 src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/analyzer/protocol/ntlm/ntlm.pac
 src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/bro.pac
@@ -103,7 +103,7 @@ src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/analyzer/protocol/ntlm/ntlm-protocol.pac
 src/analyzer/protocol/ntlm/ntlm_pac.h: ../src/analyzer/protocol/ntlm/ntlm-analyzer.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "[BINPAC] Processing ntlm.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm -I /home/ubuntu/bro/src/analyzer/protocol/ntlm -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ntlm/ntlm.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm -I /home/ubuntu/bro/src/analyzer/protocol/ntlm -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ntlm/ntlm.pac
 
 src/analyzer/protocol/ntlm/ntlm_pac.cc: src/analyzer/protocol/ntlm/ntlm_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ntlm/ntlm_pac.cc

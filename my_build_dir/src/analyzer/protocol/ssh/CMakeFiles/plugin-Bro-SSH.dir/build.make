@@ -95,7 +95,7 @@ src/analyzer/protocol/ssh/events.bif.register.cc: src/analyzer/protocol/ssh/even
 scripts/base/bif/plugins/Bro_SSH.events.bif.bro: src/analyzer/protocol/ssh/events.bif.h
 	@$(CMAKE_COMMAND) -E touch_nocreate scripts/base/bif/plugins/Bro_SSH.events.bif.bro
 
-src/analyzer/protocol/ssh/ssh_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ssh/ssh_pac.h: ../src/analyzer/protocol/ssh/binpac
 src/analyzer/protocol/ssh/ssh_pac.h: ../src/analyzer/protocol/ssh/ssh.pac
 src/analyzer/protocol/ssh/ssh_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ssh/ssh_pac.h: ../src/bro.pac
@@ -104,7 +104,7 @@ src/analyzer/protocol/ssh/ssh_pac.h: ../src/analyzer/protocol/ssh/ssh-analyzer.p
 src/analyzer/protocol/ssh/ssh_pac.h: ../src/analyzer/protocol/ssh/ssh-protocol.pac
 src/analyzer/protocol/ssh/ssh_pac.h: ../src/analyzer/protocol/ssh/consts.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "[BINPAC] Processing ssh.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh -I /home/ubuntu/bro/src/analyzer/protocol/ssh -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssh/ssh.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh -I /home/ubuntu/bro/src/analyzer/protocol/ssh -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssh/ssh.pac
 
 src/analyzer/protocol/ssh/ssh_pac.cc: src/analyzer/protocol/ssh/ssh_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ssh/ssh_pac.cc

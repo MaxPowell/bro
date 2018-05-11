@@ -38,11 +38,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   
-    if (NOT "ubuntu" STREQUAL "$ENV{USER}" AND
+    if (NOT "root" STREQUAL "$ENV{USER}" AND
         NOT "$ENV{USER}" STREQUAL root)
         message(STATUS "WARNING: Install is being performed by user "
                 "'$ENV{USER}', but the build directory was configured by "
-                "user 'ubuntu'. This may result in a permissions error "
+                "user 'root'. This may result in a permissions error "
                 "when writing the install manifest, but you can ignore it "
                 "and consider the installation as successful if you don't "
                 "care about the install manifest.")
@@ -52,7 +52,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ubuntu/bro/my_build_dir/aux/binpac/cmake_install.cmake")
   include("/home/ubuntu/bro/my_build_dir/src/cmake_install.cmake")
   include("/home/ubuntu/bro/my_build_dir/scripts/cmake_install.cmake")
   include("/home/ubuntu/bro/my_build_dir/doc/cmake_install.cmake")

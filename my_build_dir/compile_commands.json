@@ -1,220 +1,5 @@
 [
 {
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/lib",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac_lib.dir/binpac_buffer.cc.o -c /home/ubuntu/bro/aux/binpac/lib/binpac_buffer.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/lib/binpac_buffer.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/lib",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac_lib.dir/binpac_bytestring.cc.o -c /home/ubuntu/bro/aux/binpac/lib/binpac_bytestring.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/lib/binpac_bytestring.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/lib",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac_lib.dir/binpac_regex.cc.o -c /home/ubuntu/bro/aux/binpac/lib/binpac_regex.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/lib/binpac_regex.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_parse.cc.o -c /home/ubuntu/bro/my_build_dir/aux/binpac/src/pac_parse.cc",
-  "file": "/home/ubuntu/bro/my_build_dir/aux/binpac/src/pac_parse.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_scan.cc.o -c /home/ubuntu/bro/my_build_dir/aux/binpac/src/pac_scan.cc",
-  "file": "/home/ubuntu/bro/my_build_dir/aux/binpac/src/pac_scan.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_action.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_action.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_action.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_analyzer.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_analyzer.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_analyzer.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_array.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_array.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_array.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_attr.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_attr.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_attr.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_btype.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_btype.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_btype.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_case.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_case.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_case.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_conn.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_conn.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_conn.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_context.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_context.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_context.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_cstr.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_cstr.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_cstr.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_datadep.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_datadep.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_datadep.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_dataptr.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_dataptr.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_dataptr.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_dataunit.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_dataunit.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_dataunit.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_decl.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_decl.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_decl.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_embedded.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_embedded.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_embedded.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_enum.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_enum.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_enum.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_expr.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_expr.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_expr.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_exttype.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_exttype.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_exttype.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_field.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_field.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_field.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_flow.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_flow.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_flow.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_func.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_func.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_func.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_id.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_id.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_id.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_inputbuf.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_inputbuf.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_inputbuf.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_let.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_let.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_let.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_param.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_param.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_param.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_paramtype.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_paramtype.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_paramtype.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_primitive.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_primitive.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_primitive.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_record.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_record.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_record.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_redef.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_redef.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_redef.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_regex.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_regex.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_regex.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_state.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_state.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_state.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_strtype.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_strtype.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_strtype.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_type.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_type.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_type.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_typedecl.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_typedecl.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_typedecl.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_withinput.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_withinput.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_withinput.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_output.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_output.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_output.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_utils.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_utils.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_utils.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_exception.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_exception.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_exception.cc"
-},
-{
-  "directory": "/home/ubuntu/bro/my_build_dir/aux/binpac/src",
-  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac -I/home/ubuntu/bro/aux/binpac/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/src   -Wall -Wno-unused -O2 -g -DNDEBUG   -o CMakeFiles/binpac.dir/pac_main.cc.o -c /home/ubuntu/bro/aux/binpac/src/pac_main.cc",
-  "file": "/home/ubuntu/bro/aux/binpac/src/pac_main.cc"
-},
-{
   "directory": "/home/ubuntu/bro/my_build_dir/src",
   "command": "/usr/bin/c++    -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir   -Wall -Wno-unused -std=c++11 -O2 -g -DNDEBUG   -o CMakeFiles/bifcl.dir/bif_parse.cc.o -c /home/ubuntu/bro/my_build_dir/src/bif_parse.cc",
   "file": "/home/ubuntu/bro/my_build_dir/src/bif_parse.cc"
@@ -798,6 +583,11 @@
   "directory": "/home/ubuntu/bro/my_build_dir/src",
   "command": "/usr/bin/cc   -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir   -Wall -Wno-unused -O2 -g -DNDEBUG   -fno-strict-aliasing -o CMakeFiles/bro.dir/nb_dns.c.o   -c /home/ubuntu/bro/src/nb_dns.c",
   "file": "/home/ubuntu/bro/src/nb_dns.c"
+},
+{
+  "directory": "/home/ubuntu/bro/my_build_dir/src",
+  "command": "/usr/bin/c++    -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir   -Wall -Wno-unused -std=c++11 -O2 -g -DNDEBUG   -o CMakeFiles/bro.dir/broLibmoon.cc.o -c /home/ubuntu/bro/src/broLibmoon.cc",
+  "file": "/home/ubuntu/bro/src/broLibmoon.cc"
 },
 {
   "directory": "/home/ubuntu/bro/my_build_dir/src/analyzer",
@@ -3198,6 +2988,11 @@
   "directory": "/home/ubuntu/bro/my_build_dir/src/libmoon",
   "command": "/usr/bin/c++   -DLIBMOON_BUILD_LIB -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/bnxt -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/ixgbe/base -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/ixgbe -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/i40e/base -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/i40e -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/e1000 -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/e1000/base  -fno-stack-protector -Wall -Wextra -Wno-unused-parameter -g -O3 -std=gnu++11 -march=native -msse4.2 -O2 -g -DNDEBUG   -o CMakeFiles/moon.dir/src/pcap.cpp.o -c /home/ubuntu/bro/src/libmoon/src/pcap.cpp",
   "file": "/home/ubuntu/bro/src/libmoon/src/pcap.cpp"
+},
+{
+  "directory": "/home/ubuntu/bro/my_build_dir/src/libmoon",
+  "command": "/usr/bin/cc  -DLIBMOON_BUILD_LIB -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/bnxt -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/ixgbe/base -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/ixgbe -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/i40e/base -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/i40e -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/e1000 -I/home/ubuntu/bro/src/libmoon/deps/dpdk/drivers/net/e1000/base  -fno-stack-protector -Wall -Wextra -Wno-unused-parameter -g -O3 -std=gnu11 -march=native -msse4.2 -O2 -g -DNDEBUG   -o CMakeFiles/moon.dir/src/eal.c.o   -c /home/ubuntu/bro/src/libmoon/src/eal.c",
+  "file": "/home/ubuntu/bro/src/libmoon/src/eal.c"
 },
 {
   "directory": "/home/ubuntu/bro/my_build_dir/src/libmoon",

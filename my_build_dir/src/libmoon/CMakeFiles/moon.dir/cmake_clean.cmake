@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/moon.dir/src/kni.c.o"
   "CMakeFiles/moon.dir/src/filter.c.o"
   "CMakeFiles/moon.dir/src/pcap.cpp.o"
+  "CMakeFiles/moon.dir/src/eal.c.o"
   "CMakeFiles/moon.dir/src/timestamping.c.o"
   "CMakeFiles/moon.dir/src/timestamping_i40e.c.o"
   "CMakeFiles/moon.dir/src/timestamping_ixgbe.c.o"

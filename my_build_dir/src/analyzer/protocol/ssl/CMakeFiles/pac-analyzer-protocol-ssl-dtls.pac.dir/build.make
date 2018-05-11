@@ -57,7 +57,7 @@ src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-dtls.pac: src/ana
 src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-dtls.pac: src/analyzer/protocol/ssl/dtls_pac.cc
 
 
-src/analyzer/protocol/ssl/dtls_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/ssl/dtls_pac.h: ../src/analyzer/protocol/ssl/binpac
 src/analyzer/protocol/ssl/dtls_pac.h: ../src/analyzer/protocol/ssl/dtls.pac
 src/analyzer/protocol/ssl/dtls_pac.h: ../src/binpac.pac
 src/analyzer/protocol/ssl/dtls_pac.h: ../src/bro.pac
@@ -68,7 +68,7 @@ src/analyzer/protocol/ssl/dtls_pac.h: ../src/analyzer/protocol/ssl/ssl-dtls-prot
 src/analyzer/protocol/ssl/dtls_pac.h: ../src/analyzer/protocol/ssl/dtls-protocol.pac
 src/analyzer/protocol/ssl/dtls_pac.h: ../src/analyzer/protocol/ssl/ssl-defs.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing dtls.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/dtls.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src/analyzer/protocol/ssl -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/ssl/dtls.pac
 
 src/analyzer/protocol/ssl/dtls_pac.cc: src/analyzer/protocol/ssl/dtls_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/ssl/dtls_pac.cc

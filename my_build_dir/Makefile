@@ -190,32 +190,6 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
-# Target rules for targets named binpac_lib
-
-# Build rule for target.
-binpac_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 binpac_lib
-.PHONY : binpac_lib
-
-# fast build rule for target.
-binpac_lib/fast:
-	$(MAKE) -f aux/binpac/lib/CMakeFiles/binpac_lib.dir/build.make aux/binpac/lib/CMakeFiles/binpac_lib.dir/build
-.PHONY : binpac_lib/fast
-
-#=============================================================================
-# Target rules for targets named binpac
-
-# Build rule for target.
-binpac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 binpac
-.PHONY : binpac
-
-# fast build rule for target.
-binpac/fast:
-	$(MAKE) -f aux/binpac/src/CMakeFiles/binpac.dir/build.make aux/binpac/src/CMakeFiles/binpac.dir/build
-.PHONY : binpac/fast
-
-#=============================================================================
 # Target rules for targets named pac-binpac-lib.pac
 
 # Build rule for target.
@@ -3636,8 +3610,6 @@ help:
 	@echo "... install"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... binpac_lib"
-	@echo "... binpac"
 	@echo "... pac-binpac-lib.pac"
 	@echo "... bif-std-types.bif"
 	@echo "... bif-std-option.bif"

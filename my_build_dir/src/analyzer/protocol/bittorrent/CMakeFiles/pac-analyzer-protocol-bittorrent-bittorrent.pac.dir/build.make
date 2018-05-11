@@ -57,7 +57,7 @@ src/analyzer/protocol/bittorrent/CMakeFiles/pac-analyzer-protocol-bittorrent-bit
 src/analyzer/protocol/bittorrent/CMakeFiles/pac-analyzer-protocol-bittorrent-bittorrent.pac: src/analyzer/protocol/bittorrent/bittorrent_pac.cc
 
 
-src/analyzer/protocol/bittorrent/bittorrent_pac.h: aux/binpac/src/binpac
+src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/analyzer/protocol/bittorrent/binpac
 src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/analyzer/protocol/bittorrent/bittorrent.pac
 src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/binpac.pac
 src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/bro.pac
@@ -65,7 +65,7 @@ src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/binpac_bro.h
 src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/analyzer/protocol/bittorrent/bittorrent-analyzer.pac
 src/analyzer/protocol/bittorrent/bittorrent_pac.h: ../src/analyzer/protocol/bittorrent/bittorrent-protocol.pac
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/bro/my_build_dir/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BINPAC] Processing bittorrent.pac"
-	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/bittorrent && ../../../../aux/binpac/src/binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/bittorrent -I /home/ubuntu/bro/src/analyzer/protocol/bittorrent -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/bittorrent/bittorrent.pac
+	cd /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/bittorrent && binpac -q -d /home/ubuntu/bro/my_build_dir/src/analyzer/protocol/bittorrent -I /home/ubuntu/bro/src/analyzer/protocol/bittorrent -I /home/ubuntu/bro/src /home/ubuntu/bro/src/analyzer/protocol/bittorrent/bittorrent.pac
 
 src/analyzer/protocol/bittorrent/bittorrent_pac.cc: src/analyzer/protocol/bittorrent/bittorrent_pac.h
 	@$(CMAKE_COMMAND) -E touch_nocreate src/analyzer/protocol/bittorrent/bittorrent_pac.cc
