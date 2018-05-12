@@ -3,8 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	reporter
-#open	2018-05-11-20-53-08
+#open	2018-05-12-13-52-49
 #fields	ts	level	message	location
 #types	time	enum	string	string
 0.000000	Reporter::INFO	received termination signal	(empty)
-#close	2018-05-11-20-53-08
+#close	2018-05-12-13-52-49

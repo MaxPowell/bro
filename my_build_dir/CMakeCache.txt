@@ -59,18 +59,12 @@ Bro_BINARY_DIR:STATIC=/home/ubuntu/bro/my_build_dir
 //Value Computed by CMake
 Bro_SOURCE_DIR:STATIC=/home/ubuntu/bro
 
-//Path to a program.
-CMAKE_AR:FILEPATH=/usr/bin/ar
-
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
-
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -87,9 +81,6 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the compiler during release builds with debug info.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -129,9 +120,6 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/usr/bin/ld
-
-//Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules.
@@ -149,20 +137,8 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Path to a program.
-CMAKE_NM:FILEPATH=/usr/bin/nm
-
-//Path to a program.
-CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
-
-//Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
-
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Bro
-
-//Path to a program.
-CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -200,9 +176,6 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
-
-//Path to a program.
-CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -365,6 +338,9 @@ plugin-Bro-DNP3_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
 plugin-Bro-DNS_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+plugin-Bro-Dpdk_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
 plugin-Bro-FTP_LIB_DEPENDS:STATIC=
@@ -554,8 +530,6 @@ BinPAC_INCLUDE_DIR-ADVANCED:INTERNAL=1
 BinPAC_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BinPAC_ROOT_DIR
 BinPAC_ROOT_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_AR
-CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/ubuntu/bro/my_build_dir
 //Major version of cmake used to create the current loaded cache
@@ -572,8 +546,6 @@ CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
-//ADVANCED property for variable: CMAKE_CXX_COMPILER
-CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -584,8 +556,6 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -596,8 +566,6 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//Executable file format
-CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -631,8 +599,6 @@ CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/ubuntu/bro
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
-//ADVANCED property for variable: CMAKE_LINKER
-CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
 CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
@@ -645,16 +611,8 @@ CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_NM
-CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=85
-//ADVANCED property for variable: CMAKE_OBJCOPY
-CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_OBJDUMP
-CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_RANLIB
-CMAKE_RANLIB-ADVANCED:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=86
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.5
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -683,10 +641,6 @@ CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_STRIP
-CMAKE_STRIP-ADVANCED:INTERNAL=1
-//uname command
-CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test DO_SOCK_DECL
@@ -933,7 +887,7 @@ bro_BASE_BIF_SCRIPTS:INTERNAL=/home/ubuntu/bro/my_build_dir/scripts/base/bif/bro
 //Bro script stubs for BIFs in Bro plugins
 bro_PLUGIN_BIF_SCRIPTS:INTERNAL=/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_ARP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_BackDoor.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_BitTorrent.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_ConnSize.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_ConnSize.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DCE_RPC.consts.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DCE_RPC.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DCE_RPC.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DHCP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DNP3.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_DNS.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_File.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Finger.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FTP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FTP.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Gnutella.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_GSSAPI.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_GTPv1.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_HTTP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_HTTP.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_ICMP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Ident.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_IMAP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_InterConn.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_IRC.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_KRB.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_KRB.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Login.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Login.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_MIME.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Modbus.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_MySQL.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NCP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NetBIOS.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NetBIOS.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NTLM.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NTLM.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NTP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_POP3.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RADIUS.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RDP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RDP.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RFB.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RPC.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SIP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SNMP.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SNMP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_check_directory.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_close.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_create_directory.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_echo.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_logoff_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_negotiate.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_nt_create_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_nt_cancel.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_query_information.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_read_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_session_setup_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_transaction.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_transaction_secondary.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_transaction2.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_transaction2_secondary.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_tree_connect_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_tree_disconnect.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_com_write_andx.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb1_events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_close.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_create.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_negotiate.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_read.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_session_setup.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_set_info.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_tree_connect.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_tree_disconnect.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_com_write.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.smb2_events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.consts.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMB.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMTP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SMTP.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SOCKS.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SSH.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SSH.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SSL.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SSL.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SSL.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SteppingStone.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Syslog.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_TCP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_TCP.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Teredo.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_UDP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_XMPP.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FileEntropy.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FileExtract.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FileExtract.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_FileHash.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_PE.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Unified2.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_Unified2.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_X509.events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_X509.types.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_X509.functions.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_X509.ocsp_events.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_AsciiReader.ascii.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_BenchmarkReader.benchmark.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_BinaryReader.binary.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_ConfigReader.config.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_RawReader.raw.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SQLiteReader.sqlite.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_AsciiWriter.ascii.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_NoneWriter.none.bif.bro;/home/ubuntu/bro/my_build_dir/scripts/base/bif/plugins/Bro_SQLiteWriter.sqlite.bif.bro
 //plugin libraries
-bro_PLUGIN_LIBS:INTERNAL=plugin-Bro-ARP;plugin-Bro-AYIYA;plugin-Bro-BackDoor;plugin-Bro-BitTorrent;plugin-Bro-ConnSize;plugin-Bro-DCE_RPC;plugin-Bro-DHCP;plugin-Bro-DNP3;plugin-Bro-DNS;plugin-Bro-File;plugin-Bro-Finger;plugin-Bro-FTP;plugin-Bro-Gnutella;plugin-Bro-GSSAPI;plugin-Bro-GTPv1;plugin-Bro-HTTP;plugin-Bro-ICMP;plugin-Bro-Ident;plugin-Bro-IMAP;plugin-Bro-InterConn;plugin-Bro-IRC;plugin-Bro-KRB;plugin-Bro-Login;plugin-Bro-MIME;plugin-Bro-Modbus;plugin-Bro-MySQL;plugin-Bro-NCP;plugin-Bro-NetBIOS;plugin-Bro-NTLM;plugin-Bro-NTP;plugin-Bro-PIA;plugin-Bro-POP3;plugin-Bro-RADIUS;plugin-Bro-RDP;plugin-Bro-RFB;plugin-Bro-RPC;plugin-Bro-SIP;plugin-Bro-SNMP;plugin-Bro-SMB;plugin-Bro-SMTP;plugin-Bro-SOCKS;plugin-Bro-SSH;plugin-Bro-SSL;plugin-Bro-SteppingStone;plugin-Bro-Syslog;plugin-Bro-TCP;plugin-Bro-Teredo;plugin-Bro-UDP;plugin-Bro-XMPP;plugin-Bro-ZIP;plugin-Bro-FileDataEvent;plugin-Bro-FileEntropy;plugin-Bro-FileExtract;plugin-Bro-FileHash;plugin-Bro-PE;plugin-Bro-Unified2;plugin-Bro-X509;plugin-Bro-AsciiReader;plugin-Bro-BenchmarkReader;plugin-Bro-BinaryReader;plugin-Bro-ConfigReader;plugin-Bro-RawReader;plugin-Bro-SQLiteReader;plugin-Bro-Pcap;plugin-Bro-AsciiWriter;plugin-Bro-NoneWriter;plugin-Bro-SQLiteWriter
+bro_PLUGIN_LIBS:INTERNAL=plugin-Bro-ARP;plugin-Bro-AYIYA;plugin-Bro-BackDoor;plugin-Bro-BitTorrent;plugin-Bro-ConnSize;plugin-Bro-DCE_RPC;plugin-Bro-DHCP;plugin-Bro-DNP3;plugin-Bro-DNS;plugin-Bro-File;plugin-Bro-Finger;plugin-Bro-FTP;plugin-Bro-Gnutella;plugin-Bro-GSSAPI;plugin-Bro-GTPv1;plugin-Bro-HTTP;plugin-Bro-ICMP;plugin-Bro-Ident;plugin-Bro-IMAP;plugin-Bro-InterConn;plugin-Bro-IRC;plugin-Bro-KRB;plugin-Bro-Login;plugin-Bro-MIME;plugin-Bro-Modbus;plugin-Bro-MySQL;plugin-Bro-NCP;plugin-Bro-NetBIOS;plugin-Bro-NTLM;plugin-Bro-NTP;plugin-Bro-PIA;plugin-Bro-POP3;plugin-Bro-RADIUS;plugin-Bro-RDP;plugin-Bro-RFB;plugin-Bro-RPC;plugin-Bro-SIP;plugin-Bro-SNMP;plugin-Bro-SMB;plugin-Bro-SMTP;plugin-Bro-SOCKS;plugin-Bro-SSH;plugin-Bro-SSL;plugin-Bro-SteppingStone;plugin-Bro-Syslog;plugin-Bro-TCP;plugin-Bro-Teredo;plugin-Bro-UDP;plugin-Bro-XMPP;plugin-Bro-ZIP;plugin-Bro-FileDataEvent;plugin-Bro-FileEntropy;plugin-Bro-FileExtract;plugin-Bro-FileHash;plugin-Bro-PE;plugin-Bro-Unified2;plugin-Bro-X509;plugin-Bro-AsciiReader;plugin-Bro-BenchmarkReader;plugin-Bro-BinaryReader;plugin-Bro-ConfigReader;plugin-Bro-RawReader;plugin-Bro-SQLiteReader;plugin-Bro-Pcap;plugin-Bro-Dpdk;plugin-Bro-AsciiWriter;plugin-Bro-NoneWriter;plugin-Bro-SQLiteWriter
 //BIFs for automatic registering
 bro_REGISTER_BIFS:INTERNAL=/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/arp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/backdoor/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/bittorrent/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/conn-size/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/conn-size/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc/consts.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dce-rpc/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dhcp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dnp3/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/dns/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/file/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/finger/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ftp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ftp/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gnutella/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gssapi/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/gtpv1/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/http/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/http/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/icmp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ident/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/imap/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/interconn/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/irc/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/krb/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/login/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/login/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/mime/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/modbus/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/mysql/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ncp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/netbios/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/netbios/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntlm/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ntp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/pop3/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/radius/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rdp/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rfb/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/rpc/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/sip/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/snmp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_check_directory.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_close.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_create_directory.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_echo.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_logoff_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_negotiate.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_nt_create_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_nt_cancel.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_query_information.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_read_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_session_setup_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_transaction.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_transaction_secondary.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_transaction2.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_transaction2_secondary.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_tree_connect_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_tree_disconnect.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_com_write_andx.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb1_events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_close.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_create.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_negotiate.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_read.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_session_setup.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_set_info.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_tree_connect.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_tree_disconnect.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_com_write.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/smb2_events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/consts.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smb/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smtp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/smtp/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/socks/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssh/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl/types.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/ssl/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/stepping-stone/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/syslog/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/tcp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/tcp/functions.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/teredo/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/udp/events.bif;/home/ubuntu/bro/my_build_dir/src/analyzer/protocol/xmpp/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/entropy/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/extract/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/extract/functions.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/hash/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/pe/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/unified2/types.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509/events.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509/types.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509/functions.bif;/home/ubuntu/bro/my_build_dir/src/file_analysis/analyzer/x509/ocsp_events.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/ascii/ascii.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/benchmark/benchmark.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/binary/binary.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/config/config.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/raw/raw.bif;/home/ubuntu/bro/my_build_dir/src/input/readers/sqlite/sqlite.bif;/home/ubuntu/bro/my_build_dir/src/logging/writers/ascii/ascii.bif;/home/ubuntu/bro/my_build_dir/src/logging/writers/none/none.bif;/home/ubuntu/bro/my_build_dir/src/logging/writers/sqlite/sqlite.bif
 //subdir libraries

@@ -228,6 +228,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/ubuntu/bro/my_build_dir/src/input/readers/raw/CMakeFiles/plugin-Bro-RawReader.dir/DependInfo.cmake"
   "/home/ubuntu/bro/my_build_dir/src/input/readers/sqlite/CMakeFiles/plugin-Bro-SQLiteReader.dir/DependInfo.cmake"
   "/home/ubuntu/bro/my_build_dir/src/iosource/pcap/CMakeFiles/plugin-Bro-Pcap.dir/DependInfo.cmake"
+  "/home/ubuntu/bro/my_build_dir/src/iosource/dpdk/CMakeFiles/plugin-Bro-Dpdk.dir/DependInfo.cmake"
   "/home/ubuntu/bro/my_build_dir/src/logging/writers/ascii/CMakeFiles/plugin-Bro-AsciiWriter.dir/DependInfo.cmake"
   "/home/ubuntu/bro/my_build_dir/src/logging/writers/none/CMakeFiles/plugin-Bro-NoneWriter.dir/DependInfo.cmake"
   "/home/ubuntu/bro/my_build_dir/src/logging/writers/sqlite/CMakeFiles/plugin-Bro-SQLiteWriter.dir/DependInfo.cmake"

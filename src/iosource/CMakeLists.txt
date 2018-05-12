@@ -7,6 +7,7 @@ include_directories(BEFORE
 )
 
 add_subdirectory(pcap)
+add_subdirectory(dpdk)
 
 set(iosource_SRCS
     BPF_Program.cc

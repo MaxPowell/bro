@@ -141,6 +141,9 @@ OpaqueType* ocsp_resp_opaque_type = 0;
 int bro_argc;
 char** bro_argv;
 
+/* DPDK */
+bool dpdk_on = true;
+
 const char* bro_version()
 	{
 #ifdef DEBUG
@@ -1170,7 +1173,7 @@ int main(int argc, char** argv)
 
 		net_run();
 
-		double time_net_done = current_time(true);;
+		double time_net_done = current_time(true);
 
 		uint64 mem_net_done_total;
 		uint64 mem_net_done_malloced;

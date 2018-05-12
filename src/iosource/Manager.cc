@@ -17,6 +17,9 @@
 
 #define DEFAULT_PREFIX "pcap"
 
+/* DPDK */
+extern bool dpdk_on;
+
 using namespace iosource;
 
 Manager::~Manager()
@@ -232,6 +235,15 @@ static std::pair<std::string, std::string> split_prefix(std::string path)
 
 PktSrc* Manager::OpenPktSrc(const std::string& path, bool is_live)
 	{
+	/* DPDK */
+	if(dpdk_on){
+		PktSrc* dpdk_src = new DpdkSource(atoi(path), true);
+		assert(dpdk_src);
+		Register(dpdk_src);
+		return dpdk_src;
+	}
+
+	
 	std::pair<std::string, std::string> t = split_prefix(path);
 	std::string prefix = t.first;
 	std::string npath = t.second;
@@ -243,13 +255,13 @@ PktSrc* Manager::OpenPktSrc(const std::string& path, bool is_live)
 	std::list<PktSrcComponent*> all_components = plugin_mgr->Components<PktSrcComponent>();
 
 	for ( std::list<PktSrcComponent*>::const_iterator i = all_components.begin();
-	      i != all_components.end(); i++ )
+		  i != all_components.end(); i++ )
 		{
 		PktSrcComponent* c = *i;
 
 		if ( c->HandlesPrefix(prefix) &&
-		     ((  is_live && c->DoesLive() ) ||
-		      (! is_live && c->DoesTrace())) )
+			 ((  is_live && c->DoesLive() ) ||
+			  (! is_live && c->DoesTrace())) )
 			{
 			component = c;
 			break;
@@ -260,6 +272,7 @@ PktSrc* Manager::OpenPktSrc(const std::string& path, bool is_live)
 	if ( ! component )
 		reporter->FatalError("type of packet source '%s' not recognized, or mode not supported", prefix.c_str());
 
+	
 	// Instantiate packet source.
 
 	PktSrc* ps = (*component->Factory())(npath, is_live);

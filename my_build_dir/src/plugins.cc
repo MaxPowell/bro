@@ -74,6 +74,7 @@ namespace plugin { namespace Bro_ConfigReader { class Plugin; extern Plugin plug
 namespace plugin { namespace Bro_RawReader { class Plugin; extern Plugin plugin; } };
 namespace plugin { namespace Bro_SQLiteReader { class Plugin; extern Plugin plugin; } };
 namespace plugin { namespace Bro_Pcap { class Plugin; extern Plugin plugin; } };
+namespace plugin { namespace Bro_Dpdk { class Plugin; extern Plugin plugin; } };
 namespace plugin { namespace Bro_AsciiWriter { class Plugin; extern Plugin plugin; } };
 namespace plugin { namespace Bro_NoneWriter { class Plugin; extern Plugin plugin; } };
 namespace plugin { namespace Bro_SQLiteWriter { class Plugin; extern Plugin plugin; } };
@@ -148,6 +149,7 @@ i += (size_t)(&(plugin::Bro_ConfigReader::plugin));
 i += (size_t)(&(plugin::Bro_RawReader::plugin));
 i += (size_t)(&(plugin::Bro_SQLiteReader::plugin));
 i += (size_t)(&(plugin::Bro_Pcap::plugin));
+i += (size_t)(&(plugin::Bro_Dpdk::plugin));
 i += (size_t)(&(plugin::Bro_AsciiWriter::plugin));
 i += (size_t)(&(plugin::Bro_NoneWriter::plugin));
 i += (size_t)(&(plugin::Bro_SQLiteWriter::plugin));

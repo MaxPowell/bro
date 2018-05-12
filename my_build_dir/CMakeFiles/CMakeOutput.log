@@ -1,4 +1,4 @@
-The system is: Linux - 4.4.0-121-generic - x86_64
+The system is: Linux - 4.4.0-124-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/ubuntu/bro/my_build_dir/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aba4b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aba4b.dir/build.make CMakeFiles/cmTC_aba4b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_23dc6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23dc6.dir/build.make CMakeFiles/cmTC_23dc6.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aba4b.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_aba4b.dir/testCCompiler.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_aba4b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aba4b.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_aba4b.dir/testCCompiler.c.o  -o cmTC_aba4b -rdynamic 
+Building C object CMakeFiles/cmTC_23dc6.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_23dc6.dir/testCCompiler.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_23dc6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23dc6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_23dc6.dir/testCCompiler.c.o  -o cmTC_23dc6 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bbf3c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bbf3c.dir/build.make CMakeFiles/cmTC_bbf3c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_42158/fast"
+/usr/bin/make -f CMakeFiles/cmTC_42158.dir/build.make CMakeFiles/cmTC_42158.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_bbf3c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbf3c.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o  -o cmTC_bbf3c -rdynamic  
+Building C object CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_42158
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42158.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o  -o cmTC_42158 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,8 +59,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbf3c' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccf6CgBW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_bbf3c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_42158' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH1v6Nf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_42158 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -68,14 +68,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_bbf3c/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_bbf3c.dir/build.make CMakeFiles/cmTC_bbf3c.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_42158/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_42158.dir/build.make CMakeFiles/cmTC_42158.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_bbf3c]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbf3c.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o  -o cmTC_bbf3c -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_42158]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42158.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o  -o cmTC_42158 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_bbf3c' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccf6CgBW.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_bbf3c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_42158' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccH1v6Nf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_42158 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccf6CgBW.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccH1v6Nf.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_bbf3c] ==> ignore
+    arg [cmTC_42158] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_bbf3c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_42158.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -155,14 +155,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d40f5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d40f5.dir/build.make CMakeFiles/cmTC_d40f5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c1fd0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c1fd0.dir/build.make CMakeFiles/cmTC_c1fd0.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d40f5.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_d40f5.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d40f5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d40f5.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_d40f5.dir/feature_tests.c.o  -o cmTC_d40f5 -rdynamic 
+Building C object CMakeFiles/cmTC_c1fd0.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_c1fd0.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c1fd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1fd0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c1fd0.dir/feature_tests.c.o  -o cmTC_c1fd0 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -175,14 +175,14 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d6332/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d6332.dir/build.make CMakeFiles/cmTC_d6332.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_23c15/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23c15.dir/build.make CMakeFiles/cmTC_23c15.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d6332.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_d6332.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d6332
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6332.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_d6332.dir/feature_tests.c.o  -o cmTC_d6332 -rdynamic 
+Building C object CMakeFiles/cmTC_23c15.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_23c15.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
+Linking C executable cmTC_23c15
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23c15.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_23c15.dir/feature_tests.c.o  -o cmTC_23c15 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -195,14 +195,14 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0e3f3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0e3f3.dir/build.make CMakeFiles/cmTC_0e3f3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_432b0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_432b0.dir/build.make CMakeFiles/cmTC_432b0.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0e3f3.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_0e3f3.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
-Linking C executable cmTC_0e3f3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e3f3.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_0e3f3.dir/feature_tests.c.o  -o cmTC_0e3f3 -rdynamic 
+Building C object CMakeFiles/cmTC_432b0.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_432b0.dir/feature_tests.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.c
+Linking C executable cmTC_432b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_432b0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_432b0.dir/feature_tests.c.o  -o cmTC_432b0 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -213,28 +213,28 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6926a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6926a.dir/build.make CMakeFiles/cmTC_6926a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4c61e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c61e.dir/build.make CMakeFiles/cmTC_4c61e.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6926a.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_6926a.dir/testCXXCompiler.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_6926a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6926a.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_6926a.dir/testCXXCompiler.cxx.o  -o cmTC_6926a -rdynamic 
+Building CXX object CMakeFiles/cmTC_4c61e.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_4c61e.dir/testCXXCompiler.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_4c61e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c61e.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_4c61e.dir/testCXXCompiler.cxx.o  -o cmTC_4c61e -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c8325/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c8325.dir/build.make CMakeFiles/cmTC_c8325.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2ea16/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ea16.dir/build.make CMakeFiles/cmTC_2ea16.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_c8325
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8325.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c8325 -rdynamic  
+Building CXX object CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_2ea16
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ea16.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2ea16 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,8 +244,8 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8325' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXBUTmw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c8325 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2ea16' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQ5jQUY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2ea16 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -253,14 +253,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c8325/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c8325.dir/build.make CMakeFiles/cmTC_c8325.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2ea16/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2ea16.dir/build.make CMakeFiles/cmTC_2ea16.dir/build]
   ignore line: [make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_c8325]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8325.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_c8325 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_2ea16]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ea16.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2ea16 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8325' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXBUTmw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c8325 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2ea16' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQ5jQUY.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2ea16 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccXBUTmw.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccQ5jQUY.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_c8325] ==> ignore
+    arg [cmTC_2ea16] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_c8325.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_2ea16.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -338,14 +338,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_93677/fast"
-/usr/bin/make -f CMakeFiles/cmTC_93677.dir/build.make CMakeFiles/cmTC_93677.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ab93a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ab93a.dir/build.make CMakeFiles/cmTC_ab93a.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_93677.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_93677.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_93677
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93677.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_93677.dir/feature_tests.cxx.o  -o cmTC_93677 -rdynamic 
+Building CXX object CMakeFiles/cmTC_ab93a.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_ab93a.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ab93a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab93a.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_ab93a.dir/feature_tests.cxx.o  -o cmTC_ab93a -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -411,14 +411,14 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_35e67/fast"
-/usr/bin/make -f CMakeFiles/cmTC_35e67.dir/build.make CMakeFiles/cmTC_35e67.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fbcec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fbcec.dir/build.make CMakeFiles/cmTC_fbcec.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_35e67.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_35e67.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_35e67
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35e67.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_35e67.dir/feature_tests.cxx.o  -o cmTC_35e67 -rdynamic 
+Building CXX object CMakeFiles/cmTC_fbcec.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_fbcec.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fbcec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbcec.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_fbcec.dir/feature_tests.cxx.o  -o cmTC_fbcec -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -484,14 +484,14 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3cea8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3cea8.dir/build.make CMakeFiles/cmTC_3cea8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1798d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1798d.dir/build.make CMakeFiles/cmTC_1798d.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3cea8.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_3cea8.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3cea8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cea8.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_3cea8.dir/feature_tests.cxx.o  -o cmTC_3cea8 -rdynamic 
+Building CXX object CMakeFiles/cmTC_1798d.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_1798d.dir/feature_tests.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1798d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1798d.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_1798d.dir/feature_tests.cxx.o  -o cmTC_1798d -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
@@ -555,14 +555,14 @@ make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 Performing C SOURCE FILE Test PCAP_LINKS_SOLO succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a8f8a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a8f8a.dir/build.make CMakeFiles/cmTC_a8f8a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0ef78/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ef78.dir/build.make CMakeFiles/cmTC_0ef78.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a8f8a.dir/src.c.o
-/usr/bin/cc    -Wall -Wno-unused -DPCAP_LINKS_SOLO   -o CMakeFiles/cmTC_a8f8a.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_a8f8a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8f8a.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DPCAP_LINKS_SOLO    CMakeFiles/cmTC_a8f8a.dir/src.c.o  -o cmTC_a8f8a -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+Building C object CMakeFiles/cmTC_0ef78.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -DPCAP_LINKS_SOLO   -o CMakeFiles/cmTC_0ef78.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0ef78
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ef78.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DPCAP_LINKS_SOLO    CMakeFiles/cmTC_0ef78.dir/src.c.o  -o cmTC_0ef78 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -570,15 +570,15 @@ int main() { return 0; }
 Performing C SOURCE FILE Test ns_initparse_works_libresolv.a succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_38029/fast"
-/usr/bin/make -f CMakeFiles/cmTC_38029.dir/build.make CMakeFiles/cmTC_38029.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_abd26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abd26.dir/build.make CMakeFiles/cmTC_abd26.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_38029.dir/src.c.o
-/usr/bin/cc    -Wall -Wno-unused -Dns_initparse_works_libresolv.a   -o CMakeFiles/cmTC_38029.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_abd26.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dns_initparse_works_libresolv.a   -o CMakeFiles/cmTC_abd26.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
 <command-line>:0:29: warning: ISO C99 requires whitespace after the macro name
-Linking C executable cmTC_38029
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38029.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -Dns_initparse_works_libresolv.a    CMakeFiles/cmTC_38029.dir/src.c.o  -o cmTC_38029 -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
+Linking C executable cmTC_abd26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abd26.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dns_initparse_works_libresolv.a    CMakeFiles/cmTC_abd26.dir/src.c.o  -o cmTC_abd26 -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -592,15 +592,15 @@ Source file was:
 Performing C SOURCE FILE Test res_mkquery_works_libresolv.a succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_10a7a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_10a7a.dir/build.make CMakeFiles/cmTC_10a7a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_52c66/fast"
+/usr/bin/make -f CMakeFiles/cmTC_52c66.dir/build.make CMakeFiles/cmTC_52c66.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_10a7a.dir/src.c.o
-/usr/bin/cc    -Wall -Wno-unused -Dres_mkquery_works_libresolv.a   -o CMakeFiles/cmTC_10a7a.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Building C object CMakeFiles/cmTC_52c66.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dres_mkquery_works_libresolv.a   -o CMakeFiles/cmTC_52c66.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
 <command-line>:0:28: warning: ISO C99 requires whitespace after the macro name
-Linking C executable cmTC_10a7a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10a7a.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -Dres_mkquery_works_libresolv.a    CMakeFiles/cmTC_10a7a.dir/src.c.o  -o cmTC_10a7a -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
+Linking C executable cmTC_52c66
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52c66.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dres_mkquery_works_libresolv.a    CMakeFiles/cmTC_52c66.dir/src.c.o  -o cmTC_52c66 -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -618,336 +618,336 @@ Source file was:
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_465d0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_465d0.dir/build.make CMakeFiles/cmTC_465d0.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f740c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f740c.dir/build.make CMakeFiles/cmTC_f740c.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_465d0.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_465d0.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_465d0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_465d0.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_465d0.dir/CheckIncludeFile.c.o  -o cmTC_465d0 -rdynamic 
+Building C object CMakeFiles/cmTC_f740c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_f740c.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f740c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f740c.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_f740c.dir/CheckIncludeFile.c.o  -o cmTC_f740c -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_243c9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_243c9.dir/build.make CMakeFiles/cmTC_243c9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c36bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c36bc.dir/build.make CMakeFiles/cmTC_c36bc.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_243c9.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_243c9.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_243c9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_243c9.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_243c9.dir/CheckIncludeFile.c.o  -o cmTC_243c9 -rdynamic 
+Building C object CMakeFiles/cmTC_c36bc.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c36bc.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c36bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c36bc.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c36bc.dir/CheckIncludeFile.c.o  -o cmTC_c36bc -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c5e4c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c5e4c.dir/build.make CMakeFiles/cmTC_c5e4c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_547e6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_547e6.dir/build.make CMakeFiles/cmTC_547e6.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c5e4c.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c5e4c.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_c5e4c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5e4c.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c5e4c.dir/CheckIncludeFile.c.o  -o cmTC_c5e4c -rdynamic 
+Building C object CMakeFiles/cmTC_547e6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_547e6.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_547e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_547e6.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_547e6.dir/CheckIncludeFile.c.o  -o cmTC_547e6 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of unsigned short passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a55c1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a55c1.dir/build.make CMakeFiles/cmTC_a55c1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c658f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c658f.dir/build.make CMakeFiles/cmTC_c658f.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a55c1.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_a55c1.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
-Linking C executable cmTC_a55c1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a55c1.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_a55c1.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_a55c1 -rdynamic 
+Building C object CMakeFiles/cmTC_c658f.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c658f.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_c658f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c658f.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c658f.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_c658f -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of unsigned int passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e6dce/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e6dce.dir/build.make CMakeFiles/cmTC_e6dce.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d9f1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9f1f.dir/build.make CMakeFiles/cmTC_d9f1f.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e6dce.dir/SIZEOF_UNSIGNED_INT.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_e6dce.dir/SIZEOF_UNSIGNED_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_INT.c
-Linking C executable cmTC_e6dce
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6dce.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_e6dce.dir/SIZEOF_UNSIGNED_INT.c.o  -o cmTC_e6dce -rdynamic 
+Building C object CMakeFiles/cmTC_d9f1f.dir/SIZEOF_UNSIGNED_INT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d9f1f.dir/SIZEOF_UNSIGNED_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_INT.c
+Linking C executable cmTC_d9f1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9f1f.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d9f1f.dir/SIZEOF_UNSIGNED_INT.c.o  -o cmTC_d9f1f -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of long int passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8f98d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8f98d.dir/build.make CMakeFiles/cmTC_8f98d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_69758/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69758.dir/build.make CMakeFiles/cmTC_69758.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8f98d.dir/SIZEOF_LONG_INT.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_8f98d.dir/SIZEOF_LONG_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_INT.c
-Linking C executable cmTC_8f98d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f98d.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_8f98d.dir/SIZEOF_LONG_INT.c.o  -o cmTC_8f98d -rdynamic 
+Building C object CMakeFiles/cmTC_69758.dir/SIZEOF_LONG_INT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_69758.dir/SIZEOF_LONG_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_INT.c
+Linking C executable cmTC_69758
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69758.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_69758.dir/SIZEOF_LONG_INT.c.o  -o cmTC_69758 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of long long passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_716cd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_716cd.dir/build.make CMakeFiles/cmTC_716cd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_30cae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30cae.dir/build.make CMakeFiles/cmTC_30cae.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_716cd.dir/SIZEOF_LONG_LONG.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_716cd.dir/SIZEOF_LONG_LONG.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_LONG.c
-Linking C executable cmTC_716cd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_716cd.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_716cd.dir/SIZEOF_LONG_LONG.c.o  -o cmTC_716cd -rdynamic 
+Building C object CMakeFiles/cmTC_30cae.dir/SIZEOF_LONG_LONG.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_30cae.dir/SIZEOF_LONG_LONG.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_LONG.c
+Linking C executable cmTC_30cae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30cae.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_30cae.dir/SIZEOF_LONG_LONG.c.o  -o cmTC_30cae -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of void * passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c06ba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c06ba.dir/build.make CMakeFiles/cmTC_c06ba.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f43c8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f43c8.dir/build.make CMakeFiles/cmTC_f43c8.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c06ba.dir/SIZEOF_VOID_P.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c06ba.dir/SIZEOF_VOID_P.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_VOID_P.c
-Linking C executable cmTC_c06ba
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c06ba.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c06ba.dir/SIZEOF_VOID_P.c.o  -o cmTC_c06ba -rdynamic 
+Building C object CMakeFiles/cmTC_f43c8.dir/SIZEOF_VOID_P.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_f43c8.dir/SIZEOF_VOID_P.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_VOID_P.c
+Linking C executable cmTC_f43c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f43c8.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_f43c8.dir/SIZEOF_VOID_P.c.o  -o cmTC_f43c8 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of int32_t passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79876/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79876.dir/build.make CMakeFiles/cmTC_79876.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ba35b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba35b.dir/build.make CMakeFiles/cmTC_ba35b.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_79876.dir/int32_t.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_79876.dir/int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/int32_t.c
-Linking C executable cmTC_79876
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79876.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_79876.dir/int32_t.c.o  -o cmTC_79876 -rdynamic 
+Building C object CMakeFiles/cmTC_ba35b.dir/int32_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_ba35b.dir/int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/int32_t.c
+Linking C executable cmTC_ba35b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba35b.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_ba35b.dir/int32_t.c.o  -o cmTC_ba35b -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of u_int32_t passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cc0d9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cc0d9.dir/build.make CMakeFiles/cmTC_cc0d9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d5298/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5298.dir/build.make CMakeFiles/cmTC_d5298.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cc0d9.dir/u_int32_t.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_cc0d9.dir/u_int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int32_t.c
-Linking C executable cmTC_cc0d9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc0d9.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_cc0d9.dir/u_int32_t.c.o  -o cmTC_cc0d9 -rdynamic 
+Building C object CMakeFiles/cmTC_d5298.dir/u_int32_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d5298.dir/u_int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int32_t.c
+Linking C executable cmTC_d5298
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5298.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d5298.dir/u_int32_t.c.o  -o cmTC_d5298 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of u_int16_t passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_40538/fast"
-/usr/bin/make -f CMakeFiles/cmTC_40538.dir/build.make CMakeFiles/cmTC_40538.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_aac17/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aac17.dir/build.make CMakeFiles/cmTC_aac17.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_40538.dir/u_int16_t.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_40538.dir/u_int16_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int16_t.c
-Linking C executable cmTC_40538
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40538.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_40538.dir/u_int16_t.c.o  -o cmTC_40538 -rdynamic 
+Building C object CMakeFiles/cmTC_aac17.dir/u_int16_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_aac17.dir/u_int16_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int16_t.c
+Linking C executable cmTC_aac17
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aac17.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_aac17.dir/u_int16_t.c.o  -o cmTC_aac17 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of u_int8_t passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2074a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2074a.dir/build.make CMakeFiles/cmTC_2074a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8b9fb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b9fb.dir/build.make CMakeFiles/cmTC_8b9fb.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2074a.dir/u_int8_t.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_2074a.dir/u_int8_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int8_t.c
-Linking C executable cmTC_2074a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2074a.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_2074a.dir/u_int8_t.c.o  -o cmTC_2074a -rdynamic 
+Building C object CMakeFiles/cmTC_8b9fb.dir/u_int8_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_8b9fb.dir/u_int8_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int8_t.c
+Linking C executable cmTC_8b9fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b9fb.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_8b9fb.dir/u_int8_t.c.o  -o cmTC_8b9fb -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of socklen_t passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b8cb9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b8cb9.dir/build.make CMakeFiles/cmTC_b8cb9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_83f53/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83f53.dir/build.make CMakeFiles/cmTC_83f53.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b8cb9.dir/socklen_t.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b8cb9.dir/socklen_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/socklen_t.c
-Linking C executable cmTC_b8cb9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8cb9.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b8cb9.dir/socklen_t.c.o  -o cmTC_b8cb9 -rdynamic 
+Building C object CMakeFiles/cmTC_83f53.dir/socklen_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_83f53.dir/socklen_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/socklen_t.c
+Linking C executable cmTC_83f53
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83f53.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_83f53.dir/socklen_t.c.o  -o cmTC_83f53 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of struct ip6_opt passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4f948/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4f948.dir/build.make CMakeFiles/cmTC_4f948.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2dab4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2dab4.dir/build.make CMakeFiles/cmTC_2dab4.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4f948.dir/IP6_OPT.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4f948.dir/IP6_OPT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_OPT.c
-Linking C executable cmTC_4f948
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f948.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4f948.dir/IP6_OPT.c.o  -o cmTC_4f948 -rdynamic 
+Building C object CMakeFiles/cmTC_2dab4.dir/IP6_OPT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_2dab4.dir/IP6_OPT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_OPT.c
+Linking C executable cmTC_2dab4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2dab4.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_2dab4.dir/IP6_OPT.c.o  -o cmTC_2dab4 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining size of struct ip6_ext passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d5c91/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d5c91.dir/build.make CMakeFiles/cmTC_d5c91.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bb541/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb541.dir/build.make CMakeFiles/cmTC_bb541.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d5c91.dir/IP6_EXT.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d5c91.dir/IP6_EXT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_EXT.c
-Linking C executable cmTC_d5c91
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5c91.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d5c91.dir/IP6_EXT.c.o  -o cmTC_d5c91 -rdynamic 
+Building C object CMakeFiles/cmTC_bb541.dir/IP6_EXT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_bb541.dir/IP6_EXT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_EXT.c
+Linking C executable cmTC_bb541
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb541.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_bb541.dir/IP6_EXT.c.o  -o cmTC_bb541 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files getopt.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_58e5a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_58e5a.dir/build.make CMakeFiles/cmTC_58e5a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8665b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8665b.dir/build.make CMakeFiles/cmTC_8665b.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_58e5a.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_58e5a.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_58e5a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58e5a.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_58e5a.dir/CheckIncludeFiles.c.o  -o cmTC_58e5a -rdynamic 
+Building C object CMakeFiles/cmTC_8665b.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_8665b.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_8665b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8665b.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_8665b.dir/CheckIncludeFiles.c.o  -o cmTC_8665b -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files memory.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5fa8d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5fa8d.dir/build.make CMakeFiles/cmTC_5fa8d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f30ee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f30ee.dir/build.make CMakeFiles/cmTC_f30ee.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5fa8d.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_5fa8d.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_5fa8d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fa8d.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_5fa8d.dir/CheckIncludeFiles.c.o  -o cmTC_5fa8d -rdynamic 
+Building C object CMakeFiles/cmTC_f30ee.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_f30ee.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_f30ee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f30ee.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_f30ee.dir/CheckIncludeFiles.c.o  -o cmTC_f30ee -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files netinet/ether.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_48e6c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_48e6c.dir/build.make CMakeFiles/cmTC_48e6c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4b0fb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4b0fb.dir/build.make CMakeFiles/cmTC_4b0fb.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_48e6c.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_48e6c.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_48e6c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48e6c.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_48e6c.dir/CheckIncludeFiles.c.o  -o cmTC_48e6c -rdynamic 
+Building C object CMakeFiles/cmTC_4b0fb.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4b0fb.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_4b0fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b0fb.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4b0fb.dir/CheckIncludeFiles.c.o  -o cmTC_4b0fb -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files sys/socket.h;netinet/in.h;net/if.h;netinet/if_ether.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_66c74/fast"
-/usr/bin/make -f CMakeFiles/cmTC_66c74.dir/build.make CMakeFiles/cmTC_66c74.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d77d2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d77d2.dir/build.make CMakeFiles/cmTC_d77d2.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_66c74.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_66c74.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_66c74
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66c74.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_66c74.dir/CheckIncludeFiles.c.o  -o cmTC_66c74 -rdynamic 
+Building C object CMakeFiles/cmTC_d77d2.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d77d2.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_d77d2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d77d2.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d77d2.dir/CheckIncludeFiles.c.o  -o cmTC_d77d2 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files sys/socket.h;netinet/in.h;net/if.h;netinet/ip6.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_408f3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_408f3.dir/build.make CMakeFiles/cmTC_408f3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d8339/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d8339.dir/build.make CMakeFiles/cmTC_d8339.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_408f3.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_408f3.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_408f3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_408f3.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_408f3.dir/CheckIncludeFiles.c.o  -o cmTC_408f3 -rdynamic 
+Building C object CMakeFiles/cmTC_d8339.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d8339.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_d8339
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8339.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d8339.dir/CheckIncludeFiles.c.o  -o cmTC_d8339 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files sys/socket.h;net/if.h;net/ethernet.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_526c5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_526c5.dir/build.make CMakeFiles/cmTC_526c5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_99a11/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99a11.dir/build.make CMakeFiles/cmTC_99a11.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_526c5.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_526c5.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_526c5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_526c5.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_526c5.dir/CheckIncludeFiles.c.o  -o cmTC_526c5 -rdynamic 
+Building C object CMakeFiles/cmTC_99a11.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_99a11.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_99a11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99a11.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_99a11.dir/CheckIncludeFiles.c.o  -o cmTC_99a11 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files sys/time.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_50455/fast"
-/usr/bin/make -f CMakeFiles/cmTC_50455.dir/build.make CMakeFiles/cmTC_50455.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9fbf7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9fbf7.dir/build.make CMakeFiles/cmTC_9fbf7.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_50455.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_50455.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_50455
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50455.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_50455.dir/CheckIncludeFiles.c.o  -o cmTC_50455 -rdynamic 
+Building C object CMakeFiles/cmTC_9fbf7.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_9fbf7.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_9fbf7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9fbf7.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_9fbf7.dir/CheckIncludeFiles.c.o  -o cmTC_9fbf7 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if files time.h;sys/time.h exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_adf40/fast"
-/usr/bin/make -f CMakeFiles/cmTC_adf40.dir/build.make CMakeFiles/cmTC_adf40.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4a12d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a12d.dir/build.make CMakeFiles/cmTC_4a12d.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_adf40.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_adf40.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTC_adf40
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adf40.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_adf40.dir/CheckIncludeFiles.c.o  -o cmTC_adf40 -rdynamic 
+Building C object CMakeFiles/cmTC_4a12d.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4a12d.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_4a12d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a12d.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4a12d.dir/CheckIncludeFiles.c.o  -o cmTC_4a12d -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the IPPROTO_HOPOPTS exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_95c68/fast"
-/usr/bin/make -f CMakeFiles/cmTC_95c68.dir/build.make CMakeFiles/cmTC_95c68.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fe3b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fe3b9.dir/build.make CMakeFiles/cmTC_fe3b9.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_95c68.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_95c68.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_95c68
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95c68.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_95c68.dir/CheckSymbolExists.c.o  -o cmTC_95c68 -rdynamic 
+Building C object CMakeFiles/cmTC_fe3b9.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_fe3b9.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fe3b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe3b9.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_fe3b9.dir/CheckSymbolExists.c.o  -o cmTC_fe3b9 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -968,14 +968,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_IPV6 exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9cb1b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9cb1b.dir/build.make CMakeFiles/cmTC_9cb1b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ac879/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac879.dir/build.make CMakeFiles/cmTC_ac879.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9cb1b.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_9cb1b.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_9cb1b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cb1b.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_9cb1b.dir/CheckSymbolExists.c.o  -o cmTC_9cb1b -rdynamic 
+Building C object CMakeFiles/cmTC_ac879.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_ac879.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ac879
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac879.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_ac879.dir/CheckSymbolExists.c.o  -o cmTC_ac879 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -996,14 +996,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_ROUTING exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b679f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b679f.dir/build.make CMakeFiles/cmTC_b679f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_57572/fast"
+/usr/bin/make -f CMakeFiles/cmTC_57572.dir/build.make CMakeFiles/cmTC_57572.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b679f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b679f.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b679f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b679f.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b679f.dir/CheckSymbolExists.c.o  -o cmTC_b679f -rdynamic 
+Building C object CMakeFiles/cmTC_57572.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_57572.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_57572
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57572.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_57572.dir/CheckSymbolExists.c.o  -o cmTC_57572 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1024,14 +1024,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_FRAGMENT exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b058d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b058d.dir/build.make CMakeFiles/cmTC_b058d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_17f26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_17f26.dir/build.make CMakeFiles/cmTC_17f26.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b058d.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b058d.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b058d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b058d.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b058d.dir/CheckSymbolExists.c.o  -o cmTC_b058d -rdynamic 
+Building C object CMakeFiles/cmTC_17f26.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_17f26.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_17f26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17f26.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_17f26.dir/CheckSymbolExists.c.o  -o cmTC_17f26 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1052,14 +1052,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_ESP exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_58f10/fast"
-/usr/bin/make -f CMakeFiles/cmTC_58f10.dir/build.make CMakeFiles/cmTC_58f10.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b7c87/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7c87.dir/build.make CMakeFiles/cmTC_b7c87.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_58f10.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_58f10.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_58f10
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58f10.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_58f10.dir/CheckSymbolExists.c.o  -o cmTC_58f10 -rdynamic 
+Building C object CMakeFiles/cmTC_b7c87.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b7c87.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_b7c87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7c87.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b7c87.dir/CheckSymbolExists.c.o  -o cmTC_b7c87 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1080,14 +1080,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_AH exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91d6f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91d6f.dir/build.make CMakeFiles/cmTC_91d6f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1fbc8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1fbc8.dir/build.make CMakeFiles/cmTC_1fbc8.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_91d6f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_91d6f.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_91d6f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91d6f.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_91d6f.dir/CheckSymbolExists.c.o  -o cmTC_91d6f -rdynamic 
+Building C object CMakeFiles/cmTC_1fbc8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_1fbc8.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_1fbc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fbc8.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_1fbc8.dir/CheckSymbolExists.c.o  -o cmTC_1fbc8 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1108,14 +1108,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_ICMPV6 exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c50af/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c50af.dir/build.make CMakeFiles/cmTC_c50af.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5ef6d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5ef6d.dir/build.make CMakeFiles/cmTC_5ef6d.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c50af.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c50af.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_c50af
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c50af.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c50af.dir/CheckSymbolExists.c.o  -o cmTC_c50af -rdynamic 
+Building C object CMakeFiles/cmTC_5ef6d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_5ef6d.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_5ef6d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ef6d.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_5ef6d.dir/CheckSymbolExists.c.o  -o cmTC_5ef6d -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1136,14 +1136,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_NONE exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_274ff/fast"
-/usr/bin/make -f CMakeFiles/cmTC_274ff.dir/build.make CMakeFiles/cmTC_274ff.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ffb89/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ffb89.dir/build.make CMakeFiles/cmTC_ffb89.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_274ff.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_274ff.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_274ff
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_274ff.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_274ff.dir/CheckSymbolExists.c.o  -o cmTC_274ff -rdynamic 
+Building C object CMakeFiles/cmTC_ffb89.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_ffb89.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ffb89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffb89.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_ffb89.dir/CheckSymbolExists.c.o  -o cmTC_ffb89 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1164,14 +1164,14 @@ int main(int argc, char** argv)
 Determining if the IPPROTO_DSTOPTS exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6d93c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6d93c.dir/build.make CMakeFiles/cmTC_6d93c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4f285/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4f285.dir/build.make CMakeFiles/cmTC_4f285.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6d93c.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_6d93c.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_6d93c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d93c.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_6d93c.dir/CheckSymbolExists.c.o  -o cmTC_6d93c -rdynamic 
+Building C object CMakeFiles/cmTC_4f285.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4f285.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_4f285
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f285.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4f285.dir/CheckSymbolExists.c.o  -o cmTC_4f285 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1192,112 +1192,112 @@ int main(int argc, char** argv)
 Determining if the function getopt_long exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_76158/fast"
-/usr/bin/make -f CMakeFiles/cmTC_76158.dir/build.make CMakeFiles/cmTC_76158.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bd446/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd446.dir/build.make CMakeFiles/cmTC_bd446.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_76158.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long   -o CMakeFiles/cmTC_76158.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_76158
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76158.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long    CMakeFiles/cmTC_76158.dir/CheckFunctionExists.c.o  -o cmTC_76158 -rdynamic 
+Building C object CMakeFiles/cmTC_bd446.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long   -o CMakeFiles/cmTC_bd446.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bd446
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd446.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long    CMakeFiles/cmTC_bd446.dir/CheckFunctionExists.c.o  -o cmTC_bd446 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function mallinfo exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e429e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e429e.dir/build.make CMakeFiles/cmTC_e429e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_310d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_310d6.dir/build.make CMakeFiles/cmTC_310d6.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e429e.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo   -o CMakeFiles/cmTC_e429e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e429e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e429e.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo    CMakeFiles/cmTC_e429e.dir/CheckFunctionExists.c.o  -o cmTC_e429e -rdynamic 
+Building C object CMakeFiles/cmTC_310d6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo   -o CMakeFiles/cmTC_310d6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_310d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_310d6.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo    CMakeFiles/cmTC_310d6.dir/CheckFunctionExists.c.o  -o cmTC_310d6 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function strcasestr exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d216c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d216c.dir/build.make CMakeFiles/cmTC_d216c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_77f50/fast"
+/usr/bin/make -f CMakeFiles/cmTC_77f50.dir/build.make CMakeFiles/cmTC_77f50.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d216c.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr   -o CMakeFiles/cmTC_d216c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d216c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d216c.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr    CMakeFiles/cmTC_d216c.dir/CheckFunctionExists.c.o  -o cmTC_d216c -rdynamic 
+Building C object CMakeFiles/cmTC_77f50.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr   -o CMakeFiles/cmTC_77f50.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_77f50
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77f50.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr    CMakeFiles/cmTC_77f50.dir/CheckFunctionExists.c.o  -o cmTC_77f50 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function strerror exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3ebc5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3ebc5.dir/build.make CMakeFiles/cmTC_3ebc5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4d034/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4d034.dir/build.make CMakeFiles/cmTC_4d034.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3ebc5.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror   -o CMakeFiles/cmTC_3ebc5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3ebc5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ebc5.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror    CMakeFiles/cmTC_3ebc5.dir/CheckFunctionExists.c.o  -o cmTC_3ebc5 -rdynamic 
+Building C object CMakeFiles/cmTC_4d034.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror   -o CMakeFiles/cmTC_4d034.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4d034
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d034.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror    CMakeFiles/cmTC_4d034.dir/CheckFunctionExists.c.o  -o cmTC_4d034 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function strsep exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_99cff/fast"
-/usr/bin/make -f CMakeFiles/cmTC_99cff.dir/build.make CMakeFiles/cmTC_99cff.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_93bd3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93bd3.dir/build.make CMakeFiles/cmTC_93bd3.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_99cff.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep   -o CMakeFiles/cmTC_99cff.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_99cff
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99cff.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep    CMakeFiles/cmTC_99cff.dir/CheckFunctionExists.c.o  -o cmTC_99cff -rdynamic 
+Building C object CMakeFiles/cmTC_93bd3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep   -o CMakeFiles/cmTC_93bd3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_93bd3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93bd3.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep    CMakeFiles/cmTC_93bd3.dir/CheckFunctionExists.c.o  -o cmTC_93bd3 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function sigset exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_aaf80/fast"
-/usr/bin/make -f CMakeFiles/cmTC_aaf80.dir/build.make CMakeFiles/cmTC_aaf80.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f60fd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f60fd.dir/build.make CMakeFiles/cmTC_f60fd.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_aaf80.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset   -o CMakeFiles/cmTC_aaf80.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_aaf80
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf80.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset    CMakeFiles/cmTC_aaf80.dir/CheckFunctionExists.c.o  -o cmTC_aaf80 -rdynamic 
+Building C object CMakeFiles/cmTC_f60fd.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset   -o CMakeFiles/cmTC_f60fd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f60fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f60fd.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset    CMakeFiles/cmTC_f60fd.dir/CheckFunctionExists.c.o  -o cmTC_f60fd -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pcap_freecode exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_31a94/fast"
-/usr/bin/make -f CMakeFiles/cmTC_31a94.dir/build.make CMakeFiles/cmTC_31a94.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cb921/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cb921.dir/build.make CMakeFiles/cmTC_cb921.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_31a94.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode   -o CMakeFiles/cmTC_31a94.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_31a94
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31a94.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode    CMakeFiles/cmTC_31a94.dir/CheckFunctionExists.c.o  -o cmTC_31a94 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+Building C object CMakeFiles/cmTC_cb921.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode   -o CMakeFiles/cmTC_cb921.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cb921
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb921.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode    CMakeFiles/cmTC_cb921.dir/CheckFunctionExists.c.o  -o cmTC_cb921 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Performing C SOURCE FILE Test LIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c87ac/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c87ac.dir/build.make CMakeFiles/cmTC_c87ac.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_06773/fast"
+/usr/bin/make -f CMakeFiles/cmTC_06773.dir/build.make CMakeFiles/cmTC_06773.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c87ac.dir/src.c.o
-/usr/bin/cc    -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER   -o CMakeFiles/cmTC_c87ac.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_c87ac
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c87ac.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER    CMakeFiles/cmTC_c87ac.dir/src.c.o  -o cmTC_c87ac -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+Building C object CMakeFiles/cmTC_06773.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER   -o CMakeFiles/cmTC_06773.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_06773
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06773.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER    CMakeFiles/cmTC_06773.dir/src.c.o  -o cmTC_06773 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1322,14 +1322,14 @@ int main () {
 Determining if the DLT_PPP_SERIAL exist passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7d36a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7d36a.dir/build.make CMakeFiles/cmTC_7d36a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_60fc8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60fc8.dir/build.make CMakeFiles/cmTC_60fc8.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7d36a.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_7d36a.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_7d36a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d36a.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_7d36a.dir/CheckSymbolExists.c.o  -o cmTC_7d36a -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+Building C object CMakeFiles/cmTC_60fc8.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_60fc8.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_60fc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60fc8.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_60fc8.dir/CheckSymbolExists.c.o  -o cmTC_60fc8 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1350,14 +1350,14 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test including_ssl_h_works succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5a83d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5a83d.dir/build.make CMakeFiles/cmTC_5a83d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_95426/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95426.dir/build.make CMakeFiles/cmTC_95426.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5a83d.dir/src.c.o
-/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dincluding_ssl_h_works   -o CMakeFiles/cmTC_5a83d.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_5a83d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a83d.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -Dincluding_ssl_h_works    CMakeFiles/cmTC_5a83d.dir/src.c.o  -o cmTC_5a83d -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+Building C object CMakeFiles/cmTC_95426.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dincluding_ssl_h_works   -o CMakeFiles/cmTC_95426.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_95426
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95426.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dincluding_ssl_h_works    CMakeFiles/cmTC_95426.dir/src.c.o  -o cmTC_95426 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1368,14 +1368,14 @@ Source file was:
 Performing C SOURCE FILE Test openssl_greater_than_0_9_7 succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3cfd4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3cfd4.dir/build.make CMakeFiles/cmTC_3cfd4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9bc20/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9bc20.dir/build.make CMakeFiles/cmTC_9bc20.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3cfd4.dir/src.c.o
-/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dopenssl_greater_than_0_9_7   -o CMakeFiles/cmTC_3cfd4.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_3cfd4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3cfd4.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -Dopenssl_greater_than_0_9_7    CMakeFiles/cmTC_3cfd4.dir/src.c.o  -o cmTC_3cfd4 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+Building C object CMakeFiles/cmTC_9bc20.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dopenssl_greater_than_0_9_7   -o CMakeFiles/cmTC_9bc20.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9bc20
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bc20.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dopenssl_greater_than_0_9_7    CMakeFiles/cmTC_9bc20.dir/src.c.o  -o cmTC_9bc20 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1389,14 +1389,14 @@ Source file was:
 Performing C++ SOURCE FILE Test OPENSSL_D2I_X509_USES_CONST_CHAR succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a21cd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a21cd.dir/build.make CMakeFiles/cmTC_a21cd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2a592/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a592.dir/build.make CMakeFiles/cmTC_2a592.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a21cd.dir/src.cxx.o
-/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR   -o CMakeFiles/cmTC_a21cd.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_a21cd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a21cd.dir/link.txt --verbose=1
-/usr/bin/c++    -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR    CMakeFiles/cmTC_a21cd.dir/src.cxx.o  -o cmTC_a21cd -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+Building CXX object CMakeFiles/cmTC_2a592.dir/src.cxx.o
+/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR   -o CMakeFiles/cmTC_2a592.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2a592
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a592.dir/link.txt --verbose=1
+/usr/bin/c++    -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR    CMakeFiles/cmTC_2a592.dir/src.cxx.o  -o cmTC_2a592 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1412,14 +1412,14 @@ Source file was:
 Performing C SOURCE FILE Test OPENSSL_CORRECT_VERSION_NUMBER succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5aea6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5aea6.dir/build.make CMakeFiles/cmTC_5aea6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6cc89/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6cc89.dir/build.make CMakeFiles/cmTC_6cc89.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5aea6.dir/src.c.o
-/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER   -o CMakeFiles/cmTC_5aea6.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_5aea6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aea6.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER    CMakeFiles/cmTC_5aea6.dir/src.c.o  -o cmTC_5aea6 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+Building C object CMakeFiles/cmTC_6cc89.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER   -o CMakeFiles/cmTC_6cc89.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6cc89
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cc89.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER    CMakeFiles/cmTC_6cc89.dir/src.c.o  -o cmTC_6cc89 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Return value: 1
@@ -1440,14 +1440,14 @@ Source file was:
 Performing C SOURCE FILE Test have_nameser_header succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4dc98/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4dc98.dir/build.make CMakeFiles/cmTC_4dc98.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e33a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e33a7.dir/build.make CMakeFiles/cmTC_e33a7.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4dc98.dir/src.c.o
-/usr/bin/cc    -Wall -Wno-unused -Dhave_nameser_header   -o CMakeFiles/cmTC_4dc98.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4dc98
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4dc98.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -Dhave_nameser_header    CMakeFiles/cmTC_4dc98.dir/src.c.o  -o cmTC_4dc98 -rdynamic 
+Building C object CMakeFiles/cmTC_e33a7.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dhave_nameser_header   -o CMakeFiles/cmTC_e33a7.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e33a7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e33a7.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dhave_nameser_header    CMakeFiles/cmTC_e33a7.dir/src.c.o  -o cmTC_e33a7 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1457,14 +1457,14 @@ Source file was:
 Performing C++ SOURCE FILE Test cxx11_header_works succeeded with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1543c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1543c.dir/build.make CMakeFiles/cmTC_1543c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_da7d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_da7d3.dir/build.make CMakeFiles/cmTC_da7d3.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1543c.dir/src.cxx.o
-/usr/bin/c++     -Wall -Wno-unused -std=c++11 -Dcxx11_header_works   -o CMakeFiles/cmTC_1543c.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_1543c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1543c.dir/link.txt --verbose=1
-/usr/bin/c++    -Wall -Wno-unused -std=c++11 -Dcxx11_header_works    CMakeFiles/cmTC_1543c.dir/src.cxx.o  -o cmTC_1543c -rdynamic 
+Building CXX object CMakeFiles/cmTC_da7d3.dir/src.cxx.o
+/usr/bin/c++     -Wall -Wno-unused -std=c++11 -Dcxx11_header_works   -o CMakeFiles/cmTC_da7d3.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_da7d3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da7d3.dir/link.txt --verbose=1
+/usr/bin/c++    -Wall -Wno-unused -std=c++11 -Dcxx11_header_works    CMakeFiles/cmTC_da7d3.dir/src.cxx.o  -o cmTC_da7d3 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -1481,28 +1481,982 @@ Source file was:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1ef83/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1ef83.dir/build.make CMakeFiles/cmTC_1ef83.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_aa615/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aa615.dir/build.make CMakeFiles/cmTC_aa615.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1ef83.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_1ef83.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_1ef83
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ef83.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_1ef83.dir/CheckIncludeFile.c.o  -o cmTC_1ef83 -rdynamic 
+Building C object CMakeFiles/cmTC_aa615.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_aa615.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_aa615
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa615.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_aa615.dir/CheckIncludeFile.c.o  -o cmTC_aa615 -rdynamic 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eb505/fast"
-/usr/bin/make -f CMakeFiles/cmTC_eb505.dir/build.make CMakeFiles/cmTC_eb505.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4b8ed/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4b8ed.dir/build.make CMakeFiles/cmTC_4b8ed.dir/build
 make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_eb505.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eb505.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_eb505
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb505.dir/link.txt --verbose=1
-/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_eb505.dir/CheckFunctionExists.c.o  -o cmTC_eb505 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTC_4b8ed.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4b8ed.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4b8ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b8ed.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4b8ed.dir/CheckFunctionExists.c.o  -o cmTC_4b8ed -rdynamic -lpthread 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test PCAP_LINKS_SOLO succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e7dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e7dc.dir/build.make CMakeFiles/cmTC_3e7dc.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e7dc.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -DPCAP_LINKS_SOLO   -o CMakeFiles/cmTC_3e7dc.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3e7dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e7dc.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DPCAP_LINKS_SOLO    CMakeFiles/cmTC_3e7dc.dir/src.c.o  -o cmTC_3e7dc -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test ns_initparse_works_libresolv.a succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_faf1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_faf1f.dir/build.make CMakeFiles/cmTC_faf1f.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_faf1f.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dns_initparse_works_libresolv.a   -o CMakeFiles/cmTC_faf1f.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+<command-line>:0:29: warning: ISO C99 requires whitespace after the macro name
+Linking C executable cmTC_faf1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faf1f.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dns_initparse_works_libresolv.a    CMakeFiles/cmTC_faf1f.dir/src.c.o  -o cmTC_faf1f -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <arpa/nameser.h>
+        int main() {
+            ns_initparse(0, 0, 0);
+            return 0;
+        }
+
+Performing C SOURCE FILE Test res_mkquery_works_libresolv.a succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2a7f4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a7f4.dir/build.make CMakeFiles/cmTC_2a7f4.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a7f4.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dres_mkquery_works_libresolv.a   -o CMakeFiles/cmTC_2a7f4.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+<command-line>:0:28: warning: ISO C99 requires whitespace after the macro name
+Linking C executable cmTC_2a7f4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a7f4.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dres_mkquery_works_libresolv.a    CMakeFiles/cmTC_2a7f4.dir/src.c.o  -o cmTC_2a7f4 -rdynamic /usr/lib/x86_64-linux-gnu/libresolv.a 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <sys/types.h>
+        #include <sys/socket.h>
+        #include <netinet/in.h>
+        #include <arpa/nameser.h>
+        #include <resolv.h>
+        int main() {
+            int (*p)() = res_mkquery;
+            return 0;
+        }
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ac8d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ac8d.dir/build.make CMakeFiles/cmTC_3ac8d.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ac8d.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_3ac8d.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3ac8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ac8d.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_3ac8d.dir/CheckIncludeFile.c.o  -o cmTC_3ac8d -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3941e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3941e.dir/build.make CMakeFiles/cmTC_3941e.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3941e.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_3941e.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3941e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3941e.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_3941e.dir/CheckIncludeFile.c.o  -o cmTC_3941e -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_42cab/fast"
+/usr/bin/make -f CMakeFiles/cmTC_42cab.dir/build.make CMakeFiles/cmTC_42cab.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_42cab.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_42cab.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_42cab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42cab.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_42cab.dir/CheckIncludeFile.c.o  -o cmTC_42cab -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5a7b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5a7b.dir/build.make CMakeFiles/cmTC_b5a7b.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5a7b.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b5a7b.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_b5a7b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5a7b.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b5a7b.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_b5a7b -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7180/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7180.dir/build.make CMakeFiles/cmTC_b7180.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7180.dir/SIZEOF_UNSIGNED_INT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b7180.dir/SIZEOF_UNSIGNED_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_INT.c
+Linking C executable cmTC_b7180
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7180.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b7180.dir/SIZEOF_UNSIGNED_INT.c.o  -o cmTC_b7180 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of long int passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0dabb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0dabb.dir/build.make CMakeFiles/cmTC_0dabb.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0dabb.dir/SIZEOF_LONG_INT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_0dabb.dir/SIZEOF_LONG_INT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_INT.c
+Linking C executable cmTC_0dabb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dabb.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_0dabb.dir/SIZEOF_LONG_INT.c.o  -o cmTC_0dabb -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b422a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b422a.dir/build.make CMakeFiles/cmTC_b422a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b422a.dir/SIZEOF_LONG_LONG.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b422a.dir/SIZEOF_LONG_LONG.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_LONG_LONG.c
+Linking C executable cmTC_b422a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b422a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b422a.dir/SIZEOF_LONG_LONG.c.o  -o cmTC_b422a -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of void * passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6fda1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6fda1.dir/build.make CMakeFiles/cmTC_6fda1.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6fda1.dir/SIZEOF_VOID_P.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_6fda1.dir/SIZEOF_VOID_P.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/SIZEOF_VOID_P.c
+Linking C executable cmTC_6fda1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fda1.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_6fda1.dir/SIZEOF_VOID_P.c.o  -o cmTC_6fda1 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d46bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d46bb.dir/build.make CMakeFiles/cmTC_d46bb.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d46bb.dir/int32_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d46bb.dir/int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/int32_t.c
+Linking C executable cmTC_d46bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d46bb.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d46bb.dir/int32_t.c.o  -o cmTC_d46bb -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of u_int32_t passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a72a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a72a.dir/build.make CMakeFiles/cmTC_8a72a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8a72a.dir/u_int32_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_8a72a.dir/u_int32_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int32_t.c
+Linking C executable cmTC_8a72a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a72a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_8a72a.dir/u_int32_t.c.o  -o cmTC_8a72a -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of u_int16_t passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c853/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c853.dir/build.make CMakeFiles/cmTC_4c853.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4c853.dir/u_int16_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4c853.dir/u_int16_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int16_t.c
+Linking C executable cmTC_4c853
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c853.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4c853.dir/u_int16_t.c.o  -o cmTC_4c853 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of u_int8_t passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45852/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45852.dir/build.make CMakeFiles/cmTC_45852.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_45852.dir/u_int8_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_45852.dir/u_int8_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/u_int8_t.c
+Linking C executable cmTC_45852
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45852.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_45852.dir/u_int8_t.c.o  -o cmTC_45852 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of socklen_t passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_688df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_688df.dir/build.make CMakeFiles/cmTC_688df.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_688df.dir/socklen_t.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_688df.dir/socklen_t.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/socklen_t.c
+Linking C executable cmTC_688df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_688df.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_688df.dir/socklen_t.c.o  -o cmTC_688df -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of struct ip6_opt passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b636c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b636c.dir/build.make CMakeFiles/cmTC_b636c.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b636c.dir/IP6_OPT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_b636c.dir/IP6_OPT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_OPT.c
+Linking C executable cmTC_b636c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b636c.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_b636c.dir/IP6_OPT.c.o  -o cmTC_b636c -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining size of struct ip6_ext passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_96f26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96f26.dir/build.make CMakeFiles/cmTC_96f26.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96f26.dir/IP6_EXT.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_96f26.dir/IP6_EXT.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CheckTypeSize/IP6_EXT.c
+Linking C executable cmTC_96f26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96f26.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_96f26.dir/IP6_EXT.c.o  -o cmTC_96f26 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files getopt.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6750b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6750b.dir/build.make CMakeFiles/cmTC_6750b.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6750b.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_6750b.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_6750b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6750b.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_6750b.dir/CheckIncludeFiles.c.o  -o cmTC_6750b -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d648e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d648e.dir/build.make CMakeFiles/cmTC_d648e.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d648e.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_d648e.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_d648e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d648e.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_d648e.dir/CheckIncludeFiles.c.o  -o cmTC_d648e -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files netinet/ether.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d753/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d753.dir/build.make CMakeFiles/cmTC_5d753.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d753.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_5d753.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_5d753
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d753.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_5d753.dir/CheckIncludeFiles.c.o  -o cmTC_5d753 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/socket.h;netinet/in.h;net/if.h;netinet/if_ether.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_40ec3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40ec3.dir/build.make CMakeFiles/cmTC_40ec3.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40ec3.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_40ec3.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_40ec3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40ec3.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_40ec3.dir/CheckIncludeFiles.c.o  -o cmTC_40ec3 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/socket.h;netinet/in.h;net/if.h;netinet/ip6.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58fc1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58fc1.dir/build.make CMakeFiles/cmTC_58fc1.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58fc1.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_58fc1.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_58fc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58fc1.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_58fc1.dir/CheckIncludeFiles.c.o  -o cmTC_58fc1 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/socket.h;net/if.h;net/ethernet.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d33a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d33a.dir/build.make CMakeFiles/cmTC_9d33a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d33a.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_9d33a.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_9d33a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d33a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_9d33a.dir/CheckIncludeFiles.c.o  -o cmTC_9d33a -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4cd98/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4cd98.dir/build.make CMakeFiles/cmTC_4cd98.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4cd98.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_4cd98.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_4cd98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cd98.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_4cd98.dir/CheckIncludeFiles.c.o  -o cmTC_4cd98 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if files time.h;sys/time.h exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_95ae6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95ae6.dir/build.make CMakeFiles/cmTC_95ae6.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_95ae6.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_95ae6.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_95ae6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95ae6.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_95ae6.dir/CheckIncludeFiles.c.o  -o cmTC_95ae6 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the IPPROTO_HOPOPTS exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_40d95/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40d95.dir/build.make CMakeFiles/cmTC_40d95.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40d95.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_40d95.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_40d95
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40d95.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_40d95.dir/CheckSymbolExists.c.o  -o cmTC_40d95 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_HOPOPTS
+  return ((int*)(&IPPROTO_HOPOPTS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_IPV6 exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_081c1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_081c1.dir/build.make CMakeFiles/cmTC_081c1.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_081c1.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_081c1.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_081c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_081c1.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_081c1.dir/CheckSymbolExists.c.o  -o cmTC_081c1 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_IPV6
+  return ((int*)(&IPPROTO_IPV6))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_ROUTING exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9f51f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f51f.dir/build.make CMakeFiles/cmTC_9f51f.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f51f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_9f51f.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9f51f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f51f.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_9f51f.dir/CheckSymbolExists.c.o  -o cmTC_9f51f -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_ROUTING
+  return ((int*)(&IPPROTO_ROUTING))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_FRAGMENT exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_67d08/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67d08.dir/build.make CMakeFiles/cmTC_67d08.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_67d08.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_67d08.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_67d08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67d08.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_67d08.dir/CheckSymbolExists.c.o  -o cmTC_67d08 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_FRAGMENT
+  return ((int*)(&IPPROTO_FRAGMENT))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_ESP exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b063/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b063.dir/build.make CMakeFiles/cmTC_3b063.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b063.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_3b063.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3b063
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b063.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_3b063.dir/CheckSymbolExists.c.o  -o cmTC_3b063 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_ESP
+  return ((int*)(&IPPROTO_ESP))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_AH exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_247a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_247a6.dir/build.make CMakeFiles/cmTC_247a6.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_247a6.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_247a6.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_247a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_247a6.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_247a6.dir/CheckSymbolExists.c.o  -o cmTC_247a6 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_AH
+  return ((int*)(&IPPROTO_AH))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_ICMPV6 exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58844/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58844.dir/build.make CMakeFiles/cmTC_58844.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58844.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_58844.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_58844
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58844.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_58844.dir/CheckSymbolExists.c.o  -o cmTC_58844 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_ICMPV6
+  return ((int*)(&IPPROTO_ICMPV6))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_NONE exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ddd40/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ddd40.dir/build.make CMakeFiles/cmTC_ddd40.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ddd40.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_ddd40.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ddd40
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddd40.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_ddd40.dir/CheckSymbolExists.c.o  -o cmTC_ddd40 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_NONE
+  return ((int*)(&IPPROTO_NONE))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the IPPROTO_DSTOPTS exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4fb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4fb6.dir/build.make CMakeFiles/cmTC_c4fb6.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4fb6.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_c4fb6.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_c4fb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4fb6.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_c4fb6.dir/CheckSymbolExists.c.o  -o cmTC_c4fb6 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <netinet/in.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IPPROTO_DSTOPTS
+  return ((int*)(&IPPROTO_DSTOPTS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function getopt_long exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7f6b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7f6b.dir/build.make CMakeFiles/cmTC_e7f6b.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7f6b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long   -o CMakeFiles/cmTC_e7f6b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7f6b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7f6b.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=getopt_long    CMakeFiles/cmTC_e7f6b.dir/CheckFunctionExists.c.o  -o cmTC_e7f6b -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function mallinfo exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2b7f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2b7f5.dir/build.make CMakeFiles/cmTC_2b7f5.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo   -o CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2b7f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b7f5.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=mallinfo    CMakeFiles/cmTC_2b7f5.dir/CheckFunctionExists.c.o  -o cmTC_2b7f5 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strcasestr exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eebf3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eebf3.dir/build.make CMakeFiles/cmTC_eebf3.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eebf3.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr   -o CMakeFiles/cmTC_eebf3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eebf3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eebf3.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strcasestr    CMakeFiles/cmTC_eebf3.dir/CheckFunctionExists.c.o  -o cmTC_eebf3 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strerror exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b73f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b73f7.dir/build.make CMakeFiles/cmTC_b73f7.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b73f7.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror   -o CMakeFiles/cmTC_b73f7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b73f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b73f7.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strerror    CMakeFiles/cmTC_b73f7.dir/CheckFunctionExists.c.o  -o cmTC_b73f7 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strsep exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d4850/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4850.dir/build.make CMakeFiles/cmTC_d4850.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4850.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep   -o CMakeFiles/cmTC_d4850.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d4850
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4850.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=strsep    CMakeFiles/cmTC_d4850.dir/CheckFunctionExists.c.o  -o cmTC_d4850 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sigset exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5136/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5136.dir/build.make CMakeFiles/cmTC_b5136.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5136.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset   -o CMakeFiles/cmTC_b5136.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b5136
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5136.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=sigset    CMakeFiles/cmTC_b5136.dir/CheckFunctionExists.c.o  -o cmTC_b5136 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pcap_freecode exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7cd6a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7cd6a.dir/build.make CMakeFiles/cmTC_7cd6a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7cd6a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode   -o CMakeFiles/cmTC_7cd6a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7cd6a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cd6a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pcap_freecode    CMakeFiles/cmTC_7cd6a.dir/CheckFunctionExists.c.o  -o cmTC_7cd6a -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test LIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_230ac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_230ac.dir/build.make CMakeFiles/cmTC_230ac.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_230ac.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER   -o CMakeFiles/cmTC_230ac.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_230ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_230ac.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DLIBPCAP_PCAP_COMPILE_NOPCAP_NO_ERROR_PARAMETER    CMakeFiles/cmTC_230ac.dir/src.c.o  -o cmTC_230ac -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <pcap.h>
+int main () {
+    int snaplen;
+    int linktype;
+    struct bpf_program fp;
+    int optimize;
+    bpf_u_int32 netmask;
+    char str[10];
+    snaplen = 50;
+    linktype = DLT_EN10MB;
+    optimize = 1;
+    netmask = 0L;
+    str[0] = 'i'; str[1] = 'p'; str[2] = '\0';
+    (void)pcap_compile_nopcap(snaplen, linktype, &fp, str, optimize, netmask);
+    return 0;
+}
+
+Determining if the DLT_PPP_SERIAL exist passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_53d80/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53d80.dir/build.make CMakeFiles/cmTC_53d80.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53d80.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_53d80.dir/CheckSymbolExists.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_53d80
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53d80.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_53d80.dir/CheckSymbolExists.c.o  -o cmTC_53d80 -rdynamic /usr/lib/x86_64-linux-gnu/libpcap.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+File /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pcap.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef DLT_PPP_SERIAL
+  return ((int*)(&DLT_PPP_SERIAL))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test including_ssl_h_works succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d881a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d881a.dir/build.make CMakeFiles/cmTC_d881a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d881a.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dincluding_ssl_h_works   -o CMakeFiles/cmTC_d881a.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d881a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d881a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dincluding_ssl_h_works    CMakeFiles/cmTC_d881a.dir/src.c.o  -o cmTC_d881a -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include <openssl/ssl.h>
+    int main() { return 0; }
+
+Performing C SOURCE FILE Test openssl_greater_than_0_9_7 succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4872/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4872.dir/build.make CMakeFiles/cmTC_a4872.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4872.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -Dopenssl_greater_than_0_9_7   -o CMakeFiles/cmTC_a4872.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a4872
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4872.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dopenssl_greater_than_0_9_7    CMakeFiles/cmTC_a4872.dir/src.c.o  -o cmTC_a4872 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include <openssl/evp.h>
+    int main() {
+        OPENSSL_add_all_algorithms_conf();
+        return 0;
+    }
+
+Performing C++ SOURCE FILE Test OPENSSL_D2I_X509_USES_CONST_CHAR succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_51205/fast"
+/usr/bin/make -f CMakeFiles/cmTC_51205.dir/build.make CMakeFiles/cmTC_51205.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_51205.dir/src.cxx.o
+/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR   -o CMakeFiles/cmTC_51205.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_51205
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51205.dir/link.txt --verbose=1
+/usr/bin/c++    -Wall -Wno-unused -DOPENSSL_D2I_X509_USES_CONST_CHAR    CMakeFiles/cmTC_51205.dir/src.cxx.o  -o cmTC_51205 -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <openssl/x509.h>
+    int main() {
+        const unsigned char** cpp = 0;
+        X509** x =0;
+        d2i_X509(x, cpp, 0);
+        return 0;
+    }
+
+Performing C SOURCE FILE Test OPENSSL_CORRECT_VERSION_NUMBER succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1b48a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b48a.dir/build.make CMakeFiles/cmTC_1b48a.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b48a.dir/src.c.o
+/usr/bin/cc   -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib  -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER   -o CMakeFiles/cmTC_1b48a.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1b48a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b48a.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DOPENSSL_CORRECT_VERSION_NUMBER    CMakeFiles/cmTC_1b48a.dir/src.c.o  -o cmTC_1b48a -rdynamic /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+        #include <stdio.h>
+        #include <openssl/opensslv.h>
+        #include <openssl/crypto.h>
+        int main() {
+            printf("-- OpenSSL Library version: %s\n", SSLeay_version(SSLEAY_VERSION));
+            printf("-- OpenSSL Header version: %s\n", OPENSSL_VERSION_TEXT);
+            if (SSLeay() == OPENSSL_VERSION_NUMBER) {
+                return 0;
+            }
+            return -1;
+        }
+    
+Performing C SOURCE FILE Test have_nameser_header succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eee87/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eee87.dir/build.make CMakeFiles/cmTC_eee87.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eee87.dir/src.c.o
+/usr/bin/cc    -Wall -Wno-unused -Dhave_nameser_header   -o CMakeFiles/cmTC_eee87.dir/src.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_eee87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eee87.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -Dhave_nameser_header    CMakeFiles/cmTC_eee87.dir/src.c.o  -o cmTC_eee87 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include <arpa/nameser.h>
+    int main() { HEADER *hdr; int d = NS_IN6ADDRSZ; return 0; }
+Performing C++ SOURCE FILE Test cxx11_header_works succeeded with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_300a8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_300a8.dir/build.make CMakeFiles/cmTC_300a8.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_300a8.dir/src.cxx.o
+/usr/bin/c++     -Wall -Wno-unused -std=c++11 -Dcxx11_header_works   -o CMakeFiles/cmTC_300a8.dir/src.cxx.o -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_300a8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_300a8.dir/link.txt --verbose=1
+/usr/bin/c++    -Wall -Wno-unused -std=c++11 -Dcxx11_header_works    CMakeFiles/cmTC_300a8.dir/src.cxx.o  -o cmTC_300a8 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+    #include <array>
+    #include <iostream>
+        int main() {
+            std::array<int, 2> a{ {1, 2} };
+            for (const auto& e: a)
+                std::cout << e << ' ';
+            std::cout << std::endl;
+            }
+        
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71e66/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71e66.dir/build.make CMakeFiles/cmTC_71e66.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71e66.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -Wall -Wno-unused    -o CMakeFiles/cmTC_71e66.dir/CheckIncludeFile.c.o   -c /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_71e66
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71e66.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused     CMakeFiles/cmTC_71e66.dir/CheckIncludeFile.c.o  -o cmTC_71e66 -rdynamic 
+make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bb938/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb938.dir/build.make CMakeFiles/cmTC_bb938.dir/build
+make[1]: Entering directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb938.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_bb938.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bb938
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb938.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -Wno-unused -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_bb938.dir/CheckFunctionExists.c.o  -o cmTC_bb938 -rdynamic -lpthread 
 make[1]: Leaving directory '/home/ubuntu/bro/my_build_dir/CMakeFiles/CMakeTmp'
 
 

@@ -67,38 +67,26 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target package
+package/fast: package
 
-.PHONY : install/local/fast
+.PHONY : package/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -112,37 +100,38 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target package_source
+package_source/fast: package_source
 
-.PHONY : install/strip/fast
+.PHONY : package_source/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
+.PHONY : rebuild_cache/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : package/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
-.PHONY : src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
-
-# Convenience name for target.
-plugin-Bro-GSSAPI: src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
-
-.PHONY : plugin-Bro-GSSAPI
-
-# fast build rule for target.
-plugin-Bro-GSSAPI/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build
-.PHONY : plugin-Bro-GSSAPI/fast
-
-# Convenience name for target.
 src/analyzer/protocol/gssapi/CMakeFiles/bif-plugin-Bro_GSSAPI-events.bif.dir/rule:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gssapi/CMakeFiles/bif-plugin-Bro_GSSAPI-events.bif.dir/rule
 .PHONY : src/analyzer/protocol/gssapi/CMakeFiles/bif-plugin-Bro_GSSAPI-events.bif.dir/rule
@@ -220,6 +194,21 @@ pac-analyzer-protocol-gssapi-gssapi.pac: src/analyzer/protocol/gssapi/CMakeFiles
 pac-analyzer-protocol-gssapi-gssapi.pac/fast:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/pac-analyzer-protocol-gssapi-gssapi.pac.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/pac-analyzer-protocol-gssapi-gssapi.pac.dir/build
 .PHONY : pac-analyzer-protocol-gssapi-gssapi.pac/fast
+
+# Convenience name for target.
+src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
+.PHONY : src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
+
+# Convenience name for target.
+plugin-Bro-GSSAPI: src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/rule
+
+.PHONY : plugin-Bro-GSSAPI
+
+# fast build rule for target.
+plugin-Bro-GSSAPI/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build
+.PHONY : plugin-Bro-GSSAPI/fast
 
 GSSAPI.o: GSSAPI.cc.o
 
@@ -363,16 +352,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... package"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... package_source"
+	@echo "... bif-plugin-Bro_GSSAPI-events.bif"
+	@echo "... rebuild_cache"
+	@echo "... pac-analyzer-protocol-gssapi-gssapi.pac"
 	@echo "... plugin-Bro-GSSAPI"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
-	@echo "... bif-plugin-Bro_GSSAPI-events.bif"
-	@echo "... package_source"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... pac-analyzer-protocol-gssapi-gssapi.pac"
-	@echo "... package"
 	@echo "... GSSAPI.o"
 	@echo "... GSSAPI.i"
 	@echo "... GSSAPI.s"

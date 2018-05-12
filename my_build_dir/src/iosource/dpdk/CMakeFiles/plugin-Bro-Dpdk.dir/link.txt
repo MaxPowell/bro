@@ -1,0 +1,2 @@
+/usr/bin/ar qc libplugin-Bro-Dpdk.a  CMakeFiles/plugin-Bro-Dpdk.dir/Source.cc.o
+/usr/bin/ranlib libplugin-Bro-Dpdk.a

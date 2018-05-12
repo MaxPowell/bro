@@ -56,6 +56,61 @@ CMAKE_BINARY_DIR = /home/ubuntu/bro/my_build_dir
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,72 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
-.PHONY : src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
-
-# Convenience name for target.
-plugin-Bro-ConnSize: src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
-
-.PHONY : plugin-Bro-ConnSize
-
-# fast build rule for target.
-plugin-Bro-ConnSize/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build
-.PHONY : plugin-Bro-ConnSize/fast
-
-# Convenience name for target.
 src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-events.bif.dir/rule:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-events.bif.dir/rule
 .PHONY : src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-events.bif.dir/rule
@@ -220,6 +194,21 @@ bif-plugin-Bro_ConnSize-functions.bif: src/analyzer/protocol/conn-size/CMakeFile
 bif-plugin-Bro_ConnSize-functions.bif/fast:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-functions.bif.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-functions.bif.dir/build
 .PHONY : bif-plugin-Bro_ConnSize-functions.bif/fast
+
+# Convenience name for target.
+src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
+.PHONY : src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
+
+# Convenience name for target.
+plugin-Bro-ConnSize: src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/rule
+
+.PHONY : plugin-Bro-ConnSize
+
+# fast build rule for target.
+plugin-Bro-ConnSize/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build
+.PHONY : plugin-Bro-ConnSize/fast
 
 ConnSize.o: ConnSize.cc.o
 
@@ -389,17 +378,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... plugin-Bro-ConnSize"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... package"
-	@echo "... bif-plugin-Bro_ConnSize-events.bif"
-	@echo "... rebuild_cache"
-	@echo "... bif-plugin-Bro_ConnSize-functions.bif"
 	@echo "... package_source"
+	@echo "... rebuild_cache"
+	@echo "... package"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... edit_cache"
+	@echo "... bif-plugin-Bro_ConnSize-events.bif"
+	@echo "... bif-plugin-Bro_ConnSize-functions.bif"
+	@echo "... plugin-Bro-ConnSize"
+	@echo "... install/local"
 	@echo "... ConnSize.o"
 	@echo "... ConnSize.i"
 	@echo "... ConnSize.s"

@@ -67,17 +67,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -90,17 +79,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -111,16 +89,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target package
+package/fast: package
 
-.PHONY : install/strip/fast
+.PHONY : package/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -143,6 +121,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -432,17 +421,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... package_source"
 	@echo "... plugin-Bro-SIP"
 	@echo "... install"
 	@echo "... pac-analyzer-protocol-sip-sip_TCP.pac"
-	@echo "... package"
 	@echo "... pac-analyzer-protocol-sip-sip.pac"
 	@echo "... list_install_components"
 	@echo "... bif-plugin-Bro_SIP-events.bif"
-	@echo "... install/strip"
+	@echo "... package"
 	@echo "... install/local"
 	@echo "... rebuild_cache"
+	@echo "... package_source"
 	@echo "... Plugin.o"
 	@echo "... Plugin.i"
 	@echo "... Plugin.s"

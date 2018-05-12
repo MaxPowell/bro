@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -122,17 +111,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -143,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -275,7 +264,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... package"
 	@echo "... install-example-config-.home.ubuntu.bro.scripts.site.local-logger.bro"
 	@echo "... install-example-config-.home.ubuntu.bro.scripts.site.local-manager.bro"
 	@echo "... install-example-config-.home.ubuntu.bro.scripts.site.local.bro"
@@ -283,9 +271,9 @@ help:
 	@echo "... install-example-configs"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... install/strip"
 	@echo "... install-example-config-.home.ubuntu.bro.scripts.site.local-worker.bro"
 	@echo "... install/local"
+	@echo "... package"
 .PHONY : help
 
 

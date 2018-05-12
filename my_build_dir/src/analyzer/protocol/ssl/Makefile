@@ -101,17 +101,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -122,16 +111,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/strip/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -175,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/ubuntu/bro/my_build_dir && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
+.PHONY : src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
+
+# Convenience name for target.
+bif-plugin-Bro_SSL-functions.bif: src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
+
+.PHONY : bif-plugin-Bro_SSL-functions.bif
+
+# fast build rule for target.
+bif-plugin-Bro_SSL-functions.bif/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build.make src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build
+.PHONY : bif-plugin-Bro_SSL-functions.bif/fast
 
 # Convenience name for target.
 src/analyzer/protocol/ssl/CMakeFiles/pac-analyzer-protocol-ssl-dtls.pac.dir/rule:
@@ -265,21 +269,6 @@ plugin-Bro-SSL: src/analyzer/protocol/ssl/CMakeFiles/plugin-Bro-SSL.dir/rule
 plugin-Bro-SSL/fast:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ssl/CMakeFiles/plugin-Bro-SSL.dir/build.make src/analyzer/protocol/ssl/CMakeFiles/plugin-Bro-SSL.dir/build
 .PHONY : plugin-Bro-SSL/fast
-
-# Convenience name for target.
-src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
-.PHONY : src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
-
-# Convenience name for target.
-bif-plugin-Bro_SSL-functions.bif: src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/rule
-
-.PHONY : bif-plugin-Bro_SSL-functions.bif
-
-# fast build rule for target.
-bif-plugin-Bro_SSL-functions.bif/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build.make src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build
-.PHONY : bif-plugin-Bro_SSL-functions.bif/fast
 
 DTLS.o: DTLS.cc.o
 
@@ -615,6 +604,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... package"
 	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... bif-plugin-Bro_SSL-functions.bif"
 	@echo "... pac-analyzer-protocol-ssl-dtls.pac"
 	@echo "... bif-plugin-Bro_SSL-events.bif"
 	@echo "... edit_cache"
@@ -622,9 +613,6 @@ help:
 	@echo "... pac-analyzer-protocol-ssl-tls-handshake.pac"
 	@echo "... pac-analyzer-protocol-ssl-ssl.pac"
 	@echo "... plugin-Bro-SSL"
-	@echo "... list_install_components"
-	@echo "... bif-plugin-Bro_SSL-functions.bif"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... DTLS.o"
 	@echo "... DTLS.i"

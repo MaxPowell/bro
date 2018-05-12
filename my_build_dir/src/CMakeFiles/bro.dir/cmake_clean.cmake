@@ -135,6 +135,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/bro.dir/broLibmoon.cc.o"
   "bro.pdb"
   "bro"
+  "bro.pdb"
+  "CMakeFiles/CMakeRelink.dir/bro"
 )
 
 # Per-language clean rules from dependency scanning.

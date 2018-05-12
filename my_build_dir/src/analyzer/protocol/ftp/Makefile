@@ -67,27 +67,37 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target package_source
+package_source/fast: package_source
 
-.PHONY : install/local/fast
+.PHONY : package_source/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : package/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -101,48 +111,27 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target package
+package/fast: package
 
-.PHONY : install/strip/fast
+.PHONY : package/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
-.PHONY : src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
+src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
+.PHONY : src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
 
 # Convenience name for target.
-plugin-Bro-FTP: src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
+bif-plugin-Bro_FTP-events.bif: src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
 
-.PHONY : plugin-Bro-FTP
+.PHONY : bif-plugin-Bro_FTP-events.bif
 
 # fast build rule for target.
-plugin-Bro-FTP/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build
-.PHONY : plugin-Bro-FTP/fast
+bif-plugin-Bro_FTP-events.bif/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_FTP-events.bif/fast
 
 # Convenience name for target.
 src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-functions.bif.dir/rule:
@@ -207,19 +196,19 @@ bif-plugin-Bro_FTP-functions.bif/fast:
 .PHONY : bif-plugin-Bro_FTP-functions.bif/fast
 
 # Convenience name for target.
-src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
-.PHONY : src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
+src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
+.PHONY : src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
 
 # Convenience name for target.
-bif-plugin-Bro_FTP-events.bif: src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/rule
+plugin-Bro-FTP: src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/rule
 
-.PHONY : bif-plugin-Bro_FTP-events.bif
+.PHONY : plugin-Bro-FTP
 
 # fast build rule for target.
-bif-plugin-Bro_FTP-events.bif/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_FTP-events.bif/fast
+plugin-Bro-FTP/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build
+.PHONY : plugin-Bro-FTP/fast
 
 FTP.o: FTP.cc.o
 
@@ -390,16 +379,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... plugin-Bro-FTP"
+	@echo "... package_source"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... package"
+	@echo "... bif-plugin-Bro_FTP-events.bif"
 	@echo "... install/local"
 	@echo "... bif-plugin-Bro_FTP-functions.bif"
-	@echo "... package"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... bif-plugin-Bro_FTP-events.bif"
-	@echo "... package_source"
+	@echo "... plugin-Bro-FTP"
 	@echo "... FTP.o"
 	@echo "... FTP.i"
 	@echo "... FTP.s"

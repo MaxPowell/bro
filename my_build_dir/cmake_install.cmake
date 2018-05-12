@@ -38,11 +38,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   
-    if (NOT "root" STREQUAL "$ENV{USER}" AND
+    if (NOT "ubuntu" STREQUAL "$ENV{USER}" AND
         NOT "$ENV{USER}" STREQUAL root)
         message(STATUS "WARNING: Install is being performed by user "
                 "'$ENV{USER}', but the build directory was configured by "
-                "user 'root'. This may result in a permissions error "
+                "user 'ubuntu'. This may result in a permissions error "
                 "when writing the install manifest, but you can ignore it "
                 "and consider the installation as successful if you don't "
                 "care about the install manifest.")

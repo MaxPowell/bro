@@ -186,16 +186,16 @@ void net_init(name_list& interfaces, name_list& readfiles,
 		reading_traces = 0;
 		
 		/* DPDK */
-		for ( int i = 0; i < interfaces.length(); ++i ){ // Using ports as interfaces
+		/*for ( int i = 0; i < interfaces.length(); ++i ){ // Using ports as interfaces
 			// TODO Use execution arguments 
 			if(config_device(atoi(interfaces[i]),1,0, 0, 0, 0, 0, 0, 0, 0, 8191, RTE_MBUF_DEFAULT_BUF_SIZE) != 0){
 				reporter->FatalError("problem configuring %s port", interfaces[i]);
 				return; // TODO maybe remove this return - right now just for one loop/port
 			}
 			port_id = atoi(interfaces[i]);
-		}
+		}*/
 
-		/*for ( int i = 0; i < interfaces.length(); ++i )
+		for ( int i = 0; i < interfaces.length(); ++i )
 			{
 			iosource::PktSrc* ps = iosource_mgr->OpenPktSrc(interfaces[i], true);
 			assert(ps);
@@ -204,7 +204,7 @@ void net_init(name_list& interfaces, name_list& readfiles,
 				reporter->FatalError("problem with interface %s (%s)",
 						     interfaces[i],
 						     ps->ErrorMsg());
-			}*/
+			}
 		}
 
 	else

@@ -56,6 +56,61 @@ CMAKE_BINARY_DIR = /home/ubuntu/bro/my_build_dir
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,72 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
+.PHONY : src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
+
+# Convenience name for target.
+bif-plugin-Bro_GTPv1-events.bif: src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
+
+.PHONY : bif-plugin-Bro_GTPv1-events.bif
+
+# fast build rule for target.
+bif-plugin-Bro_GTPv1-events.bif/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build.make src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build
+.PHONY : bif-plugin-Bro_GTPv1-events.bif/fast
+
+# Convenience name for target.
 src/analyzer/protocol/gtpv1/CMakeFiles/pac-analyzer-protocol-gtpv1-gtpv1.pac.dir/rule:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gtpv1/CMakeFiles/pac-analyzer-protocol-gtpv1-gtpv1.pac.dir/rule
 .PHONY : src/analyzer/protocol/gtpv1/CMakeFiles/pac-analyzer-protocol-gtpv1-gtpv1.pac.dir/rule
@@ -205,21 +209,6 @@ plugin-Bro-GTPv1: src/analyzer/protocol/gtpv1/CMakeFiles/plugin-Bro-GTPv1.dir/ru
 plugin-Bro-GTPv1/fast:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gtpv1/CMakeFiles/plugin-Bro-GTPv1.dir/build.make src/analyzer/protocol/gtpv1/CMakeFiles/plugin-Bro-GTPv1.dir/build
 .PHONY : plugin-Bro-GTPv1/fast
-
-# Convenience name for target.
-src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
-.PHONY : src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
-
-# Convenience name for target.
-bif-plugin-Bro_GTPv1-events.bif: src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/rule
-
-.PHONY : bif-plugin-Bro_GTPv1-events.bif
-
-# fast build rule for target.
-bif-plugin-Bro_GTPv1-events.bif/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build.make src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build
-.PHONY : bif-plugin-Bro_GTPv1-events.bif/fast
 
 GTPv1.o: GTPv1.cc.o
 
@@ -362,17 +351,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... pac-analyzer-protocol-gtpv1-gtpv1.pac"
-	@echo "... plugin-Bro-GTPv1"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... bif-plugin-Bro_GTPv1-events.bif"
-	@echo "... package"
-	@echo "... rebuild_cache"
 	@echo "... package_source"
+	@echo "... rebuild_cache"
+	@echo "... package"
+	@echo "... bif-plugin-Bro_GTPv1-events.bif"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... pac-analyzer-protocol-gtpv1-gtpv1.pac"
+	@echo "... edit_cache"
+	@echo "... plugin-Bro-GTPv1"
+	@echo "... install/local"
 	@echo "... GTPv1.o"
 	@echo "... GTPv1.i"
 	@echo "... GTPv1.s"

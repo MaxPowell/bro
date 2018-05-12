@@ -5,6 +5,10 @@
 
 #include <vector>
 
+/* DPDK */
+#include "device.h"
+#define MAX_PKT_BURST 256
+
 #include "IOSource.h"
 #include "BPF_Program.h"
 #include "Dict.h"
@@ -331,6 +335,20 @@ protected:
 	virtual bool ExtractNextPacket(Packet* pkt) = 0;
 
 	/**
+	 * Provides the next burst of packets from the source.
+	 *
+	 * @param bufs The rte_mbuf structure to fill in with the packet's
+	 * information. The callee keep ownership of the data but must
+	 * guaranetee that it stays available at least until \a
+	 * DoneWithPacket() is called.  It is guaranteed that no two calls to
+	 * this method will hapen with \a DoneWithPacket() in between.
+	 *
+	 * @return Number of packets available in bufs and *bufs* filled in.
+	 */
+	virtual int ExtractNextBurst(struct rte_mbuf** bufs) = 0;
+
+
+	/**
 	 * Signals that the data of previously extracted packet will no
 	 * longer be needed.
 	 */
@@ -343,6 +361,10 @@ private:
 
 	// Internal helper for ExtractNextPacket().
 	bool ExtractNextPacketInternal();
+
+	/* DPDK */
+	struct rte_mbuf* current_burst[MAX_PKT_BURST];
+	int ExtractNextBurstInternal();
 
 	// IOSource interface implementation.
 	void Init() override;

@@ -89,6 +89,17 @@ package/fast: package
 
 .PHONY : package/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -110,28 +121,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -323,12 +312,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... package"
-	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... bif-plugin-Bro_POP3-events.bif"
+	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... plugin-Bro-POP3"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... POP3.o"
 	@echo "... POP3.i"

@@ -2785,6 +2785,11 @@
   "file": "/home/ubuntu/bro/src/iosource/pcap/Plugin.cc"
 },
 {
+  "directory": "/home/ubuntu/bro/my_build_dir/src/iosource/dpdk",
+  "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/src/iosource/dpdk -I/home/ubuntu/bro/src/iosource/dpdk -I/home/ubuntu/bro/my_build_dir/src/iosource -I/home/ubuntu/bro/src/iosource -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir   -Wall -Wno-unused -std=c++11 -O2 -g -DNDEBUG   -o CMakeFiles/plugin-Bro-Dpdk.dir/Source.cc.o -c /home/ubuntu/bro/src/iosource/dpdk/Source.cc",
+  "file": "/home/ubuntu/bro/src/iosource/dpdk/Source.cc"
+},
+{
   "directory": "/home/ubuntu/bro/my_build_dir/src/logging",
   "command": "/usr/bin/c++    -I/home/ubuntu/bro/my_build_dir/src/logging -I/home/ubuntu/bro/src/logging -I/home/ubuntu/bro/src/libmoon/deps/luajit/src -I/home/ubuntu/bro/src/libmoon/deps/dpdk/x86_64-native-linuxapp-gcc/include -I/home/ubuntu/bro/src/libmoon/src -I/home/ubuntu/bro/src/libmoon/lib -I/home/ubuntu/bro/my_build_dir/src -I/home/ubuntu/bro/src -I/home/ubuntu/bro/my_build_dir/aux/binpac/lib -I/home/ubuntu/bro/aux/binpac/lib -I/home/ubuntu/bro/my_build_dir   -Wall -Wno-unused -std=c++11 -O2 -g -DNDEBUG   -o CMakeFiles/bro_logging.dir/Component.cc.o -c /home/ubuntu/bro/src/logging/Component.cc",
   "file": "/home/ubuntu/bro/src/logging/Component.cc"

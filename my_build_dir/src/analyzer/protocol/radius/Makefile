@@ -67,27 +67,37 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
+.PHONY : package_source
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target package_source
+package_source/fast: package_source
 
-.PHONY : install/local/fast
+.PHONY : package_source/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : package/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -101,48 +111,27 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target package
+package/fast: package
 
-.PHONY : install/strip/fast
+.PHONY : package/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/ubuntu/bro/my_build_dir/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
-.PHONY : src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
+src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
+.PHONY : src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
 
 # Convenience name for target.
-plugin-Bro-RADIUS: src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
+pac-analyzer-protocol-radius-radius.pac: src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
 
-.PHONY : plugin-Bro-RADIUS
+.PHONY : pac-analyzer-protocol-radius-radius.pac
 
 # fast build rule for target.
-plugin-Bro-RADIUS/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build.make src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build
-.PHONY : plugin-Bro-RADIUS/fast
+pac-analyzer-protocol-radius-radius.pac/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build.make src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build
+.PHONY : pac-analyzer-protocol-radius-radius.pac/fast
 
 # Convenience name for target.
 src/analyzer/protocol/radius/CMakeFiles/bif-plugin-Bro_RADIUS-events.bif.dir/rule:
@@ -207,19 +196,19 @@ bif-plugin-Bro_RADIUS-events.bif/fast:
 .PHONY : bif-plugin-Bro_RADIUS-events.bif/fast
 
 # Convenience name for target.
-src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
-.PHONY : src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
+src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
+.PHONY : src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
 
 # Convenience name for target.
-pac-analyzer-protocol-radius-radius.pac: src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/rule
+plugin-Bro-RADIUS: src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/rule
 
-.PHONY : pac-analyzer-protocol-radius-radius.pac
+.PHONY : plugin-Bro-RADIUS
 
 # fast build rule for target.
-pac-analyzer-protocol-radius-radius.pac/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build.make src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build
-.PHONY : pac-analyzer-protocol-radius-radius.pac/fast
+plugin-Bro-RADIUS/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build.make src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build
+.PHONY : plugin-Bro-RADIUS/fast
 
 Plugin.o: Plugin.cc.o
 
@@ -363,16 +352,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... plugin-Bro-RADIUS"
-	@echo "... bif-plugin-Bro_RADIUS-events.bif"
-	@echo "... install/local"
-	@echo "... pac-analyzer-protocol-radius-radius.pac"
-	@echo "... package"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
 	@echo "... package_source"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... package"
+	@echo "... pac-analyzer-protocol-radius-radius.pac"
+	@echo "... bif-plugin-Bro_RADIUS-events.bif"
+	@echo "... plugin-Bro-RADIUS"
+	@echo "... install/local"
 	@echo "... Plugin.o"
 	@echo "... Plugin.i"
 	@echo "... Plugin.s"

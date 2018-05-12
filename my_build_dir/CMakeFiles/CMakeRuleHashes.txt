@@ -1,7 +1,5 @@
 # Hashes of file build rules.
 dd673006779d015ffd724d55a7d035d0 CMakeFiles/uninstall
-942b7e451777307390a8d702f76a1cfa aux/binpac/src/pac_parse.cc
-8d2e8fd4b79b5d37139f69bb4e1b53ae aux/binpac/src/pac_scan.cc
 adf447490693aa2f7cf1a82fd2414254 doc/CMakeFiles/sphinxdoc
 619c4ac3b95a0c64bb386c37252f32b2 doc/CMakeFiles/sphinxdoc_clean
 80d33d1e3090982bc3c5b0fa56fa5cf4 scripts/CMakeFiles/install-example-config-.home.ubuntu.bro.scripts.site.local-logger.bro

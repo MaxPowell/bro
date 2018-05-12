@@ -1,7 +1,7 @@
 #include "broLibmoon.h"
 
 extern int port_id; /* Port used - From Net.cc */
-extern Packet* current_pkt; /* Current packet pointer - From Net.cc */
+//extern Packet* current_pkt; /* Current packet pointer - From Net.cc */
 
 void startCapturing(){
 	struct rte_mbuf *bufs[MAX_PKT_BURST]; /* Where captured packets are gonna be stored */
@@ -15,7 +15,7 @@ void startCapturing(){
 				pkt = bufs[i];
 				printf("I read something!\n");
 
-				pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, pkt);
+				//pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, pkt);
 
 			}
 		}

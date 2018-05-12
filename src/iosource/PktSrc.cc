@@ -317,6 +317,36 @@ bool PktSrc::ExtractNextPacketInternal()
 	return 0;
 	}
 
+int PktSrc::ExtractNextBurstInternal(){
+	int n_pkts = 0;
+
+	if(have_packet)
+		return 0; // TODO Seach for the appropiate return
+
+	have_packet = false;
+	
+	// Don't return any packets if processing is suspended (except for the
+	// very first packet which we need to set up times).
+	if ( net_is_processing_suspended() && first_timestamp ){
+		SetIdle(true);
+		return 0;
+	}
+
+	if ( pseudo_realtime )
+		current_wallclock = current_time(true);
+	
+	n_pkts = ExtractNextBurst(current_burst);
+	if(n_pkts > 0){
+		SetIdle(false);
+		have_packet = true;
+		return n_pkts;
+	}
+	SetIdle(true);
+	return 0;
+}
+
+
+
 bool PktSrc::PrecompileBPFFilter(int index, const std::string& filter)
 	{
 	if ( index < 0 )

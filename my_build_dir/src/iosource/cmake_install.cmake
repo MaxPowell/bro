@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ubuntu/bro/my_build_dir/src/iosource/pcap/cmake_install.cmake")
+  include("/home/ubuntu/bro/my_build_dir/src/iosource/dpdk/cmake_install.cmake")
 
 endif()
 

@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -122,17 +111,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -143,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/ubuntu/bro/my_build_dir && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -207,6 +196,21 @@ pac-file_analysis-analyzer-x509-x509-extension.pac/fast:
 .PHONY : pac-file_analysis-analyzer-x509-x509-extension.pac/fast
 
 # Convenience name for target.
+src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
+.PHONY : src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
+
+# Convenience name for target.
+bif-plugin-Bro_X509-functions.bif: src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
+
+.PHONY : bif-plugin-Bro_X509-functions.bif
+
+# fast build rule for target.
+bif-plugin-Bro_X509-functions.bif/fast:
+	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build
+.PHONY : bif-plugin-Bro_X509-functions.bif/fast
+
+# Convenience name for target.
 src/file_analysis/analyzer/x509/CMakeFiles/plugin-Bro-X509.dir/rule:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/file_analysis/analyzer/x509/CMakeFiles/plugin-Bro-X509.dir/rule
 .PHONY : src/file_analysis/analyzer/x509/CMakeFiles/plugin-Bro-X509.dir/rule
@@ -235,21 +239,6 @@ bif-plugin-Bro_X509-events.bif: src/file_analysis/analyzer/x509/CMakeFiles/bif-p
 bif-plugin-Bro_X509-events.bif/fast:
 	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-events.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-events.bif.dir/build
 .PHONY : bif-plugin-Bro_X509-events.bif/fast
-
-# Convenience name for target.
-src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f CMakeFiles/Makefile2 src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
-.PHONY : src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
-
-# Convenience name for target.
-bif-plugin-Bro_X509-functions.bif: src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/rule
-
-.PHONY : bif-plugin-Bro_X509-functions.bif
-
-# fast build rule for target.
-bif-plugin-Bro_X509-functions.bif/fast:
-	cd /home/ubuntu/bro/my_build_dir && $(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build
-.PHONY : bif-plugin-Bro_X509-functions.bif/fast
 
 # Convenience name for target.
 src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-types.bif.dir/rule:
@@ -626,17 +615,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... package"
 	@echo "... bif-plugin-Bro_X509-ocsp_events.bif"
 	@echo "... pac-file_analysis-analyzer-x509-x509-extension.pac"
 	@echo "... install"
-	@echo "... plugin-Bro-X509"
-	@echo "... bif-plugin-Bro_X509-events.bif"
 	@echo "... bif-plugin-Bro_X509-functions.bif"
 	@echo "... list_install_components"
-	@echo "... install/strip"
+	@echo "... plugin-Bro-X509"
+	@echo "... bif-plugin-Bro_X509-events.bif"
 	@echo "... bif-plugin-Bro_X509-types.bif"
 	@echo "... install/local"
+	@echo "... package"
 	@echo "... OCSP.o"
 	@echo "... OCSP.i"
 	@echo "... OCSP.s"

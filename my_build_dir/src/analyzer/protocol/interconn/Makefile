@@ -122,17 +122,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -324,11 +313,10 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... package"
-	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... bif-plugin-Bro_InterConn-events.bif"
 	@echo "... plugin-Bro-InterConn"
-	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... install/local"
 	@echo "... InterConn.o"
 	@echo "... InterConn.i"

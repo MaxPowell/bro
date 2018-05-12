@@ -100,17 +100,6 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -364,7 +353,6 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... bro_iosource"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... install"

@@ -100,15 +100,16 @@ package/fast: package
 
 .PHONY : package/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -122,27 +123,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -371,6 +360,11 @@ bro/fast:
 	$(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/build
 .PHONY : bro/fast
 
+# Manual pre-install relink rule for target.
+bro/preinstall:
+	$(MAKE) -f src/CMakeFiles/bro.dir/build.make src/CMakeFiles/bro.dir/preinstall
+.PHONY : bro/preinstall
+
 #=============================================================================
 # Target rules for targets named generate_outputs_stage1
 
@@ -528,17 +522,17 @@ plugin-Bro-BackDoor/fast:
 .PHONY : plugin-Bro-BackDoor/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-BitTorrent
+# Target rules for targets named bif-plugin-Bro_BitTorrent-events.bif
 
 # Build rule for target.
-plugin-Bro-BitTorrent: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-BitTorrent
-.PHONY : plugin-Bro-BitTorrent
+bif-plugin-Bro_BitTorrent-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_BitTorrent-events.bif
+.PHONY : bif-plugin-Bro_BitTorrent-events.bif
 
 # fast build rule for target.
-plugin-Bro-BitTorrent/fast:
-	$(MAKE) -f src/analyzer/protocol/bittorrent/CMakeFiles/plugin-Bro-BitTorrent.dir/build.make src/analyzer/protocol/bittorrent/CMakeFiles/plugin-Bro-BitTorrent.dir/build
-.PHONY : plugin-Bro-BitTorrent/fast
+bif-plugin-Bro_BitTorrent-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/bittorrent/CMakeFiles/bif-plugin-Bro_BitTorrent-events.bif.dir/build.make src/analyzer/protocol/bittorrent/CMakeFiles/bif-plugin-Bro_BitTorrent-events.bif.dir/build
+.PHONY : bif-plugin-Bro_BitTorrent-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-bittorrent-bittorrent.pac
@@ -554,30 +548,17 @@ pac-analyzer-protocol-bittorrent-bittorrent.pac/fast:
 .PHONY : pac-analyzer-protocol-bittorrent-bittorrent.pac/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_BitTorrent-events.bif
+# Target rules for targets named plugin-Bro-BitTorrent
 
 # Build rule for target.
-bif-plugin-Bro_BitTorrent-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_BitTorrent-events.bif
-.PHONY : bif-plugin-Bro_BitTorrent-events.bif
+plugin-Bro-BitTorrent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-BitTorrent
+.PHONY : plugin-Bro-BitTorrent
 
 # fast build rule for target.
-bif-plugin-Bro_BitTorrent-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/bittorrent/CMakeFiles/bif-plugin-Bro_BitTorrent-events.bif.dir/build.make src/analyzer/protocol/bittorrent/CMakeFiles/bif-plugin-Bro_BitTorrent-events.bif.dir/build
-.PHONY : bif-plugin-Bro_BitTorrent-events.bif/fast
-
-#=============================================================================
-# Target rules for targets named plugin-Bro-ConnSize
-
-# Build rule for target.
-plugin-Bro-ConnSize: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-ConnSize
-.PHONY : plugin-Bro-ConnSize
-
-# fast build rule for target.
-plugin-Bro-ConnSize/fast:
-	$(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build
-.PHONY : plugin-Bro-ConnSize/fast
+plugin-Bro-BitTorrent/fast:
+	$(MAKE) -f src/analyzer/protocol/bittorrent/CMakeFiles/plugin-Bro-BitTorrent.dir/build.make src/analyzer/protocol/bittorrent/CMakeFiles/plugin-Bro-BitTorrent.dir/build
+.PHONY : plugin-Bro-BitTorrent/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_ConnSize-events.bif
@@ -604,6 +585,19 @@ bif-plugin-Bro_ConnSize-functions.bif: cmake_check_build_system
 bif-plugin-Bro_ConnSize-functions.bif/fast:
 	$(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-functions.bif.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/bif-plugin-Bro_ConnSize-functions.bif.dir/build
 .PHONY : bif-plugin-Bro_ConnSize-functions.bif/fast
+
+#=============================================================================
+# Target rules for targets named plugin-Bro-ConnSize
+
+# Build rule for target.
+plugin-Bro-ConnSize: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-ConnSize
+.PHONY : plugin-Bro-ConnSize
+
+# fast build rule for target.
+plugin-Bro-ConnSize/fast:
+	$(MAKE) -f src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build.make src/analyzer/protocol/conn-size/CMakeFiles/plugin-Bro-ConnSize.dir/build
+.PHONY : plugin-Bro-ConnSize/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-dce-rpc-dce_rpc.pac
@@ -671,17 +665,17 @@ plugin-Bro-DCE_RPC/fast:
 .PHONY : plugin-Bro-DCE_RPC/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_DHCP-events.bif
+# Target rules for targets named pac-analyzer-protocol-dhcp-dhcp.pac
 
 # Build rule for target.
-bif-plugin-Bro_DHCP-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_DHCP-events.bif
-.PHONY : bif-plugin-Bro_DHCP-events.bif
+pac-analyzer-protocol-dhcp-dhcp.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-dhcp-dhcp.pac
+.PHONY : pac-analyzer-protocol-dhcp-dhcp.pac
 
 # fast build rule for target.
-bif-plugin-Bro_DHCP-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/dhcp/CMakeFiles/bif-plugin-Bro_DHCP-events.bif.dir/build.make src/analyzer/protocol/dhcp/CMakeFiles/bif-plugin-Bro_DHCP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_DHCP-events.bif/fast
+pac-analyzer-protocol-dhcp-dhcp.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac.dir/build.make src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac.dir/build
+.PHONY : pac-analyzer-protocol-dhcp-dhcp.pac/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-DHCP
@@ -697,17 +691,30 @@ plugin-Bro-DHCP/fast:
 .PHONY : plugin-Bro-DHCP/fast
 
 #=============================================================================
-# Target rules for targets named pac-analyzer-protocol-dhcp-dhcp.pac
+# Target rules for targets named bif-plugin-Bro_DHCP-events.bif
 
 # Build rule for target.
-pac-analyzer-protocol-dhcp-dhcp.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-dhcp-dhcp.pac
-.PHONY : pac-analyzer-protocol-dhcp-dhcp.pac
+bif-plugin-Bro_DHCP-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_DHCP-events.bif
+.PHONY : bif-plugin-Bro_DHCP-events.bif
 
 # fast build rule for target.
-pac-analyzer-protocol-dhcp-dhcp.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac.dir/build.make src/analyzer/protocol/dhcp/CMakeFiles/pac-analyzer-protocol-dhcp-dhcp.pac.dir/build
-.PHONY : pac-analyzer-protocol-dhcp-dhcp.pac/fast
+bif-plugin-Bro_DHCP-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/dhcp/CMakeFiles/bif-plugin-Bro_DHCP-events.bif.dir/build.make src/analyzer/protocol/dhcp/CMakeFiles/bif-plugin-Bro_DHCP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_DHCP-events.bif/fast
+
+#=============================================================================
+# Target rules for targets named bif-plugin-Bro_DNP3-events.bif
+
+# Build rule for target.
+bif-plugin-Bro_DNP3-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_DNP3-events.bif
+.PHONY : bif-plugin-Bro_DNP3-events.bif
+
+# fast build rule for target.
+bif-plugin-Bro_DNP3-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/dnp3/CMakeFiles/bif-plugin-Bro_DNP3-events.bif.dir/build.make src/analyzer/protocol/dnp3/CMakeFiles/bif-plugin-Bro_DNP3-events.bif.dir/build
+.PHONY : bif-plugin-Bro_DNP3-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-dnp3-dnp3.pac
@@ -734,19 +741,6 @@ plugin-Bro-DNP3: cmake_check_build_system
 plugin-Bro-DNP3/fast:
 	$(MAKE) -f src/analyzer/protocol/dnp3/CMakeFiles/plugin-Bro-DNP3.dir/build.make src/analyzer/protocol/dnp3/CMakeFiles/plugin-Bro-DNP3.dir/build
 .PHONY : plugin-Bro-DNP3/fast
-
-#=============================================================================
-# Target rules for targets named bif-plugin-Bro_DNP3-events.bif
-
-# Build rule for target.
-bif-plugin-Bro_DNP3-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_DNP3-events.bif
-.PHONY : bif-plugin-Bro_DNP3-events.bif
-
-# fast build rule for target.
-bif-plugin-Bro_DNP3-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/dnp3/CMakeFiles/bif-plugin-Bro_DNP3-events.bif.dir/build.make src/analyzer/protocol/dnp3/CMakeFiles/bif-plugin-Bro_DNP3-events.bif.dir/build
-.PHONY : bif-plugin-Bro_DNP3-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_DNS-events.bif
@@ -827,17 +821,17 @@ plugin-Bro-Finger/fast:
 .PHONY : plugin-Bro-Finger/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-FTP
+# Target rules for targets named bif-plugin-Bro_FTP-events.bif
 
 # Build rule for target.
-plugin-Bro-FTP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-FTP
-.PHONY : plugin-Bro-FTP
+bif-plugin-Bro_FTP-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_FTP-events.bif
+.PHONY : bif-plugin-Bro_FTP-events.bif
 
 # fast build rule for target.
-plugin-Bro-FTP/fast:
-	$(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build
-.PHONY : plugin-Bro-FTP/fast
+bif-plugin-Bro_FTP-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_FTP-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_FTP-functions.bif
@@ -853,17 +847,17 @@ bif-plugin-Bro_FTP-functions.bif/fast:
 .PHONY : bif-plugin-Bro_FTP-functions.bif/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_FTP-events.bif
+# Target rules for targets named plugin-Bro-FTP
 
 # Build rule for target.
-bif-plugin-Bro_FTP-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_FTP-events.bif
-.PHONY : bif-plugin-Bro_FTP-events.bif
+plugin-Bro-FTP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-FTP
+.PHONY : plugin-Bro-FTP
 
 # fast build rule for target.
-bif-plugin-Bro_FTP-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/bif-plugin-Bro_FTP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_FTP-events.bif/fast
+plugin-Bro-FTP/fast:
+	$(MAKE) -f src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build.make src/analyzer/protocol/ftp/CMakeFiles/plugin-Bro-FTP.dir/build
+.PHONY : plugin-Bro-FTP/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_Gnutella-events.bif
@@ -892,19 +886,6 @@ plugin-Bro-Gnutella/fast:
 .PHONY : plugin-Bro-Gnutella/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-GSSAPI
-
-# Build rule for target.
-plugin-Bro-GSSAPI: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-GSSAPI
-.PHONY : plugin-Bro-GSSAPI
-
-# fast build rule for target.
-plugin-Bro-GSSAPI/fast:
-	$(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build
-.PHONY : plugin-Bro-GSSAPI/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_GSSAPI-events.bif
 
 # Build rule for target.
@@ -929,6 +910,32 @@ pac-analyzer-protocol-gssapi-gssapi.pac: cmake_check_build_system
 pac-analyzer-protocol-gssapi-gssapi.pac/fast:
 	$(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/pac-analyzer-protocol-gssapi-gssapi.pac.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/pac-analyzer-protocol-gssapi-gssapi.pac.dir/build
 .PHONY : pac-analyzer-protocol-gssapi-gssapi.pac/fast
+
+#=============================================================================
+# Target rules for targets named plugin-Bro-GSSAPI
+
+# Build rule for target.
+plugin-Bro-GSSAPI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-GSSAPI
+.PHONY : plugin-Bro-GSSAPI
+
+# fast build rule for target.
+plugin-Bro-GSSAPI/fast:
+	$(MAKE) -f src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build.make src/analyzer/protocol/gssapi/CMakeFiles/plugin-Bro-GSSAPI.dir/build
+.PHONY : plugin-Bro-GSSAPI/fast
+
+#=============================================================================
+# Target rules for targets named bif-plugin-Bro_GTPv1-events.bif
+
+# Build rule for target.
+bif-plugin-Bro_GTPv1-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_GTPv1-events.bif
+.PHONY : bif-plugin-Bro_GTPv1-events.bif
+
+# fast build rule for target.
+bif-plugin-Bro_GTPv1-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build.make src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build
+.PHONY : bif-plugin-Bro_GTPv1-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-gtpv1-gtpv1.pac
@@ -957,30 +964,17 @@ plugin-Bro-GTPv1/fast:
 .PHONY : plugin-Bro-GTPv1/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_GTPv1-events.bif
+# Target rules for targets named bif-plugin-Bro_HTTP-events.bif
 
 # Build rule for target.
-bif-plugin-Bro_GTPv1-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_GTPv1-events.bif
-.PHONY : bif-plugin-Bro_GTPv1-events.bif
+bif-plugin-Bro_HTTP-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_HTTP-events.bif
+.PHONY : bif-plugin-Bro_HTTP-events.bif
 
 # fast build rule for target.
-bif-plugin-Bro_GTPv1-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build.make src/analyzer/protocol/gtpv1/CMakeFiles/bif-plugin-Bro_GTPv1-events.bif.dir/build
-.PHONY : bif-plugin-Bro_GTPv1-events.bif/fast
-
-#=============================================================================
-# Target rules for targets named plugin-Bro-HTTP
-
-# Build rule for target.
-plugin-Bro-HTTP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-HTTP
-.PHONY : plugin-Bro-HTTP
-
-# fast build rule for target.
-plugin-Bro-HTTP/fast:
-	$(MAKE) -f src/analyzer/protocol/http/CMakeFiles/plugin-Bro-HTTP.dir/build.make src/analyzer/protocol/http/CMakeFiles/plugin-Bro-HTTP.dir/build
-.PHONY : plugin-Bro-HTTP/fast
+bif-plugin-Bro_HTTP-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/http/CMakeFiles/bif-plugin-Bro_HTTP-events.bif.dir/build.make src/analyzer/protocol/http/CMakeFiles/bif-plugin-Bro_HTTP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_HTTP-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_HTTP-functions.bif
@@ -996,17 +990,17 @@ bif-plugin-Bro_HTTP-functions.bif/fast:
 .PHONY : bif-plugin-Bro_HTTP-functions.bif/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_HTTP-events.bif
+# Target rules for targets named plugin-Bro-HTTP
 
 # Build rule for target.
-bif-plugin-Bro_HTTP-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_HTTP-events.bif
-.PHONY : bif-plugin-Bro_HTTP-events.bif
+plugin-Bro-HTTP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-HTTP
+.PHONY : plugin-Bro-HTTP
 
 # fast build rule for target.
-bif-plugin-Bro_HTTP-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/http/CMakeFiles/bif-plugin-Bro_HTTP-events.bif.dir/build.make src/analyzer/protocol/http/CMakeFiles/bif-plugin-Bro_HTTP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_HTTP-events.bif/fast
+plugin-Bro-HTTP/fast:
+	$(MAKE) -f src/analyzer/protocol/http/CMakeFiles/plugin-Bro-HTTP.dir/build.make src/analyzer/protocol/http/CMakeFiles/plugin-Bro-HTTP.dir/build
+.PHONY : plugin-Bro-HTTP/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_ICMP-events.bif
@@ -1061,19 +1055,6 @@ plugin-Bro-Ident/fast:
 .PHONY : plugin-Bro-Ident/fast
 
 #=============================================================================
-# Target rules for targets named pac-analyzer-protocol-imap-imap.pac
-
-# Build rule for target.
-pac-analyzer-protocol-imap-imap.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-imap-imap.pac
-.PHONY : pac-analyzer-protocol-imap-imap.pac
-
-# fast build rule for target.
-pac-analyzer-protocol-imap-imap.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/imap/CMakeFiles/pac-analyzer-protocol-imap-imap.pac.dir/build.make src/analyzer/protocol/imap/CMakeFiles/pac-analyzer-protocol-imap-imap.pac.dir/build
-.PHONY : pac-analyzer-protocol-imap-imap.pac/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_IMAP-events.bif
 
 # Build rule for target.
@@ -1085,6 +1066,19 @@ bif-plugin-Bro_IMAP-events.bif: cmake_check_build_system
 bif-plugin-Bro_IMAP-events.bif/fast:
 	$(MAKE) -f src/analyzer/protocol/imap/CMakeFiles/bif-plugin-Bro_IMAP-events.bif.dir/build.make src/analyzer/protocol/imap/CMakeFiles/bif-plugin-Bro_IMAP-events.bif.dir/build
 .PHONY : bif-plugin-Bro_IMAP-events.bif/fast
+
+#=============================================================================
+# Target rules for targets named pac-analyzer-protocol-imap-imap.pac
+
+# Build rule for target.
+pac-analyzer-protocol-imap-imap.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-imap-imap.pac
+.PHONY : pac-analyzer-protocol-imap-imap.pac
+
+# fast build rule for target.
+pac-analyzer-protocol-imap-imap.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/imap/CMakeFiles/pac-analyzer-protocol-imap-imap.pac.dir/build.make src/analyzer/protocol/imap/CMakeFiles/pac-analyzer-protocol-imap-imap.pac.dir/build
+.PHONY : pac-analyzer-protocol-imap-imap.pac/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-IMAP
@@ -1282,19 +1276,6 @@ plugin-Bro-MIME/fast:
 .PHONY : plugin-Bro-MIME/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-Modbus
-
-# Build rule for target.
-plugin-Bro-Modbus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-Modbus
-.PHONY : plugin-Bro-Modbus
-
-# fast build rule for target.
-plugin-Bro-Modbus/fast:
-	$(MAKE) -f src/analyzer/protocol/modbus/CMakeFiles/plugin-Bro-Modbus.dir/build.make src/analyzer/protocol/modbus/CMakeFiles/plugin-Bro-Modbus.dir/build
-.PHONY : plugin-Bro-Modbus/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_Modbus-events.bif
 
 # Build rule for target.
@@ -1321,30 +1302,17 @@ pac-analyzer-protocol-modbus-modbus.pac/fast:
 .PHONY : pac-analyzer-protocol-modbus-modbus.pac/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-MySQL
+# Target rules for targets named plugin-Bro-Modbus
 
 # Build rule for target.
-plugin-Bro-MySQL: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-MySQL
-.PHONY : plugin-Bro-MySQL
+plugin-Bro-Modbus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-Modbus
+.PHONY : plugin-Bro-Modbus
 
 # fast build rule for target.
-plugin-Bro-MySQL/fast:
-	$(MAKE) -f src/analyzer/protocol/mysql/CMakeFiles/plugin-Bro-MySQL.dir/build.make src/analyzer/protocol/mysql/CMakeFiles/plugin-Bro-MySQL.dir/build
-.PHONY : plugin-Bro-MySQL/fast
-
-#=============================================================================
-# Target rules for targets named pac-analyzer-protocol-mysql-mysql.pac
-
-# Build rule for target.
-pac-analyzer-protocol-mysql-mysql.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-mysql-mysql.pac
-.PHONY : pac-analyzer-protocol-mysql-mysql.pac
-
-# fast build rule for target.
-pac-analyzer-protocol-mysql-mysql.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/mysql/CMakeFiles/pac-analyzer-protocol-mysql-mysql.pac.dir/build.make src/analyzer/protocol/mysql/CMakeFiles/pac-analyzer-protocol-mysql-mysql.pac.dir/build
-.PHONY : pac-analyzer-protocol-mysql-mysql.pac/fast
+plugin-Bro-Modbus/fast:
+	$(MAKE) -f src/analyzer/protocol/modbus/CMakeFiles/plugin-Bro-Modbus.dir/build.make src/analyzer/protocol/modbus/CMakeFiles/plugin-Bro-Modbus.dir/build
+.PHONY : plugin-Bro-Modbus/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_MySQL-events.bif
@@ -1360,30 +1328,30 @@ bif-plugin-Bro_MySQL-events.bif/fast:
 .PHONY : bif-plugin-Bro_MySQL-events.bif/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-NCP
+# Target rules for targets named pac-analyzer-protocol-mysql-mysql.pac
 
 # Build rule for target.
-plugin-Bro-NCP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-NCP
-.PHONY : plugin-Bro-NCP
+pac-analyzer-protocol-mysql-mysql.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-mysql-mysql.pac
+.PHONY : pac-analyzer-protocol-mysql-mysql.pac
 
 # fast build rule for target.
-plugin-Bro-NCP/fast:
-	$(MAKE) -f src/analyzer/protocol/ncp/CMakeFiles/plugin-Bro-NCP.dir/build.make src/analyzer/protocol/ncp/CMakeFiles/plugin-Bro-NCP.dir/build
-.PHONY : plugin-Bro-NCP/fast
+pac-analyzer-protocol-mysql-mysql.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/mysql/CMakeFiles/pac-analyzer-protocol-mysql-mysql.pac.dir/build.make src/analyzer/protocol/mysql/CMakeFiles/pac-analyzer-protocol-mysql-mysql.pac.dir/build
+.PHONY : pac-analyzer-protocol-mysql-mysql.pac/fast
 
 #=============================================================================
-# Target rules for targets named pac-analyzer-protocol-ncp-ncp.pac
+# Target rules for targets named plugin-Bro-MySQL
 
 # Build rule for target.
-pac-analyzer-protocol-ncp-ncp.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-ncp-ncp.pac
-.PHONY : pac-analyzer-protocol-ncp-ncp.pac
+plugin-Bro-MySQL: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-MySQL
+.PHONY : plugin-Bro-MySQL
 
 # fast build rule for target.
-pac-analyzer-protocol-ncp-ncp.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac.dir/build.make src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac.dir/build
-.PHONY : pac-analyzer-protocol-ncp-ncp.pac/fast
+plugin-Bro-MySQL/fast:
+	$(MAKE) -f src/analyzer/protocol/mysql/CMakeFiles/plugin-Bro-MySQL.dir/build.make src/analyzer/protocol/mysql/CMakeFiles/plugin-Bro-MySQL.dir/build
+.PHONY : plugin-Bro-MySQL/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_NCP-events.bif
@@ -1399,17 +1367,30 @@ bif-plugin-Bro_NCP-events.bif/fast:
 .PHONY : bif-plugin-Bro_NCP-events.bif/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-NetBIOS
+# Target rules for targets named pac-analyzer-protocol-ncp-ncp.pac
 
 # Build rule for target.
-plugin-Bro-NetBIOS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-NetBIOS
-.PHONY : plugin-Bro-NetBIOS
+pac-analyzer-protocol-ncp-ncp.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-ncp-ncp.pac
+.PHONY : pac-analyzer-protocol-ncp-ncp.pac
 
 # fast build rule for target.
-plugin-Bro-NetBIOS/fast:
-	$(MAKE) -f src/analyzer/protocol/netbios/CMakeFiles/plugin-Bro-NetBIOS.dir/build.make src/analyzer/protocol/netbios/CMakeFiles/plugin-Bro-NetBIOS.dir/build
-.PHONY : plugin-Bro-NetBIOS/fast
+pac-analyzer-protocol-ncp-ncp.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac.dir/build.make src/analyzer/protocol/ncp/CMakeFiles/pac-analyzer-protocol-ncp-ncp.pac.dir/build
+.PHONY : pac-analyzer-protocol-ncp-ncp.pac/fast
+
+#=============================================================================
+# Target rules for targets named plugin-Bro-NCP
+
+# Build rule for target.
+plugin-Bro-NCP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-NCP
+.PHONY : plugin-Bro-NCP
+
+# fast build rule for target.
+plugin-Bro-NCP/fast:
+	$(MAKE) -f src/analyzer/protocol/ncp/CMakeFiles/plugin-Bro-NCP.dir/build.make src/analyzer/protocol/ncp/CMakeFiles/plugin-Bro-NCP.dir/build
+.PHONY : plugin-Bro-NCP/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_NetBIOS-events.bif
@@ -1423,6 +1404,19 @@ bif-plugin-Bro_NetBIOS-events.bif: cmake_check_build_system
 bif-plugin-Bro_NetBIOS-events.bif/fast:
 	$(MAKE) -f src/analyzer/protocol/netbios/CMakeFiles/bif-plugin-Bro_NetBIOS-events.bif.dir/build.make src/analyzer/protocol/netbios/CMakeFiles/bif-plugin-Bro_NetBIOS-events.bif.dir/build
 .PHONY : bif-plugin-Bro_NetBIOS-events.bif/fast
+
+#=============================================================================
+# Target rules for targets named plugin-Bro-NetBIOS
+
+# Build rule for target.
+plugin-Bro-NetBIOS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-NetBIOS
+.PHONY : plugin-Bro-NetBIOS
+
+# fast build rule for target.
+plugin-Bro-NetBIOS/fast:
+	$(MAKE) -f src/analyzer/protocol/netbios/CMakeFiles/plugin-Bro-NetBIOS.dir/build.make src/analyzer/protocol/netbios/CMakeFiles/plugin-Bro-NetBIOS.dir/build
+.PHONY : plugin-Bro-NetBIOS/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_NetBIOS-functions.bif
@@ -1555,17 +1549,17 @@ plugin-Bro-POP3/fast:
 .PHONY : plugin-Bro-POP3/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-RADIUS
+# Target rules for targets named pac-analyzer-protocol-radius-radius.pac
 
 # Build rule for target.
-plugin-Bro-RADIUS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-RADIUS
-.PHONY : plugin-Bro-RADIUS
+pac-analyzer-protocol-radius-radius.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-radius-radius.pac
+.PHONY : pac-analyzer-protocol-radius-radius.pac
 
 # fast build rule for target.
-plugin-Bro-RADIUS/fast:
-	$(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build.make src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build
-.PHONY : plugin-Bro-RADIUS/fast
+pac-analyzer-protocol-radius-radius.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build.make src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build
+.PHONY : pac-analyzer-protocol-radius-radius.pac/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_RADIUS-events.bif
@@ -1581,17 +1575,17 @@ bif-plugin-Bro_RADIUS-events.bif/fast:
 .PHONY : bif-plugin-Bro_RADIUS-events.bif/fast
 
 #=============================================================================
-# Target rules for targets named pac-analyzer-protocol-radius-radius.pac
+# Target rules for targets named plugin-Bro-RADIUS
 
 # Build rule for target.
-pac-analyzer-protocol-radius-radius.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-radius-radius.pac
-.PHONY : pac-analyzer-protocol-radius-radius.pac
+plugin-Bro-RADIUS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-RADIUS
+.PHONY : plugin-Bro-RADIUS
 
 # fast build rule for target.
-pac-analyzer-protocol-radius-radius.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build.make src/analyzer/protocol/radius/CMakeFiles/pac-analyzer-protocol-radius-radius.pac.dir/build
-.PHONY : pac-analyzer-protocol-radius-radius.pac/fast
+plugin-Bro-RADIUS/fast:
+	$(MAKE) -f src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build.make src/analyzer/protocol/radius/CMakeFiles/plugin-Bro-RADIUS.dir/build
+.PHONY : plugin-Bro-RADIUS/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-rdp-rdp.pac
@@ -1646,17 +1640,17 @@ bif-plugin-Bro_RDP-types.bif/fast:
 .PHONY : bif-plugin-Bro_RDP-types.bif/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-RFB
+# Target rules for targets named bif-plugin-Bro_RFB-events.bif
 
 # Build rule for target.
-plugin-Bro-RFB: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-RFB
-.PHONY : plugin-Bro-RFB
+bif-plugin-Bro_RFB-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_RFB-events.bif
+.PHONY : bif-plugin-Bro_RFB-events.bif
 
 # fast build rule for target.
-plugin-Bro-RFB/fast:
-	$(MAKE) -f src/analyzer/protocol/rfb/CMakeFiles/plugin-Bro-RFB.dir/build.make src/analyzer/protocol/rfb/CMakeFiles/plugin-Bro-RFB.dir/build
-.PHONY : plugin-Bro-RFB/fast
+bif-plugin-Bro_RFB-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/rfb/CMakeFiles/bif-plugin-Bro_RFB-events.bif.dir/build.make src/analyzer/protocol/rfb/CMakeFiles/bif-plugin-Bro_RFB-events.bif.dir/build
+.PHONY : bif-plugin-Bro_RFB-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-rfb-rfb.pac
@@ -1672,17 +1666,17 @@ pac-analyzer-protocol-rfb-rfb.pac/fast:
 .PHONY : pac-analyzer-protocol-rfb-rfb.pac/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_RFB-events.bif
+# Target rules for targets named plugin-Bro-RFB
 
 # Build rule for target.
-bif-plugin-Bro_RFB-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_RFB-events.bif
-.PHONY : bif-plugin-Bro_RFB-events.bif
+plugin-Bro-RFB: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-RFB
+.PHONY : plugin-Bro-RFB
 
 # fast build rule for target.
-bif-plugin-Bro_RFB-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/rfb/CMakeFiles/bif-plugin-Bro_RFB-events.bif.dir/build.make src/analyzer/protocol/rfb/CMakeFiles/bif-plugin-Bro_RFB-events.bif.dir/build
-.PHONY : bif-plugin-Bro_RFB-events.bif/fast
+plugin-Bro-RFB/fast:
+	$(MAKE) -f src/analyzer/protocol/rfb/CMakeFiles/plugin-Bro-RFB.dir/build.make src/analyzer/protocol/rfb/CMakeFiles/plugin-Bro-RFB.dir/build
+.PHONY : plugin-Bro-RFB/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_RPC-events.bif
@@ -2270,19 +2264,6 @@ bif-plugin-Bro_SMTP-events.bif/fast:
 .PHONY : bif-plugin-Bro_SMTP-events.bif/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-SMTP
-
-# Build rule for target.
-plugin-Bro-SMTP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-SMTP
-.PHONY : plugin-Bro-SMTP
-
-# fast build rule for target.
-plugin-Bro-SMTP/fast:
-	$(MAKE) -f src/analyzer/protocol/smtp/CMakeFiles/plugin-Bro-SMTP.dir/build.make src/analyzer/protocol/smtp/CMakeFiles/plugin-Bro-SMTP.dir/build
-.PHONY : plugin-Bro-SMTP/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_SMTP-functions.bif
 
 # Build rule for target.
@@ -2296,17 +2277,30 @@ bif-plugin-Bro_SMTP-functions.bif/fast:
 .PHONY : bif-plugin-Bro_SMTP-functions.bif/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-SOCKS
+# Target rules for targets named plugin-Bro-SMTP
 
 # Build rule for target.
-plugin-Bro-SOCKS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-SOCKS
-.PHONY : plugin-Bro-SOCKS
+plugin-Bro-SMTP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-SMTP
+.PHONY : plugin-Bro-SMTP
 
 # fast build rule for target.
-plugin-Bro-SOCKS/fast:
-	$(MAKE) -f src/analyzer/protocol/socks/CMakeFiles/plugin-Bro-SOCKS.dir/build.make src/analyzer/protocol/socks/CMakeFiles/plugin-Bro-SOCKS.dir/build
-.PHONY : plugin-Bro-SOCKS/fast
+plugin-Bro-SMTP/fast:
+	$(MAKE) -f src/analyzer/protocol/smtp/CMakeFiles/plugin-Bro-SMTP.dir/build.make src/analyzer/protocol/smtp/CMakeFiles/plugin-Bro-SMTP.dir/build
+.PHONY : plugin-Bro-SMTP/fast
+
+#=============================================================================
+# Target rules for targets named bif-plugin-Bro_SOCKS-events.bif
+
+# Build rule for target.
+bif-plugin-Bro_SOCKS-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_SOCKS-events.bif
+.PHONY : bif-plugin-Bro_SOCKS-events.bif
+
+# fast build rule for target.
+bif-plugin-Bro_SOCKS-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/socks/CMakeFiles/bif-plugin-Bro_SOCKS-events.bif.dir/build.make src/analyzer/protocol/socks/CMakeFiles/bif-plugin-Bro_SOCKS-events.bif.dir/build
+.PHONY : bif-plugin-Bro_SOCKS-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-socks-socks.pac
@@ -2322,17 +2316,17 @@ pac-analyzer-protocol-socks-socks.pac/fast:
 .PHONY : pac-analyzer-protocol-socks-socks.pac/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_SOCKS-events.bif
+# Target rules for targets named plugin-Bro-SOCKS
 
 # Build rule for target.
-bif-plugin-Bro_SOCKS-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_SOCKS-events.bif
-.PHONY : bif-plugin-Bro_SOCKS-events.bif
+plugin-Bro-SOCKS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-SOCKS
+.PHONY : plugin-Bro-SOCKS
 
 # fast build rule for target.
-bif-plugin-Bro_SOCKS-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/socks/CMakeFiles/bif-plugin-Bro_SOCKS-events.bif.dir/build.make src/analyzer/protocol/socks/CMakeFiles/bif-plugin-Bro_SOCKS-events.bif.dir/build
-.PHONY : bif-plugin-Bro_SOCKS-events.bif/fast
+plugin-Bro-SOCKS/fast:
+	$(MAKE) -f src/analyzer/protocol/socks/CMakeFiles/plugin-Bro-SOCKS.dir/build.make src/analyzer/protocol/socks/CMakeFiles/plugin-Bro-SOCKS.dir/build
+.PHONY : plugin-Bro-SOCKS/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-SSH
@@ -2385,6 +2379,19 @@ bif-plugin-Bro_SSH-types.bif: cmake_check_build_system
 bif-plugin-Bro_SSH-types.bif/fast:
 	$(MAKE) -f src/analyzer/protocol/ssh/CMakeFiles/bif-plugin-Bro_SSH-types.bif.dir/build.make src/analyzer/protocol/ssh/CMakeFiles/bif-plugin-Bro_SSH-types.bif.dir/build
 .PHONY : bif-plugin-Bro_SSH-types.bif/fast
+
+#=============================================================================
+# Target rules for targets named bif-plugin-Bro_SSL-functions.bif
+
+# Build rule for target.
+bif-plugin-Bro_SSL-functions.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_SSL-functions.bif
+.PHONY : bif-plugin-Bro_SSL-functions.bif
+
+# fast build rule for target.
+bif-plugin-Bro_SSL-functions.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build.make src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build
+.PHONY : bif-plugin-Bro_SSL-functions.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-ssl-dtls.pac
@@ -2465,19 +2472,6 @@ plugin-Bro-SSL/fast:
 .PHONY : plugin-Bro-SSL/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_SSL-functions.bif
-
-# Build rule for target.
-bif-plugin-Bro_SSL-functions.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_SSL-functions.bif
-.PHONY : bif-plugin-Bro_SSL-functions.bif
-
-# fast build rule for target.
-bif-plugin-Bro_SSL-functions.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build.make src/analyzer/protocol/ssl/CMakeFiles/bif-plugin-Bro_SSL-functions.bif.dir/build
-.PHONY : bif-plugin-Bro_SSL-functions.bif/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_SteppingStone-events.bif
 
 # Build rule for target.
@@ -2504,19 +2498,6 @@ plugin-Bro-SteppingStone/fast:
 .PHONY : plugin-Bro-SteppingStone/fast
 
 #=============================================================================
-# Target rules for targets named pac-analyzer-protocol-syslog-syslog.pac
-
-# Build rule for target.
-pac-analyzer-protocol-syslog-syslog.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-syslog-syslog.pac
-.PHONY : pac-analyzer-protocol-syslog-syslog.pac
-
-# fast build rule for target.
-pac-analyzer-protocol-syslog-syslog.pac/fast:
-	$(MAKE) -f src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac.dir/build.make src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac.dir/build
-.PHONY : pac-analyzer-protocol-syslog-syslog.pac/fast
-
-#=============================================================================
 # Target rules for targets named bif-plugin-Bro_Syslog-events.bif
 
 # Build rule for target.
@@ -2528,6 +2509,19 @@ bif-plugin-Bro_Syslog-events.bif: cmake_check_build_system
 bif-plugin-Bro_Syslog-events.bif/fast:
 	$(MAKE) -f src/analyzer/protocol/syslog/CMakeFiles/bif-plugin-Bro_Syslog-events.bif.dir/build.make src/analyzer/protocol/syslog/CMakeFiles/bif-plugin-Bro_Syslog-events.bif.dir/build
 .PHONY : bif-plugin-Bro_Syslog-events.bif/fast
+
+#=============================================================================
+# Target rules for targets named pac-analyzer-protocol-syslog-syslog.pac
+
+# Build rule for target.
+pac-analyzer-protocol-syslog-syslog.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-analyzer-protocol-syslog-syslog.pac
+.PHONY : pac-analyzer-protocol-syslog-syslog.pac
+
+# fast build rule for target.
+pac-analyzer-protocol-syslog-syslog.pac/fast:
+	$(MAKE) -f src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac.dir/build.make src/analyzer/protocol/syslog/CMakeFiles/pac-analyzer-protocol-syslog-syslog.pac.dir/build
+.PHONY : pac-analyzer-protocol-syslog-syslog.pac/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-Syslog
@@ -2543,17 +2537,17 @@ plugin-Bro-Syslog/fast:
 .PHONY : plugin-Bro-Syslog/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_TCP-functions.bif
+# Target rules for targets named bif-plugin-Bro_TCP-events.bif
 
 # Build rule for target.
-bif-plugin-Bro_TCP-functions.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_TCP-functions.bif
-.PHONY : bif-plugin-Bro_TCP-functions.bif
+bif-plugin-Bro_TCP-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_TCP-events.bif
+.PHONY : bif-plugin-Bro_TCP-events.bif
 
 # fast build rule for target.
-bif-plugin-Bro_TCP-functions.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-functions.bif.dir/build.make src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-functions.bif.dir/build
-.PHONY : bif-plugin-Bro_TCP-functions.bif/fast
+bif-plugin-Bro_TCP-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-events.bif.dir/build.make src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_TCP-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-TCP
@@ -2569,17 +2563,17 @@ plugin-Bro-TCP/fast:
 .PHONY : plugin-Bro-TCP/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_TCP-events.bif
+# Target rules for targets named bif-plugin-Bro_TCP-functions.bif
 
 # Build rule for target.
-bif-plugin-Bro_TCP-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_TCP-events.bif
-.PHONY : bif-plugin-Bro_TCP-events.bif
+bif-plugin-Bro_TCP-functions.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_TCP-functions.bif
+.PHONY : bif-plugin-Bro_TCP-functions.bif
 
 # fast build rule for target.
-bif-plugin-Bro_TCP-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-events.bif.dir/build.make src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_TCP-events.bif/fast
+bif-plugin-Bro_TCP-functions.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-functions.bif.dir/build.make src/analyzer/protocol/tcp/CMakeFiles/bif-plugin-Bro_TCP-functions.bif.dir/build
+.PHONY : bif-plugin-Bro_TCP-functions.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_Teredo-events.bif
@@ -2634,17 +2628,17 @@ plugin-Bro-UDP/fast:
 .PHONY : plugin-Bro-UDP/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-XMPP
+# Target rules for targets named bif-plugin-Bro_XMPP-events.bif
 
 # Build rule for target.
-plugin-Bro-XMPP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-XMPP
-.PHONY : plugin-Bro-XMPP
+bif-plugin-Bro_XMPP-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_XMPP-events.bif
+.PHONY : bif-plugin-Bro_XMPP-events.bif
 
 # fast build rule for target.
-plugin-Bro-XMPP/fast:
-	$(MAKE) -f src/analyzer/protocol/xmpp/CMakeFiles/plugin-Bro-XMPP.dir/build.make src/analyzer/protocol/xmpp/CMakeFiles/plugin-Bro-XMPP.dir/build
-.PHONY : plugin-Bro-XMPP/fast
+bif-plugin-Bro_XMPP-events.bif/fast:
+	$(MAKE) -f src/analyzer/protocol/xmpp/CMakeFiles/bif-plugin-Bro_XMPP-events.bif.dir/build.make src/analyzer/protocol/xmpp/CMakeFiles/bif-plugin-Bro_XMPP-events.bif.dir/build
+.PHONY : bif-plugin-Bro_XMPP-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named pac-analyzer-protocol-xmpp-xmpp.pac
@@ -2660,17 +2654,17 @@ pac-analyzer-protocol-xmpp-xmpp.pac/fast:
 .PHONY : pac-analyzer-protocol-xmpp-xmpp.pac/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_XMPP-events.bif
+# Target rules for targets named plugin-Bro-XMPP
 
 # Build rule for target.
-bif-plugin-Bro_XMPP-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_XMPP-events.bif
-.PHONY : bif-plugin-Bro_XMPP-events.bif
+plugin-Bro-XMPP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-XMPP
+.PHONY : plugin-Bro-XMPP
 
 # fast build rule for target.
-bif-plugin-Bro_XMPP-events.bif/fast:
-	$(MAKE) -f src/analyzer/protocol/xmpp/CMakeFiles/bif-plugin-Bro_XMPP-events.bif.dir/build.make src/analyzer/protocol/xmpp/CMakeFiles/bif-plugin-Bro_XMPP-events.bif.dir/build
-.PHONY : bif-plugin-Bro_XMPP-events.bif/fast
+plugin-Bro-XMPP/fast:
+	$(MAKE) -f src/analyzer/protocol/xmpp/CMakeFiles/plugin-Bro-XMPP.dir/build.make src/analyzer/protocol/xmpp/CMakeFiles/plugin-Bro-XMPP.dir/build
+.PHONY : plugin-Bro-XMPP/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-ZIP
@@ -2777,17 +2771,17 @@ plugin-Bro-FileEntropy/fast:
 .PHONY : plugin-Bro-FileEntropy/fast
 
 #=============================================================================
-# Target rules for targets named plugin-Bro-FileExtract
+# Target rules for targets named bif-plugin-Bro_FileExtract-events.bif
 
 # Build rule for target.
-plugin-Bro-FileExtract: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-FileExtract
-.PHONY : plugin-Bro-FileExtract
+bif-plugin-Bro_FileExtract-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_FileExtract-events.bif
+.PHONY : bif-plugin-Bro_FileExtract-events.bif
 
 # fast build rule for target.
-plugin-Bro-FileExtract/fast:
-	$(MAKE) -f src/file_analysis/analyzer/extract/CMakeFiles/plugin-Bro-FileExtract.dir/build.make src/file_analysis/analyzer/extract/CMakeFiles/plugin-Bro-FileExtract.dir/build
-.PHONY : plugin-Bro-FileExtract/fast
+bif-plugin-Bro_FileExtract-events.bif/fast:
+	$(MAKE) -f src/file_analysis/analyzer/extract/CMakeFiles/bif-plugin-Bro_FileExtract-events.bif.dir/build.make src/file_analysis/analyzer/extract/CMakeFiles/bif-plugin-Bro_FileExtract-events.bif.dir/build
+.PHONY : bif-plugin-Bro_FileExtract-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_FileExtract-functions.bif
@@ -2803,17 +2797,17 @@ bif-plugin-Bro_FileExtract-functions.bif/fast:
 .PHONY : bif-plugin-Bro_FileExtract-functions.bif/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_FileExtract-events.bif
+# Target rules for targets named plugin-Bro-FileExtract
 
 # Build rule for target.
-bif-plugin-Bro_FileExtract-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_FileExtract-events.bif
-.PHONY : bif-plugin-Bro_FileExtract-events.bif
+plugin-Bro-FileExtract: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-FileExtract
+.PHONY : plugin-Bro-FileExtract
 
 # fast build rule for target.
-bif-plugin-Bro_FileExtract-events.bif/fast:
-	$(MAKE) -f src/file_analysis/analyzer/extract/CMakeFiles/bif-plugin-Bro_FileExtract-events.bif.dir/build.make src/file_analysis/analyzer/extract/CMakeFiles/bif-plugin-Bro_FileExtract-events.bif.dir/build
-.PHONY : bif-plugin-Bro_FileExtract-events.bif/fast
+plugin-Bro-FileExtract/fast:
+	$(MAKE) -f src/file_analysis/analyzer/extract/CMakeFiles/plugin-Bro-FileExtract.dir/build.make src/file_analysis/analyzer/extract/CMakeFiles/plugin-Bro-FileExtract.dir/build
+.PHONY : plugin-Bro-FileExtract/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_FileHash-events.bif
@@ -2842,17 +2836,17 @@ plugin-Bro-FileHash/fast:
 .PHONY : plugin-Bro-FileHash/fast
 
 #=============================================================================
-# Target rules for targets named pac-file_analysis-analyzer-pe-pe.pac
+# Target rules for targets named bif-plugin-Bro_PE-events.bif
 
 # Build rule for target.
-pac-file_analysis-analyzer-pe-pe.pac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pac-file_analysis-analyzer-pe-pe.pac
-.PHONY : pac-file_analysis-analyzer-pe-pe.pac
+bif-plugin-Bro_PE-events.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_PE-events.bif
+.PHONY : bif-plugin-Bro_PE-events.bif
 
 # fast build rule for target.
-pac-file_analysis-analyzer-pe-pe.pac/fast:
-	$(MAKE) -f src/file_analysis/analyzer/pe/CMakeFiles/pac-file_analysis-analyzer-pe-pe.pac.dir/build.make src/file_analysis/analyzer/pe/CMakeFiles/pac-file_analysis-analyzer-pe-pe.pac.dir/build
-.PHONY : pac-file_analysis-analyzer-pe-pe.pac/fast
+bif-plugin-Bro_PE-events.bif/fast:
+	$(MAKE) -f src/file_analysis/analyzer/pe/CMakeFiles/bif-plugin-Bro_PE-events.bif.dir/build.make src/file_analysis/analyzer/pe/CMakeFiles/bif-plugin-Bro_PE-events.bif.dir/build
+.PHONY : bif-plugin-Bro_PE-events.bif/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-PE
@@ -2868,17 +2862,17 @@ plugin-Bro-PE/fast:
 .PHONY : plugin-Bro-PE/fast
 
 #=============================================================================
-# Target rules for targets named bif-plugin-Bro_PE-events.bif
+# Target rules for targets named pac-file_analysis-analyzer-pe-pe.pac
 
 # Build rule for target.
-bif-plugin-Bro_PE-events.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_PE-events.bif
-.PHONY : bif-plugin-Bro_PE-events.bif
+pac-file_analysis-analyzer-pe-pe.pac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pac-file_analysis-analyzer-pe-pe.pac
+.PHONY : pac-file_analysis-analyzer-pe-pe.pac
 
 # fast build rule for target.
-bif-plugin-Bro_PE-events.bif/fast:
-	$(MAKE) -f src/file_analysis/analyzer/pe/CMakeFiles/bif-plugin-Bro_PE-events.bif.dir/build.make src/file_analysis/analyzer/pe/CMakeFiles/bif-plugin-Bro_PE-events.bif.dir/build
-.PHONY : bif-plugin-Bro_PE-events.bif/fast
+pac-file_analysis-analyzer-pe-pe.pac/fast:
+	$(MAKE) -f src/file_analysis/analyzer/pe/CMakeFiles/pac-file_analysis-analyzer-pe-pe.pac.dir/build.make src/file_analysis/analyzer/pe/CMakeFiles/pac-file_analysis-analyzer-pe-pe.pac.dir/build
+.PHONY : pac-file_analysis-analyzer-pe-pe.pac/fast
 
 #=============================================================================
 # Target rules for targets named plugin-Bro-Unified2
@@ -2959,6 +2953,19 @@ pac-file_analysis-analyzer-x509-x509-extension.pac/fast:
 .PHONY : pac-file_analysis-analyzer-x509-x509-extension.pac/fast
 
 #=============================================================================
+# Target rules for targets named bif-plugin-Bro_X509-functions.bif
+
+# Build rule for target.
+bif-plugin-Bro_X509-functions.bif: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_X509-functions.bif
+.PHONY : bif-plugin-Bro_X509-functions.bif
+
+# fast build rule for target.
+bif-plugin-Bro_X509-functions.bif/fast:
+	$(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build
+.PHONY : bif-plugin-Bro_X509-functions.bif/fast
+
+#=============================================================================
 # Target rules for targets named plugin-Bro-X509
 
 # Build rule for target.
@@ -2983,19 +2990,6 @@ bif-plugin-Bro_X509-events.bif: cmake_check_build_system
 bif-plugin-Bro_X509-events.bif/fast:
 	$(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-events.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-events.bif.dir/build
 .PHONY : bif-plugin-Bro_X509-events.bif/fast
-
-#=============================================================================
-# Target rules for targets named bif-plugin-Bro_X509-functions.bif
-
-# Build rule for target.
-bif-plugin-Bro_X509-functions.bif: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bif-plugin-Bro_X509-functions.bif
-.PHONY : bif-plugin-Bro_X509-functions.bif
-
-# fast build rule for target.
-bif-plugin-Bro_X509-functions.bif/fast:
-	$(MAKE) -f src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build.make src/file_analysis/analyzer/x509/CMakeFiles/bif-plugin-Bro_X509-functions.bif.dir/build
-.PHONY : bif-plugin-Bro_X509-functions.bif/fast
 
 #=============================================================================
 # Target rules for targets named bif-plugin-Bro_X509-types.bif
@@ -3230,6 +3224,19 @@ plugin-Bro-Pcap: cmake_check_build_system
 plugin-Bro-Pcap/fast:
 	$(MAKE) -f src/iosource/pcap/CMakeFiles/plugin-Bro-Pcap.dir/build.make src/iosource/pcap/CMakeFiles/plugin-Bro-Pcap.dir/build
 .PHONY : plugin-Bro-Pcap/fast
+
+#=============================================================================
+# Target rules for targets named plugin-Bro-Dpdk
+
+# Build rule for target.
+plugin-Bro-Dpdk: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plugin-Bro-Dpdk
+.PHONY : plugin-Bro-Dpdk
+
+# fast build rule for target.
+plugin-Bro-Dpdk/fast:
+	$(MAKE) -f src/iosource/dpdk/CMakeFiles/plugin-Bro-Dpdk.dir/build.make src/iosource/dpdk/CMakeFiles/plugin-Bro-Dpdk.dir/build
+.PHONY : plugin-Bro-Dpdk/fast
 
 #=============================================================================
 # Target rules for targets named bif-alt-logging-logging.bif
@@ -3606,10 +3613,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... package"
 	@echo "... uninstall"
-	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... pac-binpac-lib.pac"
 	@echo "... bif-std-types.bif"
 	@echo "... bif-std-option.bif"
@@ -3636,49 +3642,49 @@ help:
 	@echo "... plugin-Bro-AYIYA"
 	@echo "... bif-plugin-Bro_BackDoor-events.bif"
 	@echo "... plugin-Bro-BackDoor"
-	@echo "... plugin-Bro-BitTorrent"
-	@echo "... pac-analyzer-protocol-bittorrent-bittorrent.pac"
 	@echo "... bif-plugin-Bro_BitTorrent-events.bif"
-	@echo "... plugin-Bro-ConnSize"
+	@echo "... pac-analyzer-protocol-bittorrent-bittorrent.pac"
+	@echo "... plugin-Bro-BitTorrent"
 	@echo "... bif-plugin-Bro_ConnSize-events.bif"
 	@echo "... bif-plugin-Bro_ConnSize-functions.bif"
+	@echo "... plugin-Bro-ConnSize"
 	@echo "... pac-analyzer-protocol-dce-rpc-dce_rpc.pac"
 	@echo "... bif-plugin-Bro_DCE_RPC-events.bif"
 	@echo "... bif-plugin-Bro_DCE_RPC-types.bif"
 	@echo "... bif-plugin-Bro_DCE_RPC-consts.bif"
 	@echo "... plugin-Bro-DCE_RPC"
-	@echo "... bif-plugin-Bro_DHCP-events.bif"
-	@echo "... plugin-Bro-DHCP"
 	@echo "... pac-analyzer-protocol-dhcp-dhcp.pac"
+	@echo "... plugin-Bro-DHCP"
+	@echo "... bif-plugin-Bro_DHCP-events.bif"
+	@echo "... bif-plugin-Bro_DNP3-events.bif"
 	@echo "... pac-analyzer-protocol-dnp3-dnp3.pac"
 	@echo "... plugin-Bro-DNP3"
-	@echo "... bif-plugin-Bro_DNP3-events.bif"
 	@echo "... bif-plugin-Bro_DNS-events.bif"
 	@echo "... plugin-Bro-DNS"
 	@echo "... bif-plugin-Bro_File-events.bif"
 	@echo "... plugin-Bro-File"
 	@echo "... bif-plugin-Bro_Finger-events.bif"
 	@echo "... plugin-Bro-Finger"
-	@echo "... plugin-Bro-FTP"
-	@echo "... bif-plugin-Bro_FTP-functions.bif"
 	@echo "... bif-plugin-Bro_FTP-events.bif"
+	@echo "... bif-plugin-Bro_FTP-functions.bif"
+	@echo "... plugin-Bro-FTP"
 	@echo "... bif-plugin-Bro_Gnutella-events.bif"
 	@echo "... plugin-Bro-Gnutella"
-	@echo "... plugin-Bro-GSSAPI"
 	@echo "... bif-plugin-Bro_GSSAPI-events.bif"
 	@echo "... pac-analyzer-protocol-gssapi-gssapi.pac"
+	@echo "... plugin-Bro-GSSAPI"
+	@echo "... bif-plugin-Bro_GTPv1-events.bif"
 	@echo "... pac-analyzer-protocol-gtpv1-gtpv1.pac"
 	@echo "... plugin-Bro-GTPv1"
-	@echo "... bif-plugin-Bro_GTPv1-events.bif"
-	@echo "... plugin-Bro-HTTP"
-	@echo "... bif-plugin-Bro_HTTP-functions.bif"
 	@echo "... bif-plugin-Bro_HTTP-events.bif"
+	@echo "... bif-plugin-Bro_HTTP-functions.bif"
+	@echo "... plugin-Bro-HTTP"
 	@echo "... bif-plugin-Bro_ICMP-events.bif"
 	@echo "... plugin-Bro-ICMP"
 	@echo "... bif-plugin-Bro_Ident-events.bif"
 	@echo "... plugin-Bro-Ident"
-	@echo "... pac-analyzer-protocol-imap-imap.pac"
 	@echo "... bif-plugin-Bro_IMAP-events.bif"
+	@echo "... pac-analyzer-protocol-imap-imap.pac"
 	@echo "... plugin-Bro-IMAP"
 	@echo "... bif-plugin-Bro_InterConn-events.bif"
 	@echo "... plugin-Bro-InterConn"
@@ -3694,17 +3700,17 @@ help:
 	@echo "... plugin-Bro-Login"
 	@echo "... bif-plugin-Bro_MIME-events.bif"
 	@echo "... plugin-Bro-MIME"
-	@echo "... plugin-Bro-Modbus"
 	@echo "... bif-plugin-Bro_Modbus-events.bif"
 	@echo "... pac-analyzer-protocol-modbus-modbus.pac"
-	@echo "... plugin-Bro-MySQL"
-	@echo "... pac-analyzer-protocol-mysql-mysql.pac"
+	@echo "... plugin-Bro-Modbus"
 	@echo "... bif-plugin-Bro_MySQL-events.bif"
-	@echo "... plugin-Bro-NCP"
-	@echo "... pac-analyzer-protocol-ncp-ncp.pac"
+	@echo "... pac-analyzer-protocol-mysql-mysql.pac"
+	@echo "... plugin-Bro-MySQL"
 	@echo "... bif-plugin-Bro_NCP-events.bif"
-	@echo "... plugin-Bro-NetBIOS"
+	@echo "... pac-analyzer-protocol-ncp-ncp.pac"
+	@echo "... plugin-Bro-NCP"
 	@echo "... bif-plugin-Bro_NetBIOS-events.bif"
+	@echo "... plugin-Bro-NetBIOS"
 	@echo "... bif-plugin-Bro_NetBIOS-functions.bif"
 	@echo "... plugin-Bro-NTLM"
 	@echo "... pac-analyzer-protocol-ntlm-ntlm.pac"
@@ -3715,16 +3721,16 @@ help:
 	@echo "... plugin-Bro-PIA"
 	@echo "... bif-plugin-Bro_POP3-events.bif"
 	@echo "... plugin-Bro-POP3"
-	@echo "... plugin-Bro-RADIUS"
-	@echo "... bif-plugin-Bro_RADIUS-events.bif"
 	@echo "... pac-analyzer-protocol-radius-radius.pac"
+	@echo "... bif-plugin-Bro_RADIUS-events.bif"
+	@echo "... plugin-Bro-RADIUS"
 	@echo "... pac-analyzer-protocol-rdp-rdp.pac"
 	@echo "... plugin-Bro-RDP"
 	@echo "... bif-plugin-Bro_RDP-events.bif"
 	@echo "... bif-plugin-Bro_RDP-types.bif"
-	@echo "... plugin-Bro-RFB"
-	@echo "... pac-analyzer-protocol-rfb-rfb.pac"
 	@echo "... bif-plugin-Bro_RFB-events.bif"
+	@echo "... pac-analyzer-protocol-rfb-rfb.pac"
+	@echo "... plugin-Bro-RFB"
 	@echo "... bif-plugin-Bro_RPC-events.bif"
 	@echo "... plugin-Bro-RPC"
 	@echo "... plugin-Bro-SIP"
@@ -3770,37 +3776,37 @@ help:
 	@echo "... bif-plugin-Bro_SMB-smb1_com_transaction2_secondary.bif"
 	@echo "... bif-plugin-Bro_SMB-smb1_com_transaction2.bif"
 	@echo "... bif-plugin-Bro_SMTP-events.bif"
-	@echo "... plugin-Bro-SMTP"
 	@echo "... bif-plugin-Bro_SMTP-functions.bif"
-	@echo "... plugin-Bro-SOCKS"
-	@echo "... pac-analyzer-protocol-socks-socks.pac"
+	@echo "... plugin-Bro-SMTP"
 	@echo "... bif-plugin-Bro_SOCKS-events.bif"
+	@echo "... pac-analyzer-protocol-socks-socks.pac"
+	@echo "... plugin-Bro-SOCKS"
 	@echo "... plugin-Bro-SSH"
 	@echo "... pac-analyzer-protocol-ssh-ssh.pac"
 	@echo "... bif-plugin-Bro_SSH-events.bif"
 	@echo "... bif-plugin-Bro_SSH-types.bif"
+	@echo "... bif-plugin-Bro_SSL-functions.bif"
 	@echo "... pac-analyzer-protocol-ssl-dtls.pac"
 	@echo "... bif-plugin-Bro_SSL-events.bif"
 	@echo "... bif-plugin-Bro_SSL-types.bif"
 	@echo "... pac-analyzer-protocol-ssl-tls-handshake.pac"
 	@echo "... pac-analyzer-protocol-ssl-ssl.pac"
 	@echo "... plugin-Bro-SSL"
-	@echo "... bif-plugin-Bro_SSL-functions.bif"
 	@echo "... bif-plugin-Bro_SteppingStone-events.bif"
 	@echo "... plugin-Bro-SteppingStone"
-	@echo "... pac-analyzer-protocol-syslog-syslog.pac"
 	@echo "... bif-plugin-Bro_Syslog-events.bif"
+	@echo "... pac-analyzer-protocol-syslog-syslog.pac"
 	@echo "... plugin-Bro-Syslog"
-	@echo "... bif-plugin-Bro_TCP-functions.bif"
-	@echo "... plugin-Bro-TCP"
 	@echo "... bif-plugin-Bro_TCP-events.bif"
+	@echo "... plugin-Bro-TCP"
+	@echo "... bif-plugin-Bro_TCP-functions.bif"
 	@echo "... bif-plugin-Bro_Teredo-events.bif"
 	@echo "... plugin-Bro-Teredo"
 	@echo "... bif-plugin-Bro_UDP-events.bif"
 	@echo "... plugin-Bro-UDP"
-	@echo "... plugin-Bro-XMPP"
-	@echo "... pac-analyzer-protocol-xmpp-xmpp.pac"
 	@echo "... bif-plugin-Bro_XMPP-events.bif"
+	@echo "... pac-analyzer-protocol-xmpp-xmpp.pac"
+	@echo "... plugin-Bro-XMPP"
 	@echo "... plugin-Bro-ZIP"
 	@echo "... bif-alt-broxygen-broxygen.bif"
 	@echo "... bro_broxygen"
@@ -3809,23 +3815,23 @@ help:
 	@echo "... plugin-Bro-FileDataEvent"
 	@echo "... bif-plugin-Bro_FileEntropy-events.bif"
 	@echo "... plugin-Bro-FileEntropy"
-	@echo "... plugin-Bro-FileExtract"
-	@echo "... bif-plugin-Bro_FileExtract-functions.bif"
 	@echo "... bif-plugin-Bro_FileExtract-events.bif"
+	@echo "... bif-plugin-Bro_FileExtract-functions.bif"
+	@echo "... plugin-Bro-FileExtract"
 	@echo "... bif-plugin-Bro_FileHash-events.bif"
 	@echo "... plugin-Bro-FileHash"
-	@echo "... pac-file_analysis-analyzer-pe-pe.pac"
-	@echo "... plugin-Bro-PE"
 	@echo "... bif-plugin-Bro_PE-events.bif"
+	@echo "... plugin-Bro-PE"
+	@echo "... pac-file_analysis-analyzer-pe-pe.pac"
 	@echo "... plugin-Bro-Unified2"
 	@echo "... pac-file_analysis-analyzer-unified2-unified2.pac"
 	@echo "... bif-plugin-Bro_Unified2-types.bif"
 	@echo "... bif-plugin-Bro_Unified2-events.bif"
 	@echo "... bif-plugin-Bro_X509-ocsp_events.bif"
 	@echo "... pac-file_analysis-analyzer-x509-x509-extension.pac"
+	@echo "... bif-plugin-Bro_X509-functions.bif"
 	@echo "... plugin-Bro-X509"
 	@echo "... bif-plugin-Bro_X509-events.bif"
-	@echo "... bif-plugin-Bro_X509-functions.bif"
 	@echo "... bif-plugin-Bro_X509-types.bif"
 	@echo "... bif-alt-input-input.bif"
 	@echo "... bro_input"
@@ -3844,6 +3850,7 @@ help:
 	@echo "... bro_iosource"
 	@echo "... bif-alt-iosource-pcap-pcap.bif"
 	@echo "... plugin-Bro-Pcap"
+	@echo "... plugin-Bro-Dpdk"
 	@echo "... bif-alt-logging-logging.bif"
 	@echo "... bro_logging"
 	@echo "... bif-plugin-Bro_AsciiWriter-ascii.bif"
