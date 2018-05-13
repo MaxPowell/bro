@@ -13,6 +13,7 @@ public:
 	~DpdkSource() override;
 
 	static PktSrc* Instantiate(int port_id, bool is_live);
+	void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt);
 
 protected:
 	// PktSrc interface.

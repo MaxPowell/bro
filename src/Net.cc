@@ -42,7 +42,6 @@
 extern "C" {
 #include "device.h"
 };
-#include "broLibmoon.h"
 
 extern "C" {
 #include "setsignal.h"
@@ -309,43 +308,42 @@ void net_packet_dispatch(double t, const Packet* pkt, iosource::PktSrc* src_ps)
 void net_run()
 	{
 	/* DPDK */
-	struct rte_mbuf *bufs[MAX_PKT_BURST]; /* Where captured packets are gonna be stored */
+	/*struct rte_mbuf *bufs[MAX_PKT_BURST]; // Where captured packets are gonna be stored 
 	struct rte_mbuf *pkt = NULL;
 	int n_pkt = 0;
+	printf("[+] Reading on port %d...\n", port_id);*/
 
 	set_processing_status("RUNNING", "net_run");
-	printf("[+] Reading on port %d...\n", port_id);
 
-	while ( /*iosource_mgr->Size() ||*/
-		//(BifConst::exit_only_after_terminate && ! terminating) )
-		!terminating)
+	while ( iosource_mgr->Size() ||
+		(BifConst::exit_only_after_terminate && ! terminating) )
 		{
 		double ts;
-		//iosource::IOSource* src = iosource_mgr->FindSoonest(&ts);
+		iosource::IOSource* src = iosource_mgr->FindSoonest(&ts);
 
 #ifdef DEBUG
 		static int loop_counter = 0;
 
 		// If no source is ready, we log only every 100th cycle,
 		// starting with the first.
-		if ( /*src ||*/ loop_counter++ % 100 == 0 )
+		if ( src || loop_counter++ % 100 == 0 )
 			{
-			//DBG_LOG(DBG_MAINLOOP, "realtime=%.6f iosrc=%s ts=%.6f",
-			//		current_time(), src ? src->Tag() : "<all dry>", src ? ts : -1);
+			DBG_LOG(DBG_MAINLOOP, "realtime=%.6f iosrc=%s ts=%.6f",
+					current_time(), src ? src->Tag() : "<all dry>", src ? ts : -1);
 
-			//if ( src )
+			if ( src )
 				loop_counter = 0;
-			//}
+			}
 #endif
-		//current_iosrc = src;
+		current_iosrc = src;
 		bool communication_enabled = using_communication;
 
 #ifdef ENABLE_BROKER
 		communication_enabled |= broker_mgr->Enabled();
 #endif
 
-		/*if ( src )
-			src->Process();*/	// which will call net_packet_dispatch()
+		if ( src )
+			src->Process();	// which will call net_packet_dispatch()
 
 		/*if(port_id >= 0){
 			n_pkt = rte_eth_rx_burst_export(port_id, 0, bufs, MAX_PKT_BURST);
@@ -355,9 +353,9 @@ void net_run()
 					printf("I read something!\n");
 				}
 			}
-		}*/
+		}
 		if(port_id>=0)
-			startCapturing();
+			startCapturing();*/
 
 		else if ( reading_live && ! pseudo_realtime)
 			{ // live but  no source is currently active

@@ -35,9 +35,7 @@ bool DpdkSource::Configure(){
 }
 
 void DpdkSource::Close(){
-	/* No need for this */
 	last_burst = 0;
-
 	Closed();
 }
 
@@ -59,8 +57,9 @@ void DpdkSource::Statistics(Stats* s){
 		s->received = s->dropped = s->link = s->bytes_received = 0;
 
 	else{
-		// TODO Probably I will have to manually count all packets
-
+		// TODO Probably I will have to manually count all packets/bytes/dropped
+		s->received = stats.received;
+		s->bytes_received = stats.bytes_received;
 	}
 }
 
@@ -76,8 +75,39 @@ bool DpdkSource::ExtractNextPacket(Packet* pkt){
 
 int ExtractNextBurst(struct rte_mbuf** bufs){
 	int n_pkts = rte_eth_rx_burst_export(port, 0, bufs, MAX_PKT_BURST);
-	stats.received+=n_packets;
-	last_burst = bufs	
+	stats.received+=n_pkts;
+	last_burst = bufs;
 	
 	return n_pkts;
 }
+
+
+void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
+	if(buf == NULL || pkt == NULL)
+		return;
+	
+	/**
+	 * Initialize from packet data.
+	 *
+	 * @param link_type The link type in the form of a \c DLT_* constant.
+	 *
+	 * @param ts The timestamp associated with the packet.
+	 *
+	 * @param caplen The number of bytes valid in *data*.
+	 *
+	 * @param len The wire length of the packet, which must be more or
+	 * equal *caplen* (but can't be less).
+	 *
+	 * @param data A pointer to the raw packet data, starting with the
+	 * layer 2 header. The pointer must remain valid for the lifetime of
+	 * the Packet instance, unless *copy* is true.
+	 *
+	 * @param copy If true, the constructor will make an internal copy of
+	 * *data*, so that the caller can release its version.
+	 *
+	 * @param tag A textual tag to associate with the packet for
+	 * differentiating the input streams.
+	 */
+	pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, buf);
+}
+

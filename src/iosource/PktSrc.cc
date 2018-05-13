@@ -243,6 +243,32 @@ void PktSrc::Process()
 	{
 	if ( ! IsOpen() )
 		return;
+	
+	/* DPDK */
+	if(dpdk_on){
+		int n_pkts = ExtractNextBurstInternal();
+		if(!n_pkts)
+			return;
+		
+		for(int i=0;i<n_pkts;i++){
+			ConvertToPacket(current_burst[i], &current_packet);
+
+			if ( current_packet.Layer2Valid() ){
+				if ( pseudo_realtime ){
+					current_pseudo = CheckPseudoTime();
+					net_packet_dispatch(current_pseudo, &current_packet, this);
+					if ( ! first_wallclock )
+						first_wallclock = current_time(true);
+					}
+				else
+					net_packet_dispatch(current_packet.time, &current_packet, this);
+			}
+		}
+
+		have_packet = 0;
+		DoneWithPacket();
+		return;		
+	}
 
 	if ( ! ExtractNextPacketInternal() )
 		return;
@@ -317,6 +343,7 @@ bool PktSrc::ExtractNextPacketInternal()
 	return 0;
 	}
 
+/* DPDK */
 int PktSrc::ExtractNextBurstInternal(){
 	int n_pkts = 0;
 
