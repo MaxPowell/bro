@@ -13,6 +13,7 @@
 
 #include "pcap/pcap.bif.h"
 
+
 using namespace iosource;
 
 PktSrc::Properties::Properties()
@@ -244,14 +245,14 @@ void PktSrc::Process()
 	if ( ! IsOpen() )
 		return;
 	
-	/* DPDK */
+	/* DPDK */ // TODO Change to normal implementation
 	if(dpdk_on){
 		int n_pkts = ExtractNextBurstInternal();
 		if(!n_pkts)
 			return;
 		
 		for(int i=0;i<n_pkts;i++){
-			ConvertToPacket(current_burst[i], &current_packet);
+			current_packet = current_burst[i];
 
 			if ( current_packet.Layer2Valid() ){
 				if ( pseudo_realtime ){

@@ -235,13 +235,13 @@ static std::pair<std::string, std::string> split_prefix(std::string path)
 
 PktSrc* Manager::OpenPktSrc(const std::string& path, bool is_live)
 	{
-	/* DPDK */
-	if(dpdk_on){
-		PktSrc* dpdk_src = new DpdkSource(atoi(props.path.c_str()), true);
+	/* DPDK */ // TODO change to normal implementation
+	/*if(dpdk_on){
+		DpdkSource(atoi(props.path.c_str()), true);
 		assert(dpdk_src);
 		Register(dpdk_src);
 		return dpdk_src;
-	}
+	}*/
 	
 	std::pair<std::string, std::string> t = split_prefix(path);
 	std::string prefix = t.first;

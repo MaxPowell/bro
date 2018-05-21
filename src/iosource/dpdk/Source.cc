@@ -2,11 +2,10 @@
 #include <assert.h>
 
 #include "bro-config.h"
-
-#include "Source.h"
 #include "iosource/Packet.h"
 
 #include "device.h"
+#include "Source.h"
 
 using namespace iosource::dpdk;
 
@@ -14,12 +13,14 @@ DpdkSource::~DpdkSource(){
 	Close();
 }
 
-DpdkSource::DpdkSource(int port_id, bool is_live){
+DpdkSource::DpdkSource(const std::string& path, bool is_live){
 
-	props.path = std::to_string(port_id);
+	props.path = path;
 	props.is_live = is_live;
-	last_burst = 0;
-	port = port_id;
+	//last_burst = NULL;
+	
+	// TODO Add function to look for port 
+	//port = port_id;
 }
 
 void DpdkSource::Open(){
@@ -35,7 +36,7 @@ bool DpdkSource::Configure(){
 }
 
 void DpdkSource::Close(){
-	last_burst = 0;
+	//last_burst = 0;
 	Closed();
 }
 
@@ -63,8 +64,8 @@ void DpdkSource::Statistics(Stats* s){
 	}
 }
 
-iosource::PktSrc* DpdkSource::Instantiate(int port_id, bool is_live){
-	return new DpdkSource(port_id, is_live);
+iosource::PktSrc* DpdkSource::Instantiate(const std::string& path, bool is_live){
+	return new DpdkSource(path, is_live);
 }
 
 
@@ -73,16 +74,18 @@ bool DpdkSource::ExtractNextPacket(Packet* pkt){
 	return false;
 }
 
-int ExtractNextBurst(struct rte_mbuf** bufs){
-	int n_pkts = rte_eth_rx_burst_export(port, 0, bufs, MAX_PKT_BURST);
+int  DpdkSource::ExtractNextBurst(Packet bufs[MAX_PKT_BURST]){
+	int n_pkts = rte_eth_rx_burst_export(port, 0, last_burst, MAX_PKT_BURST);
 	stats.received+=n_pkts;
-	last_burst = bufs;
+	
+	for(int i=0;i<n_pkts;i++)
+		ConvertToPacket(last_burst[i], &bufs[i]);
 	
 	return n_pkts;
 }
 
 
-void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
+void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	if(buf == NULL || pkt == NULL)
 		return;
 	
@@ -108,6 +111,6 @@ void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, buf);
+	//pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, buf);
 }
 

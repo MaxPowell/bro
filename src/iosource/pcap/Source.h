@@ -20,7 +20,7 @@ protected:
 	void Open() override;
 	void Close() override;
 	bool ExtractNextPacket(Packet* pkt) override;
-	//int ExtractNextBurst(struct rte_mbuf** bufs) override;
+	int ExtractNextBurst(Packet bufs[MAX_PKT_BURST]) override;
 	void DoneWithPacket() override;
 	bool PrecompileFilter(int index, const std::string& filter) override;
 	bool SetFilter(int index) override;

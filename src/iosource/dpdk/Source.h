@@ -9,18 +9,17 @@ namespace dpdk {
 class DpdkSource : public iosource::PktSrc{
 
 public:
-	DpdkSource(int port_id, bool is_live);
+	DpdkSource(const std::string& path, bool is_live);
 	~DpdkSource() override;
 
-	static PktSrc* Instantiate(int port_id, bool is_live);
-	void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt);
+	static PktSrc* Instantiate(const std::string& path, bool is_live);
 
 protected:
 	// PktSrc interface.
 	void Open() override;
 	void Close() override;
 	bool ExtractNextPacket(Packet* pkt) override;
-	int ExtractNextBurst(struct rte_mbuf** bufs) override;
+	int ExtractNextBurst(Packet bufs[MAX_PKT_BURST]) override;
 	void DoneWithPacket() override;
 	bool PrecompileFilter(int index, const std::string& filter) override;
 	bool SetFilter(int index) override;
@@ -29,12 +28,13 @@ protected:
 
 private:
 	bool Configure();
+	void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt);
 
 	Properties props;
 	Stats stats;
 	int port;
 
-	const struct rte_mbuf *last_burst[MAX_PKT_BURST];;
+	struct rte_mbuf *last_burst[MAX_PKT_BURST];
 };
 
 }

@@ -722,7 +722,7 @@ int main(int argc, char** argv)
 
 	bro_start_time = current_time(true);
 
-	/* DPDK */
+	/* DPDK */ // TODO Fix arguments for EAL
 	char** eal_opt = NULL;	
 	eal_opt = (char**)malloc(sizeof(char*));
 	eal_opt[0] = (char*)malloc(sizeof(char)*16);
