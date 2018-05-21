@@ -58,7 +58,7 @@ void DpdkSource::Statistics(Stats* s){
 		s->received = s->dropped = s->link = s->bytes_received = 0;
 
 	else{
-		// TODO Probably I will have to manually count all packets/bytes/dropped
+		// TODO rte_eth_stats
 		s->received = stats.received;
 		s->bytes_received = stats.bytes_received;
 	}
@@ -77,7 +77,7 @@ bool DpdkSource::ExtractNextPacket(Packet* pkt){
 int  DpdkSource::ExtractNextBurst(Packet bufs[MAX_PKT_BURST]){
 	int n_pkts = rte_eth_rx_burst_export(port, 0, last_burst, MAX_PKT_BURST);
 	stats.received+=n_pkts;
-	
+
 	for(int i=0;i<n_pkts;i++)
 		ConvertToPacket(last_burst[i], &bufs[i]);
 	
@@ -88,7 +88,9 @@ int  DpdkSource::ExtractNextBurst(Packet bufs[MAX_PKT_BURST]){
 void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	if(buf == NULL || pkt == NULL)
 		return;
-	
+
+	pkt_timeval ts = {buf->timestamp, 0};
+		
 	/**
 	 * Initialize from packet data.
 	 *
@@ -111,6 +113,6 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	//pkt->Init(props.link_type, &current_hdr.ts, current_hdr.caplen, current_hdr.len, buf);
+	pkt->Init(buf->l2_type, &ts, buf->data_len, buf->pkt_len, (u_char *)buf->userdata); // TODO Fix link type and test userdata
 }
 
