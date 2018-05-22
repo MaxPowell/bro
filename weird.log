@@ -3,23 +3,7 @@
 #empty_field	(empty)
 #unset_field	-
 #path	weird
-#open	2018-05-08-14-22-19
+#open	2018-05-22-11-56-30
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
 #types	time	string	addr	port	addr	port	string	string	bool	string
-1525782139.045426	CqCgAJ2h7jxjEdhYJ7	131.159.220.182	59714	131.159.254.1	53	bad_UDP_checksum	-	F	bro
-1525782139.065408	CCuWlORmgJqwCtpxg	131.159.220.182	44634	2.20.142.91	80	bad_TCP_checksum	-	F	bro
-1525782139.089220	CCuWlORmgJqwCtpxg	131.159.220.182	44634	2.20.142.91	80	active_connection_reuse	-	F	bro
-1525782141.657148	CbnXWm4rUQGhFKzwS6	2001:4ca0:2003:1920:bd74:9848:854f:e7a7	36486	2001:4ca0:2003:2540::1	53	bad_UDP_checksum	-	F	bro
-1525782144.780994	C1jbFG1DFnvD22Xlr2	131.159.220.182	38906	52.42.114.221	443	active_connection_reuse	-	F	bro
-1525782145.130669	CTq19M6useZWUIGhe	131.159.220.182	46284	93.184.220.29	80	active_connection_reuse	-	F	bro
-1525782145.469217	CkJyR21bT9wj1dnXr2	131.159.220.182	44488	35.160.98.184	443	active_connection_reuse	-	F	bro
-1525782145.757175	CbyKD63v4Eo15jUAFb	131.159.220.182	44492	35.160.98.184	443	active_connection_reuse	-	F	bro
-1525782145.981111	CXwbiZv85ESWJ33T5	131.159.220.182	48626	52.222.146.139	443	active_connection_reuse	-	F	bro
-1525782147.217329	ClIB5x2y614aQzNgX2	131.159.220.182	42845	131.159.254.1	53	active_connection_reuse	-	F	bro
-1525782147.481204	C5Tm3i1nHKGkRlGaB6	131.159.220.182	59520	172.217.17.228	443	active_connection_reuse	-	F	bro
-1525782149.385333	CG8Zac2TtI7xjhyCuf	131.159.220.182	58210	35.166.148.212	443	active_connection_reuse	-	F	bro
-1525782149.596524	CywGgV3owhHfipdYMa	131.159.220.182	46314	93.184.220.29	80	active_connection_reuse	-	F	bro
-1525782152.788852	CSuPLt3Ja8W87OHs34	131.159.220.182	41100	216.58.214.66	443	active_connection_reuse	-	F	bro
-1525782152.873064	CfrFVQ3Bnp7PCGr6fl	131.159.220.182	41102	216.58.214.66	443	active_connection_reuse	-	F	bro
-1525782153.989275	-	-	-	-	-	non_ip_packet_in_ethernet	-	F	bro
-#close	2018-05-08-14-22-47
+1526982927.518557	CyEbNp45a9XWaEOsx7	192.168.178.123	60793	91.189.91.157	123	bad_UDP_checksum	-	F	bro

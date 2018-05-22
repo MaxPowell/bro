@@ -27,7 +27,8 @@ void DpdkSource::Open(){
 	/* It will be always opened, just need to configure it */
 	if(Configure()){
 		props.is_live = true;
-		Opened(props);
+		props.link_type = 0; // FIXME This one is harcoded, not sure if it affects bro
+		Opened(props);		 // Done just to avoid crash on Opened()
 	}
 }
 
