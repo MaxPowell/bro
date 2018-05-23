@@ -223,6 +223,24 @@ double PktSrc::NextTimestamp(double* local_network_time)
 	if ( ! IsOpen() )
 		return -1.0;
 
+	/* DPDK */ // TODO Change to normal implementation
+	if(dpdk_on){
+		if(! ExtractNextBurstInternal())
+			return -1.0;
+
+		if ( pseudo_realtime )
+		{
+		// Delay packet if necessary.
+		double packet_time = CheckPseudoTime();
+		if ( packet_time )
+			return packet_time;
+
+		SetIdle(true);
+		return -1.0;
+		}
+		return current_burst[0].time;
+	}
+
 	if ( ! ExtractNextPacketInternal() )
 		return -1.0;
 
@@ -349,7 +367,7 @@ int PktSrc::ExtractNextBurstInternal(){
 	int n_pkts = 0;
 
 	if(have_packet)
-		return 0; // TODO Seach for the appropiate return
+		return 1; // FIXME return number of packets in curent burst 
 
 	have_packet = false;
 	

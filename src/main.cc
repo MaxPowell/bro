@@ -1136,7 +1136,7 @@ int main(int argc, char** argv)
 
 	iosource_mgr->Register(thread_mgr, true);
 
-	if ( /*iosource_mgr->Size() > 0 ||*/
+	if ( iosource_mgr->Size() > 0 ||
 	     have_pending_timers ||
 	     BifConst::exit_only_after_terminate )
 		{

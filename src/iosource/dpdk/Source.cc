@@ -29,10 +29,12 @@ void DpdkSource::Open(){
 		props.is_live = true;
 		props.link_type = 0; // FIXME This one is harcoded, not sure if it affects bro
 		Opened(props);		 // Done just to avoid crash on Opened()
+
 	}
 }
 
 bool DpdkSource::Configure(){
+	// TODO look for port number
 	return !config_device(port,1,0, 0, 0, 0, 0, 0, 0, 0, 8191, RTE_MBUF_DEFAULT_BUF_SIZE);
 }
 
