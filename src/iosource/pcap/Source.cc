@@ -321,6 +321,13 @@ iosource::PktSrc* PcapSource::Instantiate(const std::string& path, bool is_live)
 	return new PcapSource(path, is_live);
 	}
 
+/* DPDK */
+
+/* As this is for dpdk, you should never call these functions */
 int PcapSource::ExtractNextBurst(Packet bufs[MAX_PKT_BURST]){
 	return -1;
+}
+
+int PcapSource::GetLastBurstSize(){
+	return 0;
 }

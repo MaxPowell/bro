@@ -347,6 +347,18 @@ protected:
 	 */
 	virtual int ExtractNextBurst(Packet bufs[MAX_PKT_BURST]) = 0;
 
+	/**
+	 * Gets the number of packets retrieved in the last burst.
+	 *
+	 * @param bufs Array of packets. The callee keep ownership of the data but must
+	 * guaranetee that it stays available at least until \a
+	 * DoneWithPacket() is called.  It is guaranteed that no two calls to
+	 * this method will hapen with \a DoneWithPacket() in between.
+	 *
+	 * @return Number of packets available in bufs and *bufs* filled in.
+	 */
+	virtual int GetLastBurstSize() = 0;
+
 
 	/**
 	 * Signals that the data of previously extracted packet will no

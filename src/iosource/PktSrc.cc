@@ -367,7 +367,7 @@ int PktSrc::ExtractNextBurstInternal(){
 	int n_pkts = 0;
 
 	if(have_packet)
-		return 1; // FIXME return number of packets in curent burst 
+		return GetLastBurstSize(); 
 
 	have_packet = false;
 	

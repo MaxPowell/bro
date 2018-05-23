@@ -17,6 +17,7 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 
 	props.path = path;
 	props.is_live = is_live;
+	last_burst_size = 0;
 	//last_burst = NULL;
 	
 	// TODO Add function to look for port 
@@ -44,7 +45,7 @@ void DpdkSource::Close(){
 }
 
 void DpdkSource::DoneWithPacket(){
-	/* Nothing to do */
+	/* Nothing to do */ // TODO create DoneWithBurst?
 }
 
 bool DpdkSource::PrecompileFilter(int index, const std::string& filter){
@@ -74,12 +75,15 @@ iosource::PktSrc* DpdkSource::Instantiate(const std::string& path, bool is_live)
 
 bool DpdkSource::ExtractNextPacket(Packet* pkt){
 	/* You should never call this function, call burst instead */
+	/* It is possible tochange the implementation to return one packet */
+	/* after calling this function, but dpdk should use bursts */
 	return false;
 }
 
 int  DpdkSource::ExtractNextBurst(Packet bufs[MAX_PKT_BURST]){
 	int n_pkts = rte_eth_rx_burst_export(port, 0, last_burst, MAX_PKT_BURST);
 	stats.received+=n_pkts;
+	last_burst_size = n_pkts;
 
 	for(int i=0;i<n_pkts;i++)
 		ConvertToPacket(last_burst[i], &bufs[i]);
@@ -92,7 +96,7 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	if(buf == NULL || pkt == NULL)
 		return;
 
-	pkt_timeval ts = {buf->timestamp, 0};
+	pkt_timeval ts = {current_time(true), 0};
 		
 	/**
 	 * Initialize from packet data.
@@ -117,5 +121,9 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * differentiating the input streams.
 	 */
 	pkt->Init(buf->l2_type, &ts, buf->data_len, buf->pkt_len, (u_char *)buf->userdata); // TODO Fix link type and test userdata
+}
+
+int DpdkSource::GetLastBurstSize(){
+	return last_burst_size;
 }
 
