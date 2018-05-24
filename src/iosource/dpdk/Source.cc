@@ -6,6 +6,7 @@
 
 #include "device.h"
 #include "Source.h"
+#include <rte_mbuf.h>
 
 using namespace iosource::dpdk;
 
@@ -120,7 +121,7 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(buf->l2_type, &ts, buf->data_len, buf->pkt_len, (u_char *)buf->userdata); // TODO Fix link type and test userdata
+	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), (u_char*)rte_mbuf_data_iova(buf)); // FIXME link type and test userdata
 }
 
 int DpdkSource::GetLastBurstSize(){
