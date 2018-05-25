@@ -3,6 +3,12 @@
 
 #include "../PktSrc.h"
 
+extern "C" {
+	#include "lua.h"
+	#include "lualib.h"
+	#include "lauxlib.h"
+}
+
 namespace iosource {
 namespace dpdk {
 
@@ -30,11 +36,14 @@ protected:
 private:
 	bool Configure();
 	void ConvertToPacket(struct rte_mbuf* buf, Packet* pkt);
+	int setLuaPath(lua_State* L, const char* path);
 
 	Properties props;
 	Stats stats;
 	int port;
 	int last_burst_size;
+
+	lua_State* L;
 
 	struct rte_mbuf *last_burst[MAX_PKT_BURST];
 };

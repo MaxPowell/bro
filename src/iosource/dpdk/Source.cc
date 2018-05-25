@@ -21,8 +21,17 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 	last_burst_size = 0;
 	//last_burst = NULL;
 	
-	// TODO Add function to look for port 
+	// TODO call with -i dpdk::<port_number> 
 	//port = port_id;
+
+	if(!L){
+		L=lua_open();
+		luaL_openlibs(L);
+		//setLuaPath(L, "aaa"); // FIXME hardcoded
+		printf("ALLAHU AKBAAAAAAAAAAAAAAAAR");
+		if(luaL_dofile(L, "packet.lua"))
+			printf("Error loading file :D\n");
+	}
 }
 
 void DpdkSource::Open(){
@@ -98,6 +107,27 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 		return;
 
 	pkt_timeval ts = {current_time(true), 0};
+	uint8_t data_int = 0;
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_2");
+	/* Get packet data with lua */
+	lua_getglobal(L, "pkt");
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_3");
+	lua_getfield(L, -1, "getBytes");
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_4");
+	lua_pushvalue(L, -2);
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_5");
+	lua_call(L, 1, 1);
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_6");
+	data_int = lua_tointeger(L, -1);
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_7");
+	lua_pop(L, 1);
+			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_8");
+
+	uint8_t* data = (uint8_t*) data_int;
+
+	if (!data){
+		printf("Something went wrong with lua\n");
+	}
 		
 	/**
 	 * Initialize from packet data.
@@ -121,10 +151,23 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), (u_char*)rte_mbuf_data_iova(buf)); // FIXME link type and test userdata
+	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME link type
 }
 
 int DpdkSource::GetLastBurstSize(){
 	return last_burst_size;
+}
+
+int setLuaPath(lua_State* L, const char* path){
+    lua_getglobal( L, "package" );
+    lua_getfield( L, -1, "path" ); // get field "path" from table at top of stack (-1)
+    std::string cur_path = lua_tostring( L, -1 ); // grab path string from top of stack
+    cur_path.append( ";" ); // do your path magic here
+    cur_path.append( path );
+    lua_pop( L, 1 ); // get rid of the string on the stack we just pushed on line 5
+    lua_pushstring( L, cur_path.c_str() ); // push the new one
+    lua_setfield( L, -2, "path" ); // set the field "path" in table at -2 with value at top of stack
+    lua_pop( L, 1 ); // get rid of package table from top of stack
+    return 0; // all done!
 }
 
