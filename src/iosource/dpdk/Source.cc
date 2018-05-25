@@ -21,8 +21,8 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 	last_burst_size = 0;
 	//last_burst = NULL;
 	
-	// TODO call with -i dpdk::<port_number> 
-	//port = port_id;
+	// call bro with -i dpdk::<port_number> 
+	port = std::stoi(path);
 
 	if(!L){
 		L=lua_open();
@@ -45,7 +45,6 @@ void DpdkSource::Open(){
 }
 
 bool DpdkSource::Configure(){
-	// TODO look for port number
 	return !config_device(port,1,0, 0, 0, 0, 0, 0, 0, 0, 8191, RTE_MBUF_DEFAULT_BUF_SIZE);
 }
 
@@ -55,7 +54,7 @@ void DpdkSource::Close(){
 }
 
 void DpdkSource::DoneWithPacket(){
-	/* Nothing to do */ // TODO create DoneWithBurst?
+	/* Nothing to do */
 }
 
 bool DpdkSource::PrecompileFilter(int index, const std::string& filter){
@@ -107,7 +106,8 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 		return;
 
 	pkt_timeval ts = {current_time(true), 0};
-	uint8_t data_int = 0;
+	uint8_t* data;
+
 			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_2");
 	/* Get packet data with lua */
 	lua_getglobal(L, "pkt");
@@ -118,15 +118,13 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_5");
 	lua_call(L, 1, 1);
 			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_6");
-	data_int = lua_tointeger(L, -1);
+	data = (uint8_t*)lua_topointer(L, -1);
 			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_7");
 	lua_pop(L, 1);
 			printf("ALLAHU AKBAAAAAAAAAAAAAAAAR_8");
 
-	uint8_t* data = (uint8_t*) data_int;
-
 	if (!data){
-		printf("Something went wrong with lua\n");
+		printf("Something went wrong with lua ^_^\n");
 	}
 		
 	/**
@@ -151,7 +149,7 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME link type
+	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME check link type
 }
 
 int DpdkSource::GetLastBurstSize(){
