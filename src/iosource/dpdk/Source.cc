@@ -29,7 +29,7 @@ void DpdkSource::Open(){
 	/* It will be always opened, just need to configure it */
 	if(Configure()){
 		props.is_live = true;
-		props.link_type = 0; // FIXME This one is harcoded, not sure if it affects bro
+		props.link_type = 1; // FIXME This one is harcoded, not sure if it affects bro
 		Opened(props);		 // Done just to avoid crash on Opened()
 
 	}
@@ -97,8 +97,8 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 		return;
 
 	pkt_timeval ts = {current_time(true), 0};
-	uint64_t data_aux = rte_mbuf_data_dma_addr(buf);
-	uint8_t* data = (uint8_t*)&data_aux;
+	//uint64_t data_aux = rte_mbuf_data_dma_addr(buf);
+	u_char* data = rte_pktmbuf_mtod(buf, u_char*);
 		
 	/**
 	 * Initialize from packet data.
