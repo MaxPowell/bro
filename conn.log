@@ -3,10 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	conn
-#open	2018-06-01-14-55-11
+#open	2018-06-01-15-32-59
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
 #types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-1527857651.000000	C5tK5g2MzqFvHMVl2h	131.159.215.119	68	131.159.254.110	67	udp	dhcp	-	-	-	S0	-	-	0	D	1	336	0	0	-
-1527857669.000000	CQA9rRPHx7RrmIW0e	131.159.215.119	68	131.159.254.111	67	udp	dhcp	-	-	-	S0	-	-	0	D	1	336	0	0	-
-1527857650.000000	Cz2exT2WDZ4bOEnbih	0.0.0.0	68	255.255.255.255	67	udp	dhcp	39.000000	8556	0	S0	-	-	0	D	28	9340	0	0	-
-#close	2018-06-01-14-55-18
+1527859979.000000	CsAjpJt8QQyMG8Tw4	92.63.193.100	59407	131.159.221.150	3389	tcp	-	-	-	-	S0	-	-	0	S	1	40	0	0	-
+#close	2018-06-01-15-32-59

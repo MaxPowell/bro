@@ -247,6 +247,10 @@ PktSrc* Manager::OpenPktSrc(const std::string& path, bool is_live)
 	std::string prefix = t.first;
 	std::string npath = t.second;
 
+	/* DPDK */
+	if(prefix.compare("dpdk") == 0)
+		dpdk_on = true;
+
 	// Find the component providing packet sources of the requested prefix.
 
 	PktSrcComponent* component = 0;

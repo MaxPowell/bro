@@ -142,7 +142,7 @@ int bro_argc;
 char** bro_argv;
 
 /* DPDK */
-bool dpdk_on = true;
+bool dpdk_on = false;
 
 const char* bro_version()
 	{

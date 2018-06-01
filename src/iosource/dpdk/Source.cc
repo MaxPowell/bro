@@ -75,7 +75,7 @@ iosource::PktSrc* DpdkSource::Instantiate(const std::string& path, bool is_live)
 
 bool DpdkSource::ExtractNextPacket(Packet* pkt){
 	/* You should never call this function, call burst instead */
-	/* It is possible tochange the implementation to return one packet */
+	/* It is possible to change the implementation to return one packet */
 	/* after calling this function, but dpdk should use bursts */
 	return false;
 }
@@ -97,7 +97,6 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 		return;
 
 	pkt_timeval ts = {current_time(true), 0};
-	//uint64_t data_aux = rte_mbuf_data_dma_addr(buf);
 	u_char* data = rte_pktmbuf_mtod(buf, u_char*);
 		
 	/**
@@ -122,7 +121,7 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(props.link_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME check link type
+	pkt->Init(props.link_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data);
 }
 
 int DpdkSource::GetLastBurstSize(){
