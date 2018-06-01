@@ -122,7 +122,7 @@ void  DpdkSource::ConvertToPacket(struct rte_mbuf* buf, Packet* pkt){
 	 * @param tag A textual tag to associate with the packet for
 	 * differentiating the input streams.
 	 */
-	pkt->Init(buf->l2_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME check link type
+	pkt->Init(props.link_type, &ts, rte_pktmbuf_data_len(buf), rte_pktmbuf_pkt_len(buf), data); // FIXME check link type
 }
 
 int DpdkSource::GetLastBurstSize(){

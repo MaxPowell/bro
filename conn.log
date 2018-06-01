@@ -3,11 +3,10 @@
 #empty_field	(empty)
 #unset_field	-
 #path	conn
-#open	2018-05-22-11-56-30
+#open	2018-06-01-14-55-11
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
 #types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
-1526982927.566826	C6B6Zf3q8LlqlhdqJ7	192.168.178.1	3665	192.168.178.123	14013	tcp	-	0.000035	0	0	REJ	-	-	0	Sr	1	60	1	40	-
-1526982952.754471	Cvj2Du3HSGKgJeZSK9	192.168.178.1	3669	192.168.178.123	14013	tcp	-	0.000019	0	0	REJ	-	-	0	Sr	1	60	1	40	-
-1526982915.260639	CZUJfi253CfJbzLmmd	192.168.178.115	51549	239.255.255.250	1900	udp	-	3.001532	696	0	S0	-	-	0	D	4	808	0	0	-
-1526982927.518557	CyEbNp45a9XWaEOsx7	192.168.178.123	60793	91.189.91.157	123	udp	-	0.110375	0	48	SHR	-	-	0	Cd	0	0	1	76	-
-1526982983.064254	Cb6ZhN2dQe9Tl65Sqk	192.168.178.1	3675	192.168.178.123	14013	tcp	-	0.000019	0	0	REJ	-	-	0	Sr	1	60	1	40	-
+1527857651.000000	C5tK5g2MzqFvHMVl2h	131.159.215.119	68	131.159.254.110	67	udp	dhcp	-	-	-	S0	-	-	0	D	1	336	0	0	-
+1527857669.000000	CQA9rRPHx7RrmIW0e	131.159.215.119	68	131.159.254.111	67	udp	dhcp	-	-	-	S0	-	-	0	D	1	336	0	0	-
+1527857650.000000	Cz2exT2WDZ4bOEnbih	0.0.0.0	68	255.255.255.255	67	udp	dhcp	39.000000	8556	0	S0	-	-	0	D	28	9340	0	0	-
+#close	2018-06-01-14-55-18

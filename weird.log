@@ -3,8 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	weird
-#open	2018-05-31-21-44-53
+#open	2018-06-01-14-39-35
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
 #types	time	string	addr	port	addr	port	string	string	bool	string
-1527795893.073680	-	-	-	-	-	non_ip_packet_in_null_transport	-	F	bro
-#close	2018-05-31-21-45-07
+0.000000	-	-	-	-	-	non_ip_packet_in_null_transport	-	F	bro
+#close	2018-06-01-14-40-04
