@@ -30,7 +30,7 @@ void DpdkSource::Open(){
 	if(Configure()){
 		props.is_live = true;
 		props.link_type = 1; // FIXME This one is harcoded, not sure if it affects bro
-		Opened(props);		 // Done just to avoid crash on Opened()
+		Opened(props);
 
 	}
 }
