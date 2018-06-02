@@ -63,8 +63,11 @@ void DpdkSource::Statistics(Stats* s){
 
 	else{
 		// TODO rte_eth_stats
+		rte_eth_stats_get(port, &dpdk_stats);
+
 		s->received = stats.received;
 		s->bytes_received = stats.bytes_received;
+		s->dropped = dpdk_stats.ierrors;
 	}
 }
 

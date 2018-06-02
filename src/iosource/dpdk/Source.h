@@ -2,6 +2,7 @@
 #define IOSOURCE_PKTSRC_DPDK_SOURCE_H
 
 #include "../PktSrc.h"
+#include <rte_ethdev.h>
 
 #define RX_QUEUES 1
 #define TX_QUEUES 0
@@ -46,6 +47,8 @@ private:
 	Stats stats;
 	int port;
 	int last_burst_size;
+
+	rte_eth_stats dpdk_stats;
 
 	struct rte_mbuf *last_burst[MAX_PKT_BURST];
 };
