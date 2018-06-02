@@ -36,7 +36,7 @@ void DpdkSource::Open(){
 }
 
 bool DpdkSource::Configure(){
-	return !config_device(port,1,0, 0, 0, 0, 0, 0, 0, 0, 8191, RTE_MBUF_DEFAULT_BUF_SIZE);
+	return !config_device(port,RX_QUEUES,TX_QUEUES,RX_DESC,TX_DESC, DROP_EN, RSS_EN, OFFLOAD_DIS, STRIPVLAN_EN, RSS_MASK, MBUF_SIZE-1, RTE_MBUF_DEFAULT_BUF_SIZE);
 }
 
 void DpdkSource::Close(){
