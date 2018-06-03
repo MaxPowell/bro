@@ -51,9 +51,6 @@ extern "C" {
 extern int select(int, fd_set *, fd_set *, fd_set *, struct timeval *);
 }
 
-/* DPDK */
-int port_id = -1;
-
 iosource::PktDumper* pkt_dumper = 0;
 
 int reading_live = 0;
@@ -183,16 +180,6 @@ void net_init(name_list& interfaces, name_list& readfiles,
 		{
 		reading_live = 1;
 		reading_traces = 0;
-		
-		/* DPDK */
-		/*for ( int i = 0; i < interfaces.length(); ++i ){ // Using ports as interfaces
-			// TODO Use execution arguments 
-			if(config_device(atoi(interfaces[i]),1,0, 0, 0, 0, 0, 0, 0, 0, 8191, RTE_MBUF_DEFAULT_BUF_SIZE) != 0){
-				reporter->FatalError("problem configuring %s port", interfaces[i]);
-				return; // TODO maybe remove this return - right now just for one loop/port
-			}
-			port_id = atoi(interfaces[i]);
-		}*/
 
 		for ( int i = 0; i < interfaces.length(); ++i )
 			{
@@ -307,12 +294,6 @@ void net_packet_dispatch(double t, const Packet* pkt, iosource::PktSrc* src_ps)
 
 void net_run()
 	{
-	/* DPDK */
-	/*struct rte_mbuf *bufs[MAX_PKT_BURST]; // Where captured packets are gonna be stored 
-	struct rte_mbuf *pkt = NULL;
-	int n_pkt = 0;
-	printf("[+] Reading on port %d...\n", port_id);*/
-
 	set_processing_status("RUNNING", "net_run");
 
 	while ( iosource_mgr->Size() ||
@@ -344,18 +325,6 @@ void net_run()
 
 		if ( src )
 			src->Process();	// which will call net_packet_dispatch()
-
-		/*if(port_id >= 0){
-			n_pkt = rte_eth_rx_burst_export(port_id, 0, bufs, MAX_PKT_BURST);
-			if(n_pkt > 0){ //TODO Implement likely() to improve performance
-				for(int i=0;i<n_pkt;i++){
-					pkt = bufs[i];
-					printf("I read something!\n");
-				}
-			}
-		}
-		if(port_id>=0)
-			startCapturing();*/
 
 		else if ( reading_live && ! pseudo_realtime)
 			{ // live but  no source is currently active
