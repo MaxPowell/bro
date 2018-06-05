@@ -177,6 +177,7 @@ void usage()
 	fprintf(stderr, "    <file>                         | policy file, or read stdin\n");
 	fprintf(stderr, "    -a|--parse-only                | exit immediately after parsing scripts\n");
 	fprintf(stderr, "    -b|--bare-mode                 | don't load scripts from the base/ directory\n");
+	fprintf(stderr, "    -c|--eal <parameters>          | EAL parameters\n");
 	fprintf(stderr, "    -d|--debug-policy              | activate policy file debugging\n");
 	fprintf(stderr, "    -e|--exec <bro code>           | augment loaded policies by given code\n");
 	fprintf(stderr, "    -f|--filter <filter>           | tcpdump filter\n");
@@ -471,10 +472,13 @@ int main(int argc, char** argv)
 	int RE_level = 4;
 	int print_plugins = 0;
 	int time_bro = 0;
+	/* DPDK */
+	char** eal_opt = NULL;
 
 	static struct option long_opts[] = {
 		{"parse-only",	no_argument,		0,	'a'},
 		{"bare-mode",	no_argument,		0,	'b'},
+		{"eal",		required_argument,		0,	'c'}, /* DPDK */
 		{"debug-policy",	no_argument,		0,	'd'},
 		{"dump-config",		no_argument,		0,	'g'},
 		{"exec",		required_argument,	0,	'e'},
@@ -546,8 +550,8 @@ int main(int argc, char** argv)
 	opterr = 0;
 
 	char opts[256];
-	safe_strncpy(opts, "B:e:f:G:H:I:i:n:p:R:r:s:T:t:U:w:x:X:CFNPQSWabdghv",
-		     sizeof(opts));
+	safe_strncpy(opts, "B:e:f:G:H:I:i:n:p:R:r:s:T:t:U:w:x:X:c:CFNPQSWabdghv",
+		     sizeof(opts)); /* DPDK */ // Added c for EAL
 
 #ifdef USE_PERFTOOLS_DEBUG
 	strncat(opts, "mM", 2);
@@ -562,6 +566,20 @@ int main(int argc, char** argv)
 
 		case 'b':
 			bare_mode = true;
+			break;
+	
+		/* DPDK */
+		case 'c':
+			fprintf(stdout, "Parameters loaded for EAL: %s\n", optarg); 
+			eal_opt = (char**)malloc(sizeof(char*));
+			if(eal_opt == NULL){
+				fprintf(stderr, "Error allocating EAL parameters\n");
+				exit(1);
+			}
+			
+			// TODO remove this			
+			free(eal_opt);
+			eal_opt=NULL;
 			break;
 
 		case 'd':
@@ -723,11 +741,11 @@ int main(int argc, char** argv)
 	bro_start_time = current_time(true);
 
 	/* DPDK */ // TODO Fix arguments for EAL
-	char** eal_opt = NULL;	
-	eal_opt = (char**)malloc(sizeof(char*));
-	eal_opt[0] = (char*)malloc(sizeof(char)*16);
-	strcpy(eal_opt[0], "");
-
+	if(eal_opt == NULL){
+		eal_opt = (char**)malloc(sizeof(char*));
+		eal_opt[0] = (char*)malloc(sizeof(char)*2);
+		strcpy(eal_opt[0], "");
+	}
 	fprintf(stdout, "Initialising EAL\n");
 	int i = rte_eal_init_export(1,eal_opt);
 	if(i<0){
