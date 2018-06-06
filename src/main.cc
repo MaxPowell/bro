@@ -438,6 +438,53 @@ static void bro_new_handler()
 	out_of_memory("new");
 	}
 
+/* DPDK */
+int copy_eal_args(char* source, char*** dest){
+	int n_params = 0;
+	char* char_aux = NULL;
+	char* copy_source = NULL;
+
+	/* Create a copy of args to tokenize the second time */
+	copy_source = (char*)malloc(sizeof(char)* (strlen(source)+1));
+	if(copy_source == NULL)
+		return -1;
+	strcpy(copy_source, source);	
+
+	fprintf(stdout, "Parameters loaded for EAL: %s\n", source); 		
+	/* Count number of words in string */
+	char_aux = strtok(source, " ");
+	while(char_aux!=NULL){
+		printf("%s - %d\n", char_aux, n_params);
+		n_params++;
+		char_aux = strtok(NULL, " ");
+	}
+
+	dest[0] = (char**)malloc(sizeof(char*)*(n_params+2));
+	if(dest[0] == NULL){
+		free(copy_source);
+		return -1;
+	}
+
+	dest[0][0] = (char*)malloc(sizeof(char)*(strlen("eal")+1));
+	strcpy(dest[0][0], "eal");
+
+	/* Copy params to create the argv** for EAL */
+	n_params = 1; // we have to start copying on the second position
+	char_aux = NULL;
+	printf("copy: %s\n", copy_source);
+	char_aux = strtok(copy_source, " ");
+	while(char_aux!=NULL){
+		printf("copying: %s of %s\n", char_aux, copy_source);
+		dest[0][n_params] = (char*)malloc(sizeof(char)*(strlen(char_aux)+1));
+		strcpy(dest[0][n_params], char_aux);
+		n_params++;
+		char_aux = strtok(NULL, " ");				
+	}
+	printf("ayy lmao\n");
+	free(copy_source);
+	return n_params;
+}
+
 int main(int argc, char** argv)
 	{
 
@@ -474,6 +521,7 @@ int main(int argc, char** argv)
 	int time_bro = 0;
 	/* DPDK */
 	char** eal_opt = NULL;
+	int n_eal_opts = 0;
 
 	static struct option long_opts[] = {
 		{"parse-only",	no_argument,		0,	'a'},
@@ -555,7 +603,7 @@ int main(int argc, char** argv)
 
 #ifdef USE_PERFTOOLS_DEBUG
 	strncat(opts, "mM", 2);
-#endif
+#endif	
 
 	int op;
 	while ( (op = getopt_long(argc, argv, opts, long_opts, &long_optsind)) != EOF )
@@ -570,16 +618,11 @@ int main(int argc, char** argv)
 	
 		/* DPDK */
 		case 'c':
-			fprintf(stdout, "Parameters loaded for EAL: %s\n", optarg); 
-			eal_opt = (char**)malloc(sizeof(char*));
-			if(eal_opt == NULL){
-				fprintf(stderr, "Error allocating EAL parameters\n");
+			n_eal_opts = copy_eal_args(optarg, &eal_opt);
+			if(n_eal_opts <= 0){
+				fprintf(stderr, "Error manipulating EAL params\n");
 				exit(1);
 			}
-			
-			// TODO remove this			
-			free(eal_opt);
-			eal_opt=NULL;
 			break;
 
 		case 'd':
@@ -740,21 +783,19 @@ int main(int argc, char** argv)
 
 	bro_start_time = current_time(true);
 
-	/* DPDK */ // TODO Fix arguments for EAL
+	/* DPDK */
 	if(eal_opt == NULL){
 		eal_opt = (char**)malloc(sizeof(char*));
-		eal_opt[0] = (char*)malloc(sizeof(char)*2);
-		strcpy(eal_opt[0], "");
+		eal_opt[0] = (char*)malloc(sizeof(char)*(strlen("eal")+1));
+		strcpy(eal_opt[0], "eal");
+		n_eal_opts = 1;
 	}
-	fprintf(stdout, "Initialising EAL\n");
-	int i = rte_eal_init_export(1,eal_opt);
+	fprintf(stdout, "Initialising EAL:\n");
+	int i = rte_eal_init_export(n_eal_opts,eal_opt);
 	if(i<0){
 		fprintf(stderr, "\n[+] Error starting EAL\n");
 		return 1;
 	}
-	
-	free(eal_opt[0]);
-	free(eal_opt);
 
 	port_mgr = new PortManager();
 	reporter = new Reporter();
