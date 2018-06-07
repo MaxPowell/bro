@@ -450,11 +450,10 @@ int copy_eal_args(char* source, char*** dest){
 		return -1;
 	strcpy(copy_source, source);	
 
-	fprintf(stdout, "Parameters loaded for EAL: %s\n", source); 		
+	fprintf(stdout, "[+] Parameters loaded for EAL: %s\n", source);		
 	/* Count number of words in string */
 	char_aux = strtok(source, " ");
 	while(char_aux!=NULL){
-		printf("%s - %d\n", char_aux, n_params);
 		n_params++;
 		char_aux = strtok(NULL, " ");
 	}
@@ -471,18 +470,27 @@ int copy_eal_args(char* source, char*** dest){
 	/* Copy params to create the argv** for EAL */
 	n_params = 1; // we have to start copying on the second position
 	char_aux = NULL;
-	printf("copy: %s\n", copy_source);
 	char_aux = strtok(copy_source, " ");
 	while(char_aux!=NULL){
-		printf("copying: %s of %s\n", char_aux, copy_source);
 		dest[0][n_params] = (char*)malloc(sizeof(char)*(strlen(char_aux)+1));
 		strcpy(dest[0][n_params], char_aux);
 		n_params++;
 		char_aux = strtok(NULL, " ");				
 	}
-	printf("ayy lmao\n");
 	free(copy_source);
 	return n_params;
+}
+
+/* DPDK */
+int start_eal(int argc, char*** argv){
+	if(argv[0] == NULL){
+		argv[0] = (char**)malloc(sizeof(char*));
+		argv[0][0] = (char*)malloc(sizeof(char)*(strlen("eal")+1));
+		strcpy(argv[0][0], "eal");
+		argc = 1;
+	}
+	fprintf(stdout, "[+] Initialising EAL:\n");
+	return rte_eal_init_export(argc, argv[0]);
 }
 
 int main(int argc, char** argv)
@@ -648,6 +656,11 @@ int main(int argc, char** argv)
 
 		case 'i':
 			interfaces.append(optarg);
+			/* DPDK */
+			if(strstr(optarg,"dpdk::") != NULL){
+				fprintf(stdout, "[+] DPDK device detected\n");
+				dpdk_on = true;
+			}
 			break;
 
 		case 'p':
@@ -783,18 +796,21 @@ int main(int argc, char** argv)
 
 	bro_start_time = current_time(true);
 
+
 	/* DPDK */
-	if(eal_opt == NULL){
-		eal_opt = (char**)malloc(sizeof(char*));
-		eal_opt[0] = (char*)malloc(sizeof(char)*(strlen("eal")+1));
-		strcpy(eal_opt[0], "eal");
-		n_eal_opts = 1;
+	if(dpdk_on){
+		if(start_eal(n_eal_opts, &eal_opt) < 0){
+			fprintf(stderr, "[+] Error starting EAL\n");
+			exit(1);
+		}	
 	}
-	fprintf(stdout, "Initialising EAL:\n");
-	int i = rte_eal_init_export(n_eal_opts,eal_opt);
-	if(i<0){
-		fprintf(stderr, "\n[+] Error starting EAL\n");
-		return 1;
+	else{
+		if(eal_opt != NULL){ // If we don't call EAL, free its parameters
+			fprintf(stdout, "[+] EAL params not used\n");
+			for(int i=0;i<n_eal_opts;i++)
+				free(eal_opt[i]);
+			free(eal_opt);
+		}
 	}
 
 	port_mgr = new PortManager();
