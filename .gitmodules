@@ -27,4 +27,4 @@
 	url = git://git.bro.org/bro-netcontrol
 [submodule "src/libmoon"]
 	path = src/libmoon
-	url = https://github.com/libmoon/libmoon.git
+	url = https://github.com/MaxPowell/libmoon.git
