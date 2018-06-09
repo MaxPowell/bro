@@ -62,15 +62,21 @@ void DpdkSource::Statistics(Stats* s){
 		s->received = s->dropped = s->link = s->bytes_received = 0;
 
 	else{
-		// TODO check/implement rte_eth_stats. Not available for every NIC
+		// TODO check stats/rte_eth_stats. Not available for every NIC
 		rte_eth_stats_get(port, &dpdk_stats);
 		if(dpdk_stats.ipackets == 0 && stats.received > 0){
-			fprintf(stderr, "Cannot get stats directly from DPDK\n");
+			fprintf(stderr, "[+] Cannot get stats directly from DPDK\n");
+
+			s->received = stats.received;
+			s->bytes_received = stats.bytes_received;
+			s->dropped = stats.dropped;
 		}
 
-		s->received = stats.received;
-		s->bytes_received = stats.bytes_received;
-		s->dropped = dpdk_stats.ierrors;
+		else{
+			s->received = dpdk_stats.ipackets;
+			s->bytes_received = dpdk_stats.ibytes;
+			s->dropped = dpdk_stats.ierrors;
+		}
 	}
 }
 
