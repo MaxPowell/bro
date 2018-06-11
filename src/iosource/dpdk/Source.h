@@ -10,7 +10,7 @@
 #define TX_DESC 0
 #define DROP_EN 0 // drop packets if no descriptor available
 #define RSS_EN 0 // enable RSS
-#define OFFLOAD_DIS 0 // disable offloads
+#define OFFLOAD_DIS 1 // disable offloads ---- CHANGED
 #define STRIPVLAN_EN 0 // strip vlan enable
 #define RSS_MASK 0 
 #define MBUF_SIZE 8192
