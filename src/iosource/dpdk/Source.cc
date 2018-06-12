@@ -45,6 +45,8 @@ void DpdkSource::Open(){
 		return;
 	}
 
+	rte_eth_promiscuous_enable(port);
+
 	fprintf(stdout, "[+] Waiting for device to come up...\n");
 	do{		
 		rte_eth_link_get_nowait(port, &link);	
