@@ -26,13 +26,14 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 }
 
 void DpdkSource::Open(){
-	/* It will be always opened, just need to configure it */
-	if(Configure()){
+	/* We need to configure it and start it */
+	if(Configure() && rte_eth_dev_start(port) == 0){
 		props.is_live = true;
 		props.link_type = 1; // FIXME This one is harcoded (LINKTYPE_ETHERNET), it probably affects bro but I didn't found a way to make this detection automatic
 		Opened(props);
-
 	}
+	else
+		fprintf(stderr, "[+] Error starting interface %d\n", port);
 }
 
 bool DpdkSource::Configure(){
