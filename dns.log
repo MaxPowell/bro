@@ -3,10 +3,9 @@
 #empty_field	(empty)
 #unset_field	-
 #path	dns
-#open	2018-06-10-20-04-49
+#open	2018-06-13-20-04-13
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
 #types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
-1528653880.254918	Ckku3UOKa42FUWabh	192.168.178.115	137	192.168.178.255	137	udp	44213	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
-1528653881.004933	Ckku3UOKa42FUWabh	192.168.178.115	137	192.168.178.255	137	udp	44213	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
-1528653881.755220	Ckku3UOKa42FUWabh	192.168.178.115	137	192.168.178.255	137	udp	44213	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
-#close	2018-06-10-20-04-49
+1528913048.491908	Cdit562QT7qBPAreZk	fe80::10af:50ff:40cd:80a6	5353	ff02::fb	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+1528913048.538387	C0tVfx2U0zMgLKakG9	192.168.178.99	5353	224.0.0.251	5353	udp	0	-	_sleep-proxy._udp.local	1	C_INTERNET	12	PTR	-	-	F	F	F	F	0	-	-	F
+#close	2018-06-13-20-04-13

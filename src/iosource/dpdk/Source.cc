@@ -63,8 +63,9 @@ void DpdkSource::Close(){
 
 void DpdkSource::DoneWithPacket(){
 	/* Just free the packets in the mbuf */
-	for(int i=0;i<last_burst_size;i++)
-		free(last_burst[i]);
+	//for(int i=0;i<last_burst_size;i++)
+		rte_pktmbuf_free_export(last_burst[0]);
+	last_burst_size = 0;
 }
 
 bool DpdkSource::PrecompileFilter(int index, const std::string& filter){

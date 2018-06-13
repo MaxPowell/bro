@@ -3,10 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	weird
-#open	2018-06-03-20-00-10
+#open	2018-06-13-20-04-06
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
 #types	time	string	addr	port	addr	port	string	string	bool	string
-1528048810.042827	-	-	-	-	-	unknown_protocol_2	-	F	bro
-1528048811.302663	CtMC0b1RCuHCkGQC28	192.168.178.124	36072	172.217.18.14	80	bad_TCP_checksum	-	F	bro
-1528048823.977320	CuPcp03aNStvA9NQNf	192.168.178.124	38440	192.168.178.1	53	bad_UDP_checksum	-	F	bro
-#close	2018-06-03-20-00-26
+1528913046.069031	-	-	-	-	-	unknown_protocol_2	-	F	bro
+#close	2018-06-13-20-04-13
