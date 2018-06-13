@@ -27,42 +27,29 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 
 void DpdkSource::Open(){
 	/* We need to configure it and start it */
-	/*if(Configure() && rte_eth_dev_start(port) == 0 && rte_eth_dev_set_link_up(port) == 0){
-		props.is_live = true;
-		props.link_type = 1; // FIXME This one is harcoded (LINKTYPE_ETHERNET), it probably affects bro but I didn't found a way to make this detection automatic
-		Opened(props);
-	}*/
-
 	struct rte_eth_link link;
 	
 
 	if(!Configure()){
-		fprintf(stderr, "[+] Error configuring interface %d\n", port);
+		fprintf(stderr, "[+] Error configuring device %d\n", port);
 		return;
 	}
 	if(rte_eth_dev_start(port) != 0){
-		fprintf(stderr, "[+] Error starting interface %d\n", port);
+		fprintf(stderr, "[+] Error starting device %d\n", port);
 		return;
 	}
 
 	rte_eth_promiscuous_enable(port);
 
-	fprintf(stdout, "[+] Waiting for device to come up...\n");
+	fprintf(stdout, "[+] Waiting for device %d to come up...\n", port);
 	do{		
 		rte_eth_link_get_nowait(port, &link);	
 	}while(link.link_status!=1);
 
-	/*if(rte_eth_dev_set_link_up(port) != 0){
-		fprintf(stderr, "[+] Error setting link up %d\n", port);
-		return;
-	}*/
 
 	props.is_live = true;
 	props.link_type = 1; // FIXME This one is harcoded (LINKTYPE_ETHERNET), it probably affects bro but I didn't found a way to make this detection automatic
 	Opened(props);
-
-	/*else
-		fprintf(stderr, "[+] Error starting interface %d\n", port);*/
 }
 
 bool DpdkSource::Configure(){
