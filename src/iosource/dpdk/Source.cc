@@ -6,7 +6,7 @@
 
 #include "device.h"
 #include "Source.h"
-#include <rte_mbuf.h>
+
 
 using namespace iosource::dpdk;
 
@@ -62,7 +62,9 @@ void DpdkSource::Close(){
 }
 
 void DpdkSource::DoneWithPacket(){
-	/* Nothing to do */
+	/* Just free the packets in the mbuf */
+	for(int i=0;i<last_burst_size;i++)
+		free(last_burst[i]);
 }
 
 bool DpdkSource::PrecompileFilter(int index, const std::string& filter){
