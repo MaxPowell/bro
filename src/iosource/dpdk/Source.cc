@@ -95,7 +95,7 @@ void DpdkSource::Statistics(Stats* s){
 		else{
 			s->received = dpdk_stats.ipackets;
 			s->bytes_received = dpdk_stats.ibytes;
-			s->dropped = dpdk_stats.ierrors;
+			s->dropped = dpdk_stats.imissed;
 		}
 	}
 }
