@@ -27,24 +27,24 @@ DpdkSource::DpdkSource(const std::string& path, bool is_live){
 
 void DpdkSource::Open(){
 	/* We need to configure it and start it */
-	struct rte_eth_link link;
+	//struct rte_eth_link link;
 	
 
 	if(!Configure()){
 		fprintf(stderr, "[+] Error configuring device %d\n", port);
 		return;
 	}
-	if(rte_eth_dev_start(port) != 0){
+	/*if(rte_eth_dev_start(port) != 0){
 		fprintf(stderr, "[+] Error starting device %d\n", port);
 		return;
-	}
+	}*/
 
-	rte_eth_promiscuous_enable(port);
+	/*rte_eth_promiscuous_enable(port);
 
 	fprintf(stdout, "[+] Waiting for device %d to come up...\n", port);
 	do{		
 		rte_eth_link_get_nowait(port, &link);	
-	}while(link.link_status!=1);
+	}while(link.link_status!=1);*/
 
 
 	props.is_live = true;
@@ -53,7 +53,7 @@ void DpdkSource::Open(){
 }
 
 bool DpdkSource::Configure(){
-	return !config_device(port,RX_QUEUES,TX_QUEUES,RX_DESC,TX_DESC, DROP_EN, RSS_EN, OFFLOAD_DIS, STRIPVLAN_EN, RSS_MASK, MBUF_SIZE-1, RTE_MBUF_DEFAULT_BUF_SIZE);
+	return !config_device(port,RX_QUEUES,TX_QUEUES,RX_DESC,TX_DESC, DROP_EN, RSS_EN, OFFLOAD_DIS, STRIPVLAN_EN, RSS_MASK, MBUF_ELEMENTS-1, MBUF_SIZE*1024*1024);
 }
 
 void DpdkSource::Close(){

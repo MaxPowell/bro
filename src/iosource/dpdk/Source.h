@@ -13,7 +13,8 @@
 #define OFFLOAD_DIS 0 // disable offloads
 #define STRIPVLAN_EN 0 // strip vlan enable
 #define RSS_MASK 0 
-#define MBUF_SIZE 8192
+#define MBUF_ELEMENTS 8192
+#define MBUF_SIZE 2 // on MB
 
 namespace iosource {
 namespace dpdk {
