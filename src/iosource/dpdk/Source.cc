@@ -53,7 +53,7 @@ void DpdkSource::Open(){
 }
 
 bool DpdkSource::Configure(){
-	return !config_device(port,RX_QUEUES,TX_QUEUES,RX_DESC,TX_DESC, DROP_EN, RSS_EN, OFFLOAD_DIS, STRIPVLAN_EN, RSS_MASK, MBUF_ELEMENTS-1, MBUF_SIZE*1024*1024);
+	return !config_device(port,RX_QUEUES,TX_QUEUES,RX_DESC,TX_DESC, DROP_EN, RSS_EN, OFFLOAD_DIS, STRIPVLAN_EN, RSS_MASK, MBUF_ELEMENTS-1, MBUF_SIZE*1024);
 }
 
 void DpdkSource::Close(){
